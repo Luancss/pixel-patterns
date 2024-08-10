@@ -1,9 +1,10 @@
-import { CardRamdom } from "@/components/cards/card-ramdom";
+import { Card } from "@/components/cards/card";
+import { RamdonCards } from "./(ramdom-cards)/cards";
 
 export default function Home() {
   return (
     <div>
-      <CardRamdom/>
+      <RamdonCards />
     </div>
   );
 }
