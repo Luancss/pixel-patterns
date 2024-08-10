@@ -11,9 +11,10 @@ import { cn } from "@/lib/utils";
 interface ContentProps {
   content: React.ReactNode;
   background?: string;
+  iconColor?: string;
 }
 
-export const Card = ({ content, background }: ContentProps) => {
+export const Card = ({ content, background, iconColor = "currentColor" }: ContentProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleClick = () => {
@@ -38,8 +39,8 @@ export const Card = ({ content, background }: ContentProps) => {
     <section className="mx-auto justify-items-center justify-content-center">
       <div
         className={cn(
-          `flex flex-col items-center justify-center w-[300px] h-[250px] rounded-xl relative card `,
-          background ? `${background}` : "bg-[#808080]",
+          `flex flex-col items-center justify-center w-[300px] h-[250px] rounded-xl relative card`,
+          background ? `${background}` : "bg-[#808080]"
         )}
       >
         <Button
@@ -47,7 +48,11 @@ export const Card = ({ content, background }: ContentProps) => {
           variant="link"
           className="absolute top-2 right-2"
         >
-          {isChecked ? <Check size={20} /> : <CopyIcon size={20} />}
+          {isChecked ? (
+            <Check size={20} color={iconColor} />
+          ) : (
+            <CopyIcon size={20} color={iconColor} />
+          )}
         </Button>
         <div className="flex items-center justify-center">{content}</div>
       </div>
