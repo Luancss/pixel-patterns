@@ -1,16 +1,19 @@
-"use client"; // components/CardRamdom.tsx""
+"use client";
+
 import { useState } from "react";
 import { Check, CopyIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { toast } from "sonner";
 import { renderToStaticMarkup } from "react-dom/server";
 import React from "react";
+import { cn } from "@/lib/utils";
 
 interface ContentProps {
   content: React.ReactNode;
+  background?: string;
 }
 
-export const Card = ({ content }: ContentProps) => {
+export const Card = ({ content, background }: ContentProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleClick = () => {
@@ -33,7 +36,12 @@ export const Card = ({ content }: ContentProps) => {
 
   return (
     <section className="mx-auto justify-items-center justify-content-center">
-      <div className="flex flex-col items-center justify-center bg-[#ccc] w-[300px] h-[250px] rounded-xl relative">
+      <div
+        className={cn(
+          `flex flex-col items-center justify-center w-[300px] h-[250px] rounded-xl relative card `,
+          background ? `${background}` : "bg-[#808080]",
+        )}
+      >
         <Button
           onClick={handleClick}
           variant="link"
@@ -41,9 +49,7 @@ export const Card = ({ content }: ContentProps) => {
         >
           {isChecked ? <Check size={20} /> : <CopyIcon size={20} />}
         </Button>
-        <div className="flex items-center justify-center">{content}
-
-        </div>
+        <div className="flex items-center justify-center">{content}</div>
       </div>
     </section>
   );

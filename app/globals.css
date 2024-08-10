@@ -65,5 +65,51 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    width: 100vw;
   }
+}
+
+.scroller {
+  max-width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroller__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 200%;
+  animation: scroll var(--_animation-duration, 40s) linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroller[data-direction="left"] .scroller__inner {
+  animation-direction: normal; 
+}
+
+.scroller[data-direction="right"] .scroller__inner {
+  animation-direction: reverse;
+}
+
+.scroller[data-speed="fast"] {
+  animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  animation-duration: 60s;
+}
+
+.card {
+  min-width: 200px;
+  margin-right: 1rem;
+  flex-shrink: 0;
 }
