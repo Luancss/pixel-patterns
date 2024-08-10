@@ -54,7 +54,7 @@ export const Card = ({ content, background, iconColor = "currentColor" }: Conten
             <CopyIcon size={20} color={iconColor} />
           )}
         </Button>
-        <div className="flex items-center justify-center">{content}</div>
+        <div className="flex items-center justify-center rounded-xl">{content}</div>
       </div>
     </section>
   );

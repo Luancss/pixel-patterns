@@ -71,7 +71,7 @@
 }
 
 .scroller {
-  max-width: 100vw;
+  max-width: calc(100vw - 20rem);
   overflow: hidden;
   position: relative;
 }
@@ -90,6 +90,13 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+.fade {
+  pointer-events: none;
+  background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+  position: absolute;
+  inset: 0;
 }
 
 .scroller[data-direction="left"] .scroller__inner {
