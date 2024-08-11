@@ -505,6 +505,796 @@ export const RamdonCards = () => {
         </div>
       }
     />,
+    <Card
+      iconColor="#fff"
+      background="bg-[#000] to-neutral-500"
+      content={
+        <div
+          aria-label="Orange and tan hamster running in a metal wheel"
+          role="img"
+          className="wheel-and-hamster"
+        >
+          <div className="wheel"></div>
+          <div className="hamster">
+            <div className="hamster__body">
+              <div className="hamster__head">
+                <div className="hamster__ear"></div>
+                <div className="hamster__eye"></div>
+                <div className="hamster__nose"></div>
+              </div>
+              <div className="hamster__limb hamster__limb--fr"></div>
+              <div className="hamster__limb hamster__limb--fl"></div>
+              <div className="hamster__limb hamster__limb--br"></div>
+              <div className="hamster__limb hamster__limb--bl"></div>
+              <div className="hamster__tail"></div>
+            </div>
+          </div>
+          <div className="spoke"></div>
+
+          <style jsx>{`
+            .wheel-and-hamster {
+              --dur: 1s;
+              position: relative;
+              width: 12em;
+              height: 12em;
+              font-size: 14px;
+            }
+
+            .wheel,
+            .hamster,
+            .hamster div,
+            .spoke {
+              position: absolute;
+            }
+
+            .wheel,
+            .spoke {
+              border-radius: 50%;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+
+            .wheel {
+              background: radial-gradient(
+                100% 100% at center,
+                hsla(0, 0%, 60%, 0) 47.8%,
+                hsl(0, 0%, 60%) 48%
+              );
+              z-index: 2;
+            }
+
+            .hamster {
+              animation: hamster var(--dur) ease-in-out infinite;
+              top: 50%;
+              left: calc(50% - 3.5em);
+              width: 7em;
+              height: 3.75em;
+              transform: rotate(4deg) translate(-0.8em, 1.85em);
+              transform-origin: 50% 0;
+              z-index: 1;
+            }
+
+            .hamster__head {
+              animation: hamsterHead var(--dur) ease-in-out infinite;
+              background: hsl(30, 90%, 55%);
+              border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
+              box-shadow: 0 -0.25em 0 hsl(30, 90%, 80%) inset,
+                0.75em -1.55em 0 hsl(30, 90%, 90%) inset;
+              top: 0;
+              left: -2em;
+              width: 2.75em;
+              height: 2.5em;
+              transform-origin: 100% 50%;
+            }
+
+            .hamster__ear {
+              animation: hamsterEar var(--dur) ease-in-out infinite;
+              background: hsl(0, 90%, 85%);
+              border-radius: 50%;
+              box-shadow: -0.25em 0 hsl(30, 90%, 55%) inset;
+              top: -0.25em;
+              right: -0.25em;
+              width: 0.75em;
+              height: 0.75em;
+              transform-origin: 50% 75%;
+            }
+
+            .hamster__eye {
+              animation: hamsterEye var(--dur) linear infinite;
+              background-color: hsl(0, 0%, 0%);
+              border-radius: 50%;
+              top: 0.375em;
+              left: 1.25em;
+              width: 0.5em;
+              height: 0.5em;
+            }
+
+            .hamster__nose {
+              background: hsl(0, 90%, 75%);
+              border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
+              top: 0.75em;
+              left: 0;
+              width: 0.2em;
+              height: 0.25em;
+            }
+
+            .hamster__body {
+              animation: hamsterBody var(--dur) ease-in-out infinite;
+              background: hsl(30, 90%, 90%);
+              border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
+              box-shadow: 0.1em 0.75em 0 hsl(30, 90%, 55%) inset,
+                0.15em -0.5em 0 hsl(30, 90%, 80%) inset;
+              top: 0.25em;
+              left: 2em;
+              width: 4.5em;
+              height: 3em;
+              transform-origin: 17% 50%;
+              transform-style: preserve-3d;
+            }
+
+            .hamster__limb--fr,
+            .hamster__limb--fl {
+              clip-path: polygon(
+                0 0,
+                100% 0,
+                70% 80%,
+                60% 100%,
+                0% 100%,
+                40% 80%
+              );
+              top: 2em;
+              left: 0.5em;
+              width: 1em;
+              height: 1.5em;
+              transform-origin: 50% 0;
+            }
+
+            .hamster__limb--fr {
+              animation: hamsterFRLimb var(--dur) linear infinite;
+              background: linear-gradient(
+                hsl(30, 90%, 80%) 80%,
+                hsl(0, 90%, 75%) 80%
+              );
+              transform: rotate(15deg) translateZ(-1px);
+            }
+
+            .hamster__limb--fl {
+              animation: hamsterFLLimb var(--dur) linear infinite;
+              background: linear-gradient(
+                hsl(30, 90%, 90%) 80%,
+                hsl(0, 90%, 85%) 80%
+              );
+              transform: rotate(15deg);
+            }
+
+            .hamster__limb--br,
+            .hamster__limb--bl {
+              border-radius: 0.75em 0.75em 0 0;
+              clip-path: polygon(
+                0 0,
+                100% 0,
+                100% 30%,
+                70% 90%,
+                70% 100%,
+                30% 100%,
+                40% 90%,
+                0% 30%
+              );
+              top: 1em;
+              left: 2.8em;
+              width: 1.5em;
+              height: 2.5em;
+              transform-origin: 50% 30%;
+            }
+
+            .hamster__limb--br {
+              animation: hamsterBRLimb var(--dur) linear infinite;
+              background: linear-gradient(
+                hsl(30, 90%, 80%) 90%,
+                hsl(0, 90%, 75%) 90%
+              );
+              transform: rotate(-25deg) translateZ(-1px);
+            }
+
+            .hamster__limb--bl {
+              animation: hamsterBLLimb var(--dur) linear infinite;
+              background: linear-gradient(
+                hsl(30, 90%, 90%) 90%,
+                hsl(0, 90%, 85%) 90%
+              );
+              transform: rotate(-25deg);
+            }
+
+            .hamster__tail {
+              animation: hamsterTail var(--dur) linear infinite;
+              background: hsl(0, 90%, 85%);
+              border-radius: 0.25em 50% 50% 0.25em;
+              box-shadow: 0 -0.2em 0 hsl(0, 90%, 75%) inset;
+              top: 1.5em;
+              right: -0.5em;
+              width: 1em;
+              height: 0.5em;
+              transform: rotate(30deg) translateZ(-1px);
+              transform-origin: 0.25em 0.25em;
+            }
+
+            .spoke {
+              animation: spoke var(--dur) linear infinite;
+              background: radial-gradient(
+                  100% 100% at center,
+                  hsl(0, 0%, 60%) 4.8%,
+                  hsla(0, 0%, 60%, 0) 5%
+                ),
+                linear-gradient(
+                    hsla(0, 0%, 55%, 0) 46.9%,
+                    hsl(0, 0%, 65%) 47% 52.9%,
+                    hsla(0, 0%, 65%, 0) 53%
+                  )
+                  50% 50% / 99% 99% no-repeat;
+            }
+
+            /* Animations */
+            @keyframes hamster {
+              from,
+              to {
+                transform: rotate(4deg) translate(-0.8em, 1.85em);
+              }
+
+              50% {
+                transform: rotate(0) translate(-0.8em, 1.85em);
+              }
+            }
+
+            @keyframes hamsterHead {
+              from,
+              25%,
+              50%,
+              75%,
+              to {
+                transform: rotate(0);
+              }
+
+              12.5%,
+              37.5%,
+              62.5%,
+              87.5% {
+                transform: rotate(8deg);
+              }
+            }
+
+            @keyframes hamsterEye {
+              from,
+              90%,
+              to {
+                transform: scaleY(1);
+              }
+
+              95% {
+                transform: scaleY(0);
+              }
+            }
+
+            @keyframes hamsterEar {
+              from,
+              25%,
+              50%,
+              75%,
+              to {
+                transform: rotate(0);
+              }
+
+              12.5%,
+              37.5%,
+              62.5%,
+              87.5% {
+                transform: rotate(12deg);
+              }
+            }
+
+            @keyframes hamsterBody {
+              from,
+              25%,
+              50%,
+              75%,
+              to {
+                transform: rotate(0);
+              }
+
+              12.5%,
+              37.5%,
+              62.5%,
+              87.5% {
+                transform: rotate(-2deg);
+              }
+            }
+
+            @keyframes hamsterFRLimb {
+              from,
+              25%,
+              50%,
+              75%,
+              to {
+                transform: rotate(50deg) translateZ(-1px);
+              }
+
+              12.5%,
+              37.5%,
+              62.5%,
+              87.5% {
+                transform: rotate(-30deg) translateZ(-1px);
+              }
+            }
+
+            @keyframes hamsterFLLimb {
+              from,
+              25%,
+              50%,
+              75%,
+              to {
+                transform: rotate(-30deg);
+              }
+
+              12.5%,
+              37.5%,
+              62.5%,
+              87.5% {
+                transform: rotate(50deg);
+              }
+            }
+
+            @keyframes hamsterBRLimb {
+              from,
+              25%,
+              50%,
+              75%,
+              to {
+                transform: rotate(-60deg) translateZ(-1px);
+              }
+
+              12.5%,
+              37.5%,
+              62.5%,
+              87.5% {
+                transform: rotate(20deg) translateZ(-1px);
+              }
+            }
+
+            @keyframes hamsterBLLimb {
+              from,
+              25%,
+              50%,
+              75%,
+              to {
+                transform: rotate(20deg);
+              }
+
+              12.5%,
+              37.5%,
+              62.5%,
+              87.5% {
+                transform: rotate(-60deg);
+              }
+            }
+
+            @keyframes hamsterTail {
+              from,
+              25%,
+              50%,
+              75%,
+              to {
+                transform: rotate(30deg) translateZ(-1px);
+              }
+
+              12.5%,
+              37.5%,
+              62.5%,
+              87.5% {
+                transform: rotate(10deg) translateZ(-1px);
+              }
+            }
+
+            @keyframes spoke {
+              from {
+                transform: rotate(0);
+              }
+
+              to {
+                transform: rotate(-1turn);
+              }
+            }
+          `}</style>
+        </div>
+      }
+    />,
+    <Card
+      background="bg-gradient-to-r from-slate-950 to-slate-900"
+      iconColor="#fff"
+      content={
+        <div className="card-container">
+          <div className="card-playing">
+            <div className="card-image"></div>
+            <div className="card-wave"></div>
+            <div className="card-wave"></div>
+            <div className="card-wave"></div>
+            <div className="card-infotop">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="card-icon"
+              >
+                <path
+                  fill="currentColor"
+                  d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784 14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701 3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476 19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091 12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466 16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402 15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864 19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528 16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68 20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"
+                ></path>
+              </svg>
+              <br />
+              UI / EX Designer
+              <br />
+              <div className="card-name">Luan Carlos</div>
+            </div>
+          </div>
+          <style jsx>{`
+            .card-container {
+              margin: 100px auto;
+              background: transparent;
+              box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+              position: relative;
+              width: 200px;
+              height: 240px;
+              border-radius: 16px;
+              overflow: hidden;
+            }
+
+            .card-playing {
+              position: relative;
+              width: 100%;
+              height: 100%;
+            }
+
+            .card-image {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+            }
+
+            .card-wave {
+              position: absolute;
+              width: 540px;
+              height: 700px;
+              opacity: 0.6;
+              left: 0;
+              top: 0;
+              margin-left: -50%;
+              margin-top: -70%;
+              background: linear-gradient(
+                744deg,
+                #af40ff,
+                #5b42f3 60%,
+                #00ddeb
+              );
+            }
+
+            .card-wave:nth-child(2),
+            .card-wave:nth-child(3) {
+              top: 210px;
+            }
+
+            .card-playing .card-wave {
+              border-radius: 40%;
+              animation: wave 3000ms infinite linear;
+            }
+
+            .card-wave {
+              border-radius: 40%;
+              animation: wave 55s infinite linear;
+            }
+
+            .card-playing .card-wave:nth-child(2) {
+              animation-duration: 4000ms;
+            }
+
+            .card-wave:nth-child(2) {
+              animation-duration: 50s;
+            }
+
+            .card-playing .card-wave:nth-child(3) {
+              animation-duration: 5000ms;
+            }
+
+            .card-wave:nth-child(3) {
+              animation-duration: 45s;
+            }
+
+            @keyframes wave {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+
+            .card-icon {
+              width: 3em;
+              margin-top: -1em;
+              padding-bottom: 1em;
+            }
+
+            .card-infotop {
+              text-align: center;
+              font-size: 20px;
+              position: absolute;
+              top: 5.6em;
+              left: 0;
+              right: 0;
+              color: rgb(255, 255, 255);
+              font-weight: 600;
+            }
+
+            .card-name {
+              font-size: 14px;
+              font-weight: 100;
+              position: relative;
+              top: 1em;
+              text-transform: lowercase;
+            }
+          `}</style>
+        </div>
+      }
+    />,
+    <Card
+      iconColor="#fff"
+      background="#242424"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+          <button class="glow-button">Button</button>
+          <style>
+            .glow-button {
+              --glow-color: rgb(217, 176, 255);
+              --glow-spread-color: rgba(191, 123, 255, 0.781);
+              --enhanced-glow-color: rgb(231, 206, 255);
+              --btn-color: rgb(100, 61, 136);
+              border: 0.25em solid var(--glow-color);
+              padding: 1em 3em;
+              color: var(--glow-color);
+              font-size: 15px;
+              font-weight: bold;
+              background-color: var(--btn-color);
+              border-radius: 1em;
+              outline: none;
+              box-shadow: 0 0 1em 0.25em var(--glow-color),
+                0 0 4em 1em var(--glow-spread-color),
+                inset 0 0 0.75em 0.25em var(--glow-color);
+              text-shadow: 0 0 0.5em var(--glow-color);
+              position: relative;
+              transition: all 0.3s;
+            }
+            .glow-button::after {
+              pointer-events: none;
+              content: "";
+              position: absolute;
+              top: 120%;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              background-color: var(--glow-spread-color);
+              filter: blur(2em);
+              opacity: 0.7;
+              transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+            }
+            .glow-button:hover {
+              color: var(--btn-color);
+              background-color: var(--glow-color);
+              box-shadow: 0 0 1em 0.25em var(--glow-color),
+                0 0 4em 2em var(--glow-spread-color),
+                inset 0 0 0.75em 0.25em var(--glow-color);
+            }
+            .glow-button:active {
+              box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+                0 0 2.5em 2em var(--glow-spread-color),
+                inset 0 0 0.5em 0.25em var(--glow-color);
+            }
+          </style>
+        `,
+          }}
+        />
+      }
+    />,
+
+    <Card
+      iconColor="#fff"
+      background="bg-gradient-to-r from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+        <button class="space-btn" type="button">
+          <strong class="space-text">SPACE</strong>
+          <div class="stars-container">
+            <div class="stars"></div>
+          </div>
+          <div class="glow-effect">
+            <div class="glow-circle glow-circle1"></div>
+            <div class="glow-circle glow-circle2"></div>
+          </div>
+        </button>
+        <style>
+          .space-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 13rem;
+            height: 3rem;
+            background-size: 300% 300%;
+            cursor: pointer;
+            backdrop-filter: blur(1rem);
+            border-radius: 5rem;
+            transition: 0.5s;
+            animation: gradientAnimation 5s ease infinite;
+            border: double 4px transparent;
+            background-image: linear-gradient(#212121, #212121),
+              linear-gradient(
+                137.48deg,
+                #ffdb3b 10%,
+                #fe53bb 45%,
+                #8f51ea 67%,
+                #0044ff 87%
+              );
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .stars-container {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transition: 0.5s;
+            backdrop-filter: blur(1rem);
+            border-radius: 5rem;
+          }
+
+          .space-text {
+            z-index: 2;
+            font-family: "Avalors Personal Use";
+            font-size: 12px;
+            letter-spacing: 5px;
+            color: #ffffff;
+            text-shadow: 0 0 4px white;
+          }
+
+          .glow-effect {
+            position: absolute;
+            display: flex;
+            width: 12rem;
+          }
+
+          .glow-circle {
+            width: 100%;
+            height: 30px;
+            filter: blur(2rem);
+            animation: pulseAnimation 4s infinite;
+            z-index: -1;
+          }
+
+          .glow-circle1 {
+            background: rgba(254, 83, 186, 0.636);
+          }
+
+          .glow-circle2 {
+            background: rgba(142, 81, 234, 0.704);
+          }
+
+          .space-btn:hover .stars-container {
+            z-index: 1;
+            background-color: #212121;
+          }
+
+          .space-btn:hover {
+            transform: scale(1.1);
+          }
+
+          .space-btn:active {
+            border: double 4px #fe53bb;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            animation: none;
+          }
+
+          .space-btn:active .glow-circle {
+            background: #fe53bb;
+          }
+
+          .stars {
+            position: relative;
+            background: transparent;
+            width: 200rem;
+            height: 200rem;
+          }
+
+          .stars::after {
+            content: "";
+            position: absolute;
+            top: -10rem;
+            left: -100rem;
+            width: 100%;
+            height: 100%;
+            animation: starRotateAnimation 90s linear infinite;
+            background-image: radial-gradient(#ffffff 1px, transparent 1%);
+            background-size: 50px 50px;
+          }
+
+          .stars::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 170%;
+            height: 500%;
+            animation: starAnimation 60s linear infinite;
+            background-image: radial-gradient(#ffffff 1px, transparent 1%);
+            background-size: 50px 50px;
+            opacity: 0.5;
+          }
+
+          @keyframes starAnimation {
+            from {
+              transform: translateY(0);
+            }
+            to {
+              transform: translateY(-135rem);
+            }
+          }
+
+          @keyframes starRotateAnimation {
+            from {
+              transform: rotate(360deg);
+            }
+            to {
+              transform: rotate(0);
+            }
+          }
+
+          @keyframes gradientAnimation {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+
+          @keyframes pulseAnimation {
+            0% {
+              transform: scale(0.75);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+            }
+            70% {
+              transform: scale(1);
+              box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            }
+            100% {
+              transform: scale(0.75);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+          }
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
   ];
 
   return (
@@ -519,6 +1309,12 @@ export const RamdonCards = () => {
         <div className="scroller__inner">
           {cardsToRight}
           {cardsToRight}
+        </div>
+      </div>
+      <div className="scroller" data-direction="left" data-speed="fast">
+        <div className="scroller__inner">
+          {cardsToLeft}
+          {cardsToLeft}
         </div>
       </div>
     </div>
