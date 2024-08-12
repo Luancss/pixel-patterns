@@ -1,8 +1,13 @@
 import { Card } from "@/components/cards/card";
 
 export const RamdonCards = () => {
+  let counter = 1;
+
+  const generateKey = () => `card-${counter++}`;
+
   const cardsToLeft = [
     <Card
+      key={generateKey()}
       information="Tailwind"
       iconColor="#fff"
       background="bg-gradient-to-r from-green-950"
@@ -33,6 +38,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Tailwind"
       iconColor="#fff"
       background="bg-slate-900"
@@ -136,16 +142,12 @@ export const RamdonCards = () => {
               <span className="text-pink-400">Text</span>
               <span className="text-slate-500">&gt;</span>
             </p>
-            <p className="ml-3 font-mono text-xs font-normal tracking-wide text-violet-400">
-              <span className="text-slate-500">&lt;/</span>
-              <span className="text-pink-400">Flex</span>
-              <span className="text-slate-500">&gt;</span>
-            </p>
           </div>
         </div>
       }
     />,
     <Card
+      key={generateKey()}
       iconColor="#fff"
       information="Css"
       background="bg-gradient-to-r from-yellow-950"
@@ -262,6 +264,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-gradient-to-l from-slate-950"
@@ -486,6 +489,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Tailwind"
       iconColor="#fff"
       background="bg-gradient-to-l from-slate-950"
@@ -510,6 +514,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Tailwind"
       iconColor="#fff"
       background="bg-[#000]"
@@ -553,6 +558,7 @@ export const RamdonCards = () => {
 
   const cardsToRight = [
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-gradient-to-b from-zinc-950"
@@ -649,6 +655,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Tailwind"
       iconColor="#000"
       background="bg-gradient-to-r from-neutral-950"
@@ -752,6 +759,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-[#000] to-neutral-500"
@@ -1156,6 +1164,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       background="bg-gradient-to-r from-slate-950 to-slate-900"
       iconColor="#fff"
@@ -1294,6 +1303,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="#242424"
@@ -1355,6 +1365,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-gradient-to-r from-slate-950"
@@ -1548,6 +1559,7 @@ export const RamdonCards = () => {
 
   const cardsToLeft_TwoColumn = [
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-[#000]"
@@ -1605,6 +1617,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-gradient-to-t from-slate-950"
@@ -1884,6 +1897,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-gradient-to-l from-gray-950 to-gray-900"
@@ -2000,6 +2014,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-[#000]"
@@ -2084,6 +2099,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      key={generateKey()}
       information="Css"
       iconColor="#fff"
       background="bg-gradient-to-r from-green-950"
