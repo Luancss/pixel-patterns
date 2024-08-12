@@ -519,3 +519,64 @@
     opacity: 0;
   }
 }
+
+.geminid {
+  position: absolute;
+  top: calc(var(--y) * 1vh);
+  left: calc(var(--x) * 1vw);
+  z-index: -11;
+  -webkit-animation: shoot calc(var(--speed) * 1s) calc(var(--delay) * 1s) infinite linear both;
+          animation: shoot calc(var(--speed) * 1s) calc(var(--delay) * 1s) infinite linear both;
+}
+.geminid__trail {
+  z-index: -11;
+  height: 2px;
+  width: 25px;
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), rgba(164, 163, 255, 0.85));
+  border-radius: 100% 25% 25% 100%;
+  filter: blur(1px);
+  transform-origin: right;
+  filter: drop-shadow(0 0 5px #fafafa);
+  -webkit-animation: spark calc(var(--speed) * 1s) calc(var(--delay) * 1s) infinite linear both;
+          animation: spark calc(var(--speed) * 1s) calc(var(--delay) * 1s) infinite linear both;
+}
+@media (min-width: 768px) {
+  .geminid__trail {
+    height: 5px;
+    width: 50px;
+  }
+}
+
+@-webkit-keyframes shoot {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg));
+  }
+  5%, 100% {
+    transform: rotate(calc(var(--angle) * 1deg)) translate(calc(var(--travel) * 1vw), 0);
+  }
+}
+@keyframes shoot {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg));
+  }
+  5%, 100% {
+    transform: rotate(calc(var(--angle) * 1deg)) translate(calc(var(--travel) * 1vw), 0);
+  }
+}
+@-webkit-keyframes spark {
+  0%, 5%, 100% {
+    transform: scaleX(0);
+  }
+  1%, 4% {
+    transform: scaleX(var(--trail));
+  }
+}
+@keyframes spark {
+  0%, 5%, 100% {
+    transform: scaleX(0);
+  }
+  1%, 4% {
+    transform: scaleX(var(--trail));
+  }
+}
