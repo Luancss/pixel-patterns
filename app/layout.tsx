@@ -4,6 +4,7 @@ import "./globals.css";
 import ButtonEffect from "@/components/button-effect";
 import { Navbar } from "@/components/navbar/page";
 import { Toaster } from "sonner";
+import Background from "@/components/background";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,23 +23,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Toaster />
         <div className="relative h-full w-full bg-black">
-          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-          <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#94814136,#000)]"></div>
+          <Background />
           <div className="flex min-h-screen flex-col">
-            <div className="flex flex-col gap-y-10 items-center text-center m-auto z-20">
-              <div className="max-w-[600px] flex flex-col items-center justify-center gap-y-7 mt-32">
-                <h1 className="text-6xl font-bold text-gray-100">
-                  Collection of components for development lovers
-                </h1>
-                <p className="text-lg text-gray-300">
-                  Ready-to-use, simply copy and paste into your next project.
-                  All snippets crafted with Tailwind CSS for easy integration.
-                </p>
-                <div className="flex items-center justify-center gap-4">
-                  <ButtonEffect href="https://github.com/Luancss" />
-                </div>
-                <Navbar />
-              </div>
+            <div className="flex flex-col gap-y-10 items-center text-center m-auto z-20 mb-16">
               {children}
             </div>
           </div>
