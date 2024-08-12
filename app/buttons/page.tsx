@@ -1,8 +1,7 @@
-import Meteor from "@/components/Meteor";
-import React from "react";
-
-const page = () => {
-  return <Meteor />;
+export const page = () => {
+  return (
+    <p>s</p>
+  )
 };
 
 export default page;

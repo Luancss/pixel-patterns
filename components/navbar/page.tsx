@@ -9,7 +9,7 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex gap-x-4 mt-7 mb-10">
+    <div className="flex gap-x-4 mt-7 mb-10 slide-in-down">
       <Button
         asChild
         className={cn(

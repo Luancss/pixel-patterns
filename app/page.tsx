@@ -1,6 +1,7 @@
-import Meteor from "@/components/Meteor";
+import Meteor from "@/components/meteor";
 import { RamdonCards } from "./(ramdom-cards)/cards";
 import HeroSection from "@/components/hero-section";
+
 
 export default function Home() {
   return (
@@ -11,7 +12,6 @@ export default function Home() {
         description="Ready-to-use, simply copy and paste into your next project. All snippets
         crafted with Tailwind CSS for easy integration."
       />
-
       <RamdonCards />
     </>
   );
