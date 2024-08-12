@@ -1,8 +1,6 @@
 import Meteor from "@/components/meteor";
 import { RamdonCards } from "./(ramdom-cards)/cards";
 import HeroSection from "@/components/hero-section";
-
-
 export default function Home() {
   return (
     <>
