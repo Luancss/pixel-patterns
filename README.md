@@ -6,9 +6,9 @@
 
 ---
 
-O Pixel Pattern é um projeto voltado para desenvolvedores que visa simplificar a integração de componentes CSS e Tailwind em seus projetos. A aplicação permite que você copie componentes prontos com apenas um clique, facilitando a estilização e a construção de interfaces de forma rápida e eficiente.
+O Pixel Patterns é um projeto voltado para desenvolvedores que visa simplificar a integração de componentes CSS e Tailwind em seus projetos. A aplicação permite que você copie componentes prontos com apenas um clique, facilitando a estilização e a construção de interfaces de forma rápida e eficiente.
 
-Este projeto open source não só oferece uma biblioteca inicial de componentes, mas também permite que a comunidade contribua com seus próprios componentes. Com uma interface intuitiva e funcionalidades em constante expansão, o Pixel Pattern é ideal para quem busca uma maneira prática de melhorar o desenvolvimento front-end.
+Este projeto open source não só oferece uma biblioteca inicial de componentes, mas também permite que a comunidade contribua com seus próprios componentes. Com uma interface intuitiva e funcionalidades em constante expansão, o Pixel Patterns é ideal para quem busca uma maneira prática de melhorar o desenvolvimento front-end.
 
 **Objetivos**:
   - Facilitar o uso de componentes CSS e Tailwind com um clique para copiar
