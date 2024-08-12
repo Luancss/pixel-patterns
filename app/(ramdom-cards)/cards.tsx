@@ -3,15 +3,7 @@ import { Card } from "@/components/cards/card";
 export const RamdonCards = () => {
   const cardsToLeft = [
     <Card
-      background="bg-red-300"
-      content={
-        <button className="bg-red-950 text-red-400 border border-red-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
-          <span className="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-          Hover Me
-        </button>
-      }
-    />,
-    <Card
+      information="Tailwind"
       iconColor="#fff"
       background="bg-gradient-to-r from-green-950"
       content={
@@ -41,6 +33,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      information="Tailwind"
       iconColor="#fff"
       background="bg-slate-900"
       content={
@@ -154,6 +147,347 @@ export const RamdonCards = () => {
     />,
     <Card
       iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-r from-yellow-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+        <button class="amogus-btn">
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 36 36"
+  width="36px"
+  height="36px"
+  >
+  <rect width="36" height="36" x="0" y="0" fill="#fdd835"></rect>
+  <path
+    fill="#e53935"
+    d="M38.67,42H11.52C11.27,40.62,11,38.57,11,36c0-5,0-11,0-11s1.44-7.39,3.22-9.59 c1.67-2.06,2.76-3.48,6.78-4.41c3-0.7,7.13-0.23,9,1c2.15,1.42,3.37,6.67,3.81,11.29c1.49-0.3,5.21,0.2,5.5,1.28 C40.89,30.29,39.48,38.31,38.67,42z"
+  ></path>
+  <path
+    fill="#b71c1c"
+    d="M39.02,42H11.99c-0.22-2.67-0.48-7.05-0.49-12.72c0.83,4.18,1.63,9.59,6.98,9.79 c3.48,0.12,8.27,0.55,9.83-2.45c1.57-3,3.72-8.95,3.51-15.62c-0.19-5.84-1.75-8.2-2.13-8.7c0.59,0.66,3.74,4.49,4.01,11.7 c0.03,0.83,0.06,1.72,0.08,2.66c4.21-0.15,5.93,1.5,6.07,2.35C40.68,33.85,39.8,38.9,39.02,42z"
+  ></path>
+  <path
+    fill="#212121"
+    d="M35,27.17c0,3.67-0.28,11.2-0.42,14.83h-2C32.72,38.42,33,30.83,33,27.17 c0-5.54-1.46-12.65-3.55-14.02c-1.65-1.08-5.49-1.48-8.23-0.85c-3.62,0.83-4.57,1.99-6.14,3.92L15,16.32 c-1.31,1.6-2.59,6.92-3,8.96v10.8c0,2.58,0.28,4.61,0.54,5.92H10.5c-0.25-1.41-0.5-3.42-0.5-5.92l0.02-11.09 c0.15-0.77,1.55-7.63,3.43-9.94l0.08-0.09c1.65-2.03,2.96-3.63,7.25-4.61c3.28-0.76,7.67-0.25,9.77,1.13 C33.79,13.6,35,22.23,35,27.17z"
+  ></path>
+  <path
+    fill="#01579b"
+    d="M17.165,17.283c5.217-0.055,9.391,0.283,9,6.011c-0.391,5.728-8.478,5.533-9.391,5.337 c-0.913-0.196-7.826-0.043-7.696-5.337C9.209,18,13.645,17.32,17.165,17.283z"
+  ></path>
+  <path
+    fill="#212121"
+    d="M40.739,37.38c-0.28,1.99-0.69,3.53-1.22,4.62h-2.43c0.25-0.19,1.13-1.11,1.67-4.9 c0.57-4-0.23-11.79-0.93-12.78c-0.4-0.4-2.63-0.8-4.37-0.89l0.1-1.99c1.04,0.05,4.53,0.31,5.71,1.49 C40.689,24.36,41.289,33.53,40.739,37.38z"
+  ></path>
+  <path
+    fill="#81d4fa"
+    d="M10.154,20.201c0.261,2.059-0.196,3.351,2.543,3.546s8.076,1.022,9.402-0.554 c1.326-1.576,1.75-4.365-0.891-5.267C19.336,17.287,12.959,16.251,10.154,20.201z"
+  ></path>
+  <path
+    fill="#212121"
+    d="M17.615,29.677c-0.502,0-0.873-0.03-1.052-0.069c-0.086-0.019-0.236-0.035-0.434-0.06 c-5.344-0.679-8.053-2.784-8.052-6.255c0.001-2.698,1.17-7.238,8.986-7.32l0.181-0.002c3.444-0.038,6.414-0.068,8.272,1.818 c1.173,1.191,1.712,3,1.647,5.53c-0.044,1.688-0.785,3.147-2.144,4.217C22.785,29.296,19.388,29.677,17.615,29.677z M17.086,17.973 c-7.006,0.074-7.008,4.023-7.008,5.321c-0.001,3.109,3.598,3.926,6.305,4.27c0.273,0.035,0.48,0.063,0.601,0.089 c0.563,0.101,4.68,0.035,6.855-1.732c0.865-0.702,1.299-1.57,1.326-2.653c0.051-1.958-0.301-3.291-1.073-4.075 c-1.262-1.281-3.834-1.255-6.825-1.222L17.086,17.973z"
+  ></path>
+  <path
+    fill="#e1f5fe"
+    d="M15.078,19.043c1.957-0.326,5.122-0.529,4.435,1.304c-0.489,1.304-7.185,2.185-7.185,0.652 C12.328,19.467,15.078,19.043,15.078,19.043z"
+  ></path>
+</svg>
+<span class="imposter">now!</span>
+<span class="crewmate">play</span>
+</button>
+<style>
+.amogus-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  color: white;
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: solid 2px black;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: hsl(49deg 98% 60%);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.amogus-btn:active {
+  transform: scale(0.9);
+  transition: all 100ms ease;
+}
+
+.amogus-btn svg {
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.crewmate {
+  transition: all 0.5s ease;
+  transition-delay: 300ms;
+}
+
+.amogus-btn:hover svg {
+  transform: scale(3) translate(50%);
+}
+
+.imposter {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.amogus-btn:hover .imposter {
+  transform: translateX(10px);
+  transition-delay: 300ms;
+}
+
+.amogus-btn:hover .crewmate {
+  transform: translateX(200%);
+  transition-delay: 300ms;
+}
+</style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-l from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+        <div class="sus-boxes-1a2b">
+            <div class="sus-box-1a2b">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sus-box-1a2b">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sus-box-1a2b">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sus-box-1a2b">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <style>
+          .sus-boxes-1a2b {
+            --size: 32px;
+            --duration: 800ms;
+            height: calc(var(--size) * 2);
+            width: calc(var(--size) * 3);
+            position: relative;
+            transform-style: preserve-3d;
+            transform-origin: 50% 50%;
+            margin-top: calc(var(--size) * 1.5 * -1);
+            transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b {
+            width: var(--size);
+            height: var(--size);
+            top: 0;
+            left: 0;
+            position: absolute;
+            transform-style: preserve-3d;
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b:nth-child(1) {
+            transform: translate(100%, 0);
+            -webkit-animation: sus-box1-1a2b var(--duration) linear infinite;
+            animation: sus-box1-1a2b var(--duration) linear infinite;
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b:nth-child(2) {
+            transform: translate(0, 100%);
+            -webkit-animation: sus-box2-1a2b var(--duration) linear infinite;
+            animation: sus-box2-1a2b var(--duration) linear infinite;
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b:nth-child(3) {
+            transform: translate(100%, 100%);
+            -webkit-animation: sus-box3-1a2b var(--duration) linear infinite;
+            animation: sus-box3-1a2b var(--duration) linear infinite;
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b:nth-child(4) {
+            transform: translate(200%, 0);
+            -webkit-animation: sus-box4-1a2b var(--duration) linear infinite;
+            animation: sus-box4-1a2b var(--duration) linear infinite;
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b > div {
+            --background: #5C8DF6;
+            --top: auto;
+            --right: auto;
+            --bottom: auto;
+            --left: auto;
+            --translateZ: calc(var(--size) / 2);
+            --rotateY: 0deg;
+            --rotateX: 0deg;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            top: var(--top);
+            right: var(--right);
+            bottom: var(--bottom);
+            left: var(--left);
+            transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b > div:nth-child(1) {
+            --top: 0;
+            --left: 0;
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b > div:nth-child(2) {
+            --background: #145af2;
+            --right: 0;
+            --rotateY: 90deg;
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b > div:nth-child(3) {
+            --background: #447cf5;
+            --rotateX: -90deg;
+          }
+
+          .sus-boxes-1a2b .sus-box-1a2b > div:nth-child(4) {
+            --background: #DBE3F4;
+            --top: 0;
+            --left: 0;
+            --translateZ: calc(var(--size) * 3 * -1);
+          }
+
+          @-webkit-keyframes sus-box1-1a2b {
+            0%, 50% {
+              transform: translate(100%, 0);
+            }
+
+            100% {
+              transform: translate(200%, 0);
+            }
+          }
+
+          @keyframes sus-box1-1a2b {
+            0%, 50% {
+              transform: translate(100%, 0);
+            }
+
+            100% {
+              transform: translate(200%, 0);
+            }
+          }
+
+          @-webkit-keyframes sus-box2-1a2b {
+            0% {
+              transform: translate(0, 100%);
+            }
+
+            50% {
+              transform: translate(0, 0);
+            }
+
+            100% {
+              transform: translate(100%, 0);
+            }
+          }
+
+          @keyframes sus-box2-1a2b {
+            0% {
+              transform: translate(0, 100%);
+            }
+
+            50% {
+              transform: translate(0, 0);
+            }
+
+            100% {
+              transform: translate(100%, 0);
+            }
+          }
+
+          @-webkit-keyframes sus-box3-1a2b {
+            0%, 50% {
+              transform: translate(100%, 100%);
+            }
+
+            100% {
+              transform: translate(0, 100%);
+            }
+          }
+
+          @keyframes sus-box3-1a2b {
+            0%, 50% {
+              transform: translate(100%, 100%);
+            }
+
+            100% {
+              transform: translate(0, 100%);
+            }
+          }
+
+          @-webkit-keyframes sus-box4-1a2b {
+            0% {
+              transform: translate(200%, 0);
+            }
+
+            50% {
+              transform: translate(200%, 100%);
+            }
+
+            100% {
+              transform: translate(100%, 100%);
+            }
+          }
+
+          @keyframes sus-box4-1a2b {
+            0% {
+              transform: translate(200%, 0);
+            }
+
+            50% {
+              transform: translate(200%, 100%);
+            }
+
+            100% {
+              transform: translate(100%, 100%);
+            }
+          }
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      information="Tailwind"
+      iconColor="#fff"
       background="bg-gradient-to-l from-slate-950"
       content={
         <button className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
@@ -176,6 +510,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      information="Tailwind"
       iconColor="#fff"
       background="bg-[#000]"
       content={
@@ -214,199 +549,110 @@ export const RamdonCards = () => {
         </div>
       }
     />,
-    <Card
-      background="bg-[#fff]"
-      content={
-        <div className="flex flex-col bg-white rounded-3xl">
-          <div className="px-6 py-8 sm:p-10 sm:pb-6">
-            <div className="grid items-center justify-center w-full grid-cols-1 text-left">
-              <div>
-                <h2 className="text-lg font-medium tracking-tighter text-gray-600 lg:text-3xl">
-                  Starter
-                </h2>
-                <p className="mt-2 text-sm text-gray-500">
-                  Suitable to grow steadily.
-                </p>
-              </div>
-              <div className="mt-6">
-                <p>
-                  <span className="text-5xl font-light tracking-tight text-black">
-                    $25
-                  </span>
-                  <span className="text-base font-medium text-gray-500">
-                    {" "}
-                    /mo{" "}
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="flex px-6 pb-8 sm:px-8">
-            <a
-              aria-describedby="tier-company"
-              className="flex items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
-              href="#"
-            >
-              Get started
-            </a>
-          </div>
-        </div>
-      }
-    />,
-    <Card
-      iconColor="#fff"
-      background="bg-[#1f1f1f]"
-      content={
-        <button className="border text-gray-50  duration-300 relative group cursor-pointer   overflow-hidden h-16 w-48 rounded-md bg-neutral-800 p-2  font-extrabold hover:bg-sky-700">
-          <div className="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-16 h-16 rounded-full group-hover:scale-150  duration-700 right-12 top-12 bg-yellow-500"></div>
-          <div className="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-12 h-12 rounded-full group-hover:scale-150  duration-700 right-20 -top-6 bg-orange-500"></div>
-          <div className="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-8 h-8   rounded-full group-hover:scale-150  duration-700 right-32 top-6 bg-pink-500"></div>
-          <div className="absolute group-hover:-top-1 group-hover:-right-2 z-10 w-4 h-4   rounded-full group-hover:scale-150  duration-700 right-2 top-12 bg-red-600"></div>
-          <p className="z-10 absolute bottom-2 left-2">See more</p>
-        </button>
-      }
-    />,
-    <Card
-      iconColor="#fff"
-      background="bg-[#212730]"
-      content={
-        /* From Uiverse.io by catraco */
-        <div className="bg-slate-800 border border-slate-700 grid grid-cols-6 gap-2 rounded-xl p-2 text-sm">
-          <h1 className="text-center text-slate-600 text-xl font-bold col-span-6">
-            Send Feedback
-          </h1>
-          <textarea
-            className="bg-slate-700 text-slate-300 h-28 placeholder:text-slate-300 placeholder:opacity-50 border border-slate-600 col-span-6 resize-none outline-none rounded-lg p-2 duration-300 focus:border-slate-300"
-            placeholder="Your feedback..."
-          ></textarea>
-          <p className="fill-slate-300 col-span-1 flex justify-center items-center rounded-lg p-2 duration-300 bg-slate-700 hover:border-slate-300 focus:fill-blue-200 focus:bg-blue-600 border border-slate-600">
-            <svg
-              viewBox="0 0 512 512"
-              height="20px"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path>
-            </svg>
-          </p>
-          <p className="fill-slate-300 col-span-1 flex justify-center items-center rounded-lg p-2 duration-300 bg-slate-700 hover:border-slate-300 focus:fill-blue-200 focus:bg-blue-600 border border-slate-600">
-            <svg
-              viewBox="0 0 512 512"
-              height="20px"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM174.6 384.1c-4.5 12.5-18.2 18.9-30.7 14.4s-18.9-18.2-14.4-30.7C146.9 319.4 198.9 288 256 288s109.1 31.4 126.6 79.9c4.5 12.5-2 26.2-14.4 30.7s-26.2-2-30.7-14.4C328.2 358.5 297.2 336 256 336s-72.2 22.5-81.4 48.1zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path>
-            </svg>
-          </p>
-          <span className="col-span-2"></span>
-          <p className="col-span-2 stroke-slate-300 bg-slate-700 focus:stroke-blue-200 focus:bg-blue-600 border border-slate-600 hover:border-slate-300 rounded-lg p-2 duration-300 flex justify-center items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30px"
-              height="30px"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M7.39999 6.32003L15.89 3.49003C19.7 2.22003 21.77 4.30003 20.51 8.11003L17.68 16.6C15.78 22.31 12.66 22.31 10.76 16.6L9.91999 14.08L7.39999 13.24C1.68999 11.34 1.68999 8.23003 7.39999 6.32003Z"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-              <path
-                d="M10.11 13.6501L13.69 10.0601"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </p>
-        </div>
-      }
-    />,
   ];
 
   const cardsToRight = [
     <Card
+      information="Css"
       iconColor="#fff"
-      background="bg-gradient-to-r from-gray-600"
+      background="bg-gradient-to-b from-zinc-950"
       content={
-        <div className="flex flex-col gap-3">
-          <button className="cursor-pointer">
-            <div className="flex max-w-48 h-12 px-3 gap-2 rounded-xl items-center justify-center bg-black text-white dark:text-black dark:bg-white sm:h-14">
-              <svg viewBox="30 336.7 120.9 129.2" className="w-5 sm:w-7">
-                <path
-                  d="M119.2,421.2c15.3-8.4,27-14.8,28-15.3c3.2-1.7,6.5-6.2,0-9.7  c-2.1-1.1-13.4-7.3-28-15.3l-20.1,20.2L119.2,421.2z"
-                  fill="#FFD400"
-                ></path>
-                <path
-                  d="M99.1,401.1l-64.2,64.7c1.5,0.2,3.2-0.2,5.2-1.3  c4.2-2.3,48.8-26.7,79.1-43.3L99.1,401.1L99.1,401.1z"
-                  fill="#FF3333"
-                ></path>
-                <path
-                  d="M99.1,401.1l20.1-20.2c0,0-74.6-40.7-79.1-43.1  c-1.7-1-3.6-1.3-5.3-1L99.1,401.1z"
-                  fill="#48FF48"
-                ></path>
-                <path
-                  d="M99.1,401.1l-64.3-64.3c-2.6,0.6-4.8,2.9-4.8,7.6  c0,7.5,0,107.5,0,113.8c0,4.3,1.7,7.4,4.9,7.7L99.1,401.1z"
-                  fill="#3BCCFF"
-                ></path>
-              </svg>
-              <div>
-                <div className="text-[.5rem] sm:text-xs text-left">
-                  GET IT ON
-                </div>
-                <div className="text-sm font-semibold font-sans -mt-1 sm:text-xl">
-                  Google Play
-                </div>
-              </div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+            <div class="wave-group">
+              <input required="" type="text" class="input">
+              <span class="bar"></span>
+              <label class="label">
+                <span class="label-char" style="--index: 0">N</span>
+                <span class="label-char" style="--index: 1">a</span>
+                <span class="label-char" style="--index: 2">m</span>
+                <span class="label-char" style="--index: 3">e</span>
+              </label>
             </div>
-          </button>
+            <style>
+            .wave-group {
+              position: relative;
+            }
 
-          <button className="cursor-pointer">
-            <div className="flex max-w-48 h-12 px-3 gap-2 rounded-xl items-center justify-center bg-black text-white dark:text-black dark:bg-white sm:gap-3 sm:h-14">
-              <svg viewBox="0 0 384 512" className="w-5 sm:w-7">
-                <path
-                  d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-              <div>
-                <div className="text-[.5rem] sm:text-xs text-left">
-                  Download on the
-                </div>
-                <div className="text-lg font-semibold font-sans -mt-1 sm:text-2xl">
-                  App Store
-                </div>
-              </div>
-            </div>
-          </button>
+            .wave-group .input {
+              font-size: 16px;
+              padding: 10px 10px 10px 5px;
+              display: block;
+              width: 200px;
+              border: none;
+              border-bottom: 1px solid #515151;
+              background: transparent;
+            }
 
-          <button className="cursor-pointer">
-            <div className="flex max-w-48 h-12 px-3 py-4 gap-2 rounded-xl items-center justify-center bg-black text-white dark:text-black dark:bg-white sm:h-14">
-              <svg viewBox="0 0 16 16" className="w-5 sm:w-7">
-                <path
-                  fill="currentColor"
-                  d="m10.213 1.471l.691-1.26q.069-.124-.048-.192q-.128-.057-.195.058l-.7 1.27A4.8 4.8 0 0 0 8.005.941q-1.032 0-1.956.404l-.7-1.27Q5.281-.037 5.154.02q-.117.069-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.7 3.7 0 0 0 3.5 5.02h9q0-1.125-.623-2.072a4.27 4.27 0 0 0-1.664-1.476ZM6.22 3.303a.37.37 0 0 1-.267.11a.35.35 0 0 1-.263-.11a.37.37 0 0 1-.107-.264a.37.37 0 0 1 .107-.265a.35.35 0 0 1 .263-.11q.155 0 .267.11a.36.36 0 0 1 .112.265a.36.36 0 0 1-.112.264m4.101 0a.35.35 0 0 1-.262.11a.37.37 0 0 1-.268-.11a.36.36 0 0 1-.112-.264q0-.154.112-.265a.37.37 0 0 1 .268-.11q.155 0 .262.11a.37.37 0 0 1 .107.265q0 .153-.107.264M3.5 11.77q0 .441.311.75q.311.306.76.307h.758l.01 2.182q0 .414.292.703a.96.96 0 0 0 .7.288a.97.97 0 0 0 .71-.288a.95.95 0 0 0 .292-.703v-2.182h1.343v2.182q0 .414.292.703a.97.97 0 0 0 .71.288a.97.97 0 0 0 .71-.288a.95.95 0 0 0 .292-.703v-2.182h.76q.436 0 .749-.308q.31-.307.311-.75V5.365h-9zm10.495-6.587a.98.98 0 0 0-.702.278a.9.9 0 0 0-.293.685v4.063q0 .406.293.69a.97.97 0 0 0 .702.284q.42 0 .712-.284a.92.92 0 0 0 .293-.69V6.146a.9.9 0 0 0-.293-.685a1 1 0 0 0-.712-.278m-12.702.283a1 1 0 0 1 .712-.283q.41 0 .702.283a.9.9 0 0 1 .293.68v4.063a.93.93 0 0 1-.288.69a.97.97 0 0 1-.707.284a1 1 0 0 1-.712-.284a.92.92 0 0 1-.293-.69V6.146q0-.396.293-.68"
-                ></path>
-              </svg>
-              <div>
-                <div className="text-[.5rem] sm:text-xs text-left">
-                  Download
-                </div>
-                <div className="text-sm font-semibold font-sans -mt-1 sm:text-xl">
-                  Android APK
-                </div>
-              </div>
-            </div>
-          </button>
-        </div>
+            .wave-group .input:focus {
+              outline: none;
+            }
+
+            .wave-group .label {
+              color: #999;
+              font-size: 18px;
+              font-weight: normal;
+              position: absolute;
+              pointer-events: none;
+              left: 5px;
+              top: 10px;
+              display: flex;
+            }
+
+            .wave-group .label-char {
+              transition: 0.2s ease all;
+              transition-delay: calc(var(--index) * .05s);
+            }
+
+            .wave-group .input:focus ~ label .label-char,
+            .wave-group .input:valid ~ label .label-char {
+              transform: translateY(-20px);
+              font-size: 14px;
+              color: #5264AE;
+            }
+
+            .wave-group .bar {
+              position: relative;
+              display: block;
+              width: 200px;
+            }
+
+            .wave-group .bar:before,.wave-group .bar:after {
+              content: '';
+              height: 2px;
+              width: 0;
+              bottom: 1px;
+              position: absolute;
+              background: #5264AE;
+              transition: 0.2s ease all;
+              -moz-transition: 0.2s ease all;
+              -webkit-transition: 0.2s ease all;
+            }
+
+            .wave-group .bar:before {
+              left: 50%;
+            }
+
+            .wave-group .bar:after {
+              right: 50%;
+            }
+
+            .wave-group .input:focus ~ .bar:before,
+            .wave-group .input:focus ~ .bar:after {
+              width: 50%;
+            }
+            </style>
+          `,
+          }}
+        />
       }
     />,
     <Card
-      iconColor="#fff"
-      background="bg-gradient-to-r from-neutral-200 to-neutral-500"
+      information="Tailwind"
+      iconColor="#000"
+      background="bg-gradient-to-r from-neutral-950"
       content={
-        /* From Uiverse.io by themrsami */
         <div className="flex justify-around gap-4 items-center px-4 py-1 bg-black rounded-[15px] ring-1 ring-white">
           <div className="relative group hover:cursor-pointer hover:bg-slate-800 p-2 rounded-full transition-all duration-500">
             <svg
@@ -506,6 +752,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      information="Css"
       iconColor="#fff"
       background="bg-[#000] to-neutral-500"
       content={
@@ -909,6 +1156,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      information="Css"
       background="bg-gradient-to-r from-slate-950 to-slate-900"
       iconColor="#fff"
       content={
@@ -1046,6 +1294,7 @@ export const RamdonCards = () => {
       }
     />,
     <Card
+      information="Css"
       iconColor="#fff"
       background="#242424"
       content={
@@ -1105,8 +1354,8 @@ export const RamdonCards = () => {
         />
       }
     />,
-
     <Card
+      information="Css"
       iconColor="#fff"
       background="bg-gradient-to-r from-slate-950"
       content={
@@ -1297,6 +1546,718 @@ export const RamdonCards = () => {
     />,
   ];
 
+  const cardsToLeft_TwoColumn = [
+    <Card
+      information="Css"
+      iconColor="#fff"
+      background="bg-[#000]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+          <label class="sus-hamburger-1a2b">
+            <input type="checkbox">
+            <svg viewBox="0 0 32 32">
+              <path class="sus-line-1a2b sus-line-top-bottom-1a2b" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="sus-line-1a2b" d="M7 16 27 16"></path>
+            </svg>
+          </label>
+          <style>
+            .sus-hamburger-1a2b {
+              cursor: pointer;
+            }
+
+            .sus-hamburger-1a2b input {
+              display: none;
+            }
+
+            .sus-hamburger-1a2b svg {
+              height: 3em;
+              transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .sus-line-1a2b {
+              fill: none;
+              stroke: white;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 3;
+              transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                          stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .sus-line-top-bottom-1a2b {
+              stroke-dasharray: 12 63;
+            }
+
+            .sus-hamburger-1a2b input:checked + svg {
+              transform: rotate(-45deg);
+            }
+
+            .sus-hamburger-1a2b input:checked + svg .sus-line-top-bottom-1a2b {
+              stroke-dasharray: 20 300;
+              stroke-dashoffset: -32.42;
+            }
+          </style>
+        `,
+          }}
+        />
+      }
+    />,
+    <Card
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-t from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+            <div class="unique-container-abc123">
+              <div class="unique-radio-wrapper-def456">
+                <input class="unique-input-ghi789" name="btn" id="unique-value-1" type="radio">
+                <div class="unique-btn-jkl012">
+                  <span aria-hidden="">_</span>Cyber
+                  <span class="unique-btn__glitch-mno345" aria-hidden="">_Cyber🦾</span>
+                  <label class="unique-number-pqr678">r1</label>
+                </div>
+              </div>
+              <div class="unique-radio-wrapper-stu901">
+                <input class="unique-input-vwx234" name="btn" id="unique-value-2" checked="true" type="radio">
+                <div class="unique-btn-yza567">
+                  _Radio<span aria-hidden="">_</span>
+                  <span class="unique-btn__glitch-bcd890" aria-hidden="">_R_a_d_i_o_</span>
+                  <label class="unique-number-efg123">r2</label>
+                </div>
+              </div>
+              <div class="unique-radio-wrapper-hij456">
+                <input class="unique-input-klm789" name="btn" id="unique-value-3" type="radio">
+                <div class="unique-btn-nop012">
+                  Buttons<span aria-hidden=""></span>
+                  <span class="unique-btn__glitch-qrstuv" aria-hidden="">Buttons_</span>
+                  <label class="unique-number-wxy345">r3</label>
+                </div> 
+              </div>
+            </div>
+            <style>
+              .unique-container-abc123 {
+                display: flex;
+                flex-direction: row;
+              }
+  
+              .unique-radio-wrapper-def456, .unique-radio-wrapper-stu901, .unique-radio-wrapper-hij456 {
+                position: relative;
+                height: 38px;
+                width: 84px;
+                margin: 3px;
+              }
+  
+              .unique-radio-wrapper-def456 .unique-input-ghi789, 
+              .unique-radio-wrapper-stu901 .unique-input-vwx234,
+              .unique-radio-wrapper-hij456 .unique-input-klm789 {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                cursor: pointer;
+                z-index: 10;
+                opacity: 0;
+              }
+  
+              .unique-btn-jkl012, .unique-btn-yza567, .unique-btn-nop012 {
+                --primary: #ff184c;
+                --shadow-primary: #fded00;
+                --color: white;
+                --font-size: 9px;
+                --shadow-primary-hue: 180;
+                --shadow-secondary-hue: 60;
+                --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
+                --clip: polygon(11% 0, 95% 0, 100% 25%, 90% 90%, 95% 90%, 85% 90%, 85% 100%, 7% 100%, 0 80%);
+                --border: 5px;
+                --shimmy-distance: 5;
+                --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+                --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
+                --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+                --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+                --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+                --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+                --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+                color: var(--color);
+                text-transform: uppercase;
+                font-size: var(--font-size);
+                letter-spacing: 3px;
+                position: relative;
+                font-weight: 900;
+                width: 100%;
+                height: 100%;
+                line-height: 38px;
+                text-align: center;
+                transition: background 0.2s, 0.3s;
+              }
+  
+              .unique-input-ghi789:checked + .unique-btn-jkl012,
+              .unique-input-vwx234:checked + .unique-btn-yza567,
+              .unique-input-klm789:checked + .unique-btn-nop012 {
+                --primary: #8B00FF;
+                --shadow-primary: #00e572;
+              }
+  
+              .unique-input-ghi789:hover + .unique-btn-jkl012,
+              .unique-input-vwx234:hover + .unique-btn-yza567,
+              .unique-input-klm789:hover + .unique-btn-nop012 {
+                --primary: #cc133c;
+                --font-size: 11px;
+              }
+  
+              .unique-btn-jkl012:after, .unique-btn-yza567:after, .unique-btn-nop012:after,
+              .unique-btn-jkl012:before, .unique-btn-yza567:before, .unique-btn-nop012:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                clip-path: var(--clip);
+                z-index: -1;
+              }
+  
+              .unique-btn-jkl012:before {
+                background: var(--shadow-primary);
+                transform: translate(var(--border), 0);
+              }
+  
+              .unique-btn-yza567:before {
+                background: var(--shadow-primary);
+                transform: translate(var(--border), 0);
+              }
+  
+              .unique-btn-nop012:before {
+                background: var(--shadow-primary);
+                transform: translate(var(--border), 0);
+              }
+  
+              .unique-btn-jkl012:after {
+                background: var(--primary);
+              }
+  
+              .unique-btn-yza567:after {
+                background: var(--primary);
+              }
+  
+              .unique-btn-nop012:after {
+                background: var(--primary);
+              }
+  
+              .unique-btn__glitch-mno345,
+              .unique-btn__glitch-bcd890,
+              .unique-btn__glitch-qrstuv {
+                position: absolute;
+                top: calc(var(--border) * -1);
+                left: calc(var(--border) * -1);
+                right: calc(var(--border) * -1);
+                bottom: calc(var(--border) * -1);
+                background: var(--shadow-primary);
+                text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
+                clip-path: var(--clip);
+                animation: glitch 2s infinite;
+                display: none;
+              }
+  
+              .unique-input-ghi789:hover + .unique-btn-jkl012 .unique-btn__glitch-mno345,
+              .unique-input-vwx234:hover + .unique-btn-yza567 .unique-btn__glitch-bcd890,
+              .unique-input-klm789:hover + .unique-btn-nop012 .unique-btn__glitch-qrstuv {
+                display: block;
+              }
+  
+              .unique-input-ghi789:checked + .unique-btn-jkl012 .unique-btn__glitch-mno345,
+              .unique-input-vwx234:checked + .unique-btn-yza567 .unique-btn__glitch-bcd890,
+              .unique-input-klm789:checked + .unique-btn-nop012 .unique-btn__glitch-qrstuv {
+                display: block;
+                animation: glitch 5s infinite;
+              }
+  
+              .unique-btn__glitch-mno345:before,
+              .unique-btn__glitch-bcd890:before,
+              .unique-btn__glitch-qrstuv:before {
+                content: '';
+                position: absolute;
+                top: calc(var(--border) * 1);
+                right: calc(var(--border) * 1);
+                bottom: calc(var(--border) * 1);
+                left: calc(var(--border) * 1);
+                clip-path: var(--clip);
+                background: var(--primary);
+                z-index: -1;
+              }
+  
+              .unique-number-pqr678, .unique-number-efg123, .unique-number-wxy345 {
+                background: var(--shadow-primary);
+                color: #323232;
+                font-size: 5.5px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                position: absolute;
+                width: 15px;
+                height: 6px;
+                top: 0;
+                left: 81%;
+                line-height: 6.2px;
+              }
+  
+              @keyframes glitch {
+                0% {
+                  clip-path: var(--clip-one);
+                }
+  
+                2%, 8% {
+                  clip-path: var(--clip-two);
+                  transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+                }
+  
+                6% {
+                  clip-path: var(--clip-two);
+                  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+                }
+  
+                9% {
+                  clip-path: var(--clip-two);
+                  transform: translate(0, 0);
+                }
+  
+                10% {
+                  clip-path: var(--clip-three);
+                  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+                }
+  
+                13% {
+                  clip-path: var(--clip-three);
+                  transform: translate(0, 0);
+                }
+  
+                14%, 21% {
+                  clip-path: var(--clip-four);
+                  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+                }
+  
+                25% {
+                  clip-path: var(--clip-five);
+                  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+                }
+  
+                30% {
+                  clip-path: var(--clip-five);
+                  transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+                }
+  
+                35%, 45% {
+                  clip-path: var(--clip-six);
+                  transform: translate(calc(var(--shimmy-distance) * -1%));
+                }
+  
+                40% {
+                  clip-path: var(--clip-six);
+                  transform: translate(calc(var(--shimmy-distance) * 1%));
+                }
+  
+                50% {
+                  clip-path: var(--clip-six);
+                  transform: translate(0, 0);
+                }
+  
+                55% {
+                  clip-path: var(--clip-seven);
+                  transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+                }
+  
+                60% {
+                  clip-path: var(--clip-seven);
+                  transform: translate(0, 0);
+                }
+  
+                31%, 61%, 100% {
+                  clip-path: var(--clip-four);
+                }
+              }
+            </style>
+          `,
+          }}
+        />
+      }
+    />,
+    <Card
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-l from-gray-950 to-gray-900"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+        <div class="unique-wrapper-123">
+            <div class="unique-circle-001"></div>
+            <div class="unique-circle-002"></div>
+            <div class="unique-circle-003"></div>
+            <div class="unique-shadow-001"></div>
+            <div class="unique-shadow-002"></div>
+            <div class="unique-shadow-003"></div>
+        </div>
+        <style>
+        .unique-wrapper-123 {
+          width: 200px;
+          height: 60px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .unique-circle-001,
+        .unique-circle-002,
+        .unique-circle-003 {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          border-radius: 50%;
+          background-color: #fff;
+          left: 15%;
+          transform-origin: 50%;
+          animation: unique-circle-animation-001 .5s alternate infinite ease;
+        }
+
+        @keyframes unique-circle-animation-001 {
+          0% {
+            top: 60px;
+            height: 5px;
+            border-radius: 50px 50px 25px 25px;
+            transform: scaleX(1.7);
+          }
+
+          40% {
+            height: 20px;
+            border-radius: 50%;
+            transform: scaleX(1);
+          }
+
+          100% {
+            top: 0%;
+          }
+        }
+
+        .unique-circle-002 {
+          left: 45%;
+          animation-delay: .2s;
+        }
+
+        .unique-circle-003 {
+          left: auto;
+          right: 15%;
+          animation-delay: .3s;
+        }
+
+        .unique-shadow-001,
+        .unique-shadow-002,
+        .unique-shadow-003 {
+          width: 20px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: rgba(0,0,0,0.9);
+          position: absolute;
+          top: 62px;
+          transform-origin: 50%;
+          z-index: -1;
+          left: 15%;
+          filter: blur(1px);
+          animation: unique-shadow-animation-001 .5s alternate infinite ease;
+        }
+
+        @keyframes unique-shadow-animation-001 {
+          0% {
+            transform: scaleX(1.5);
+          }
+
+          40% {
+            transform: scaleX(1);
+            opacity: .7;
+          }
+
+          100% {
+            transform: scaleX(.2);
+            opacity: .4;
+          }
+        }
+
+        .unique-shadow-002 {
+          left: 45%;
+          animation-delay: .2s;
+        }
+
+        .unique-shadow-003 {
+          left: auto;
+          right: 15%;
+          animation-delay: .3s;
+        }
+
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      information="Css"
+      iconColor="#fff"
+      background="bg-[#000]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+          <div class="unique-card-abc">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+            <div class="unique-card-content-def">
+              <p class="unique-card-title-ghi">Card Title</p>
+              <p class="unique-card-description-jkl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <style>
+          .unique-card-abc {
+            position: relative;
+            width: 200px;
+            height: 170px;
+            background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+          }
+
+          .unique-card-abc svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+          }
+
+          .unique-card-abc:hover {
+            transform: rotate(-5deg) scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          }
+
+          .unique-card-content-def {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+          }
+
+          .unique-card-abc:hover .unique-card-content-def {
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 1;
+          }
+
+          .unique-card-title-ghi {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+          }
+
+          .unique-card-description-jkl {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+          }
+
+          .unique-card-abc:hover svg {
+            scale: 0;
+            transform: rotate(-45deg);
+          }
+
+          </style>
+        `,
+          }}
+        />
+      }
+    />,
+    <Card
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-r from-green-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+          <label class="switch-45987">
+              <input checked="" type="checkbox">
+              <div class="slider-45987">
+                  <div class="circle-45987">
+                      <svg class="cross-45987" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 365.696 365.696" y="0" x="0" height="6" width="6" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                              <path data-original="#000000" fill="currentColor" d="M243.188 182.86 356.32 69.726c12.5-12.5 12.5-32.766 0-45.247L341.238 9.398c-12.504-12.503-32.77-12.503-45.25 0L182.86 122.528 69.727 9.374c-12.5-12.5-32.766-12.5-45.247 0L9.375 24.457c-12.5 12.504-12.5 32.77 0 45.25l113.152 113.152L9.398 295.99c-12.503 12.503-12.503 32.769 0 45.25L24.48 356.32c12.5 12.5 32.766 12.5 45.247 0l113.132-113.132L295.99 356.32c12.503 12.5 32.769 12.5 45.25 0l15.081-15.082c12.5-12.504 12.5-32.77 0-45.25zm0 0"></path>
+                          </g>
+                      </svg>
+                      <svg class="checkmark-45987" xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0" height="10" width="10" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                              <path class="" data-original="#000000" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path>
+                          </g>
+                      </svg>
+                  </div>
+              </div>
+          </label>
+          <style>
+            /* Unique Styles */
+            .switch-45987 {
+              /* switch */
+              --switch-width: 46px;
+              --switch-height: 24px;
+              --switch-bg: rgb(131, 131, 131);
+              --switch-checked-bg: rgb(0, 218, 80);
+              --switch-offset: calc((var(--switch-height) - var(--circle-diameter)) / 2);
+              --switch-transition: all .2s cubic-bezier(0.27, 0.2, 0.25, 1.51);
+              /* circle */
+              --circle-diameter: 18px;
+              --circle-bg: #fff;
+              --circle-shadow: 1px 1px 2px rgba(146, 146, 146, 0.45);
+              --circle-checked-shadow: -1px 1px 2px rgba(163, 163, 163, 0.45);
+              --circle-transition: var(--switch-transition);
+              /* icon */
+              --icon-transition: all .2s cubic-bezier(0.27, 0.2, 0.25, 1.51);
+              --icon-cross-color: var(--switch-bg);
+              --icon-cross-size: 6px;
+              --icon-checkmark-color: var(--switch-checked-bg);
+              --icon-checkmark-size: 10px;
+              /* effect line */
+              --effect-width: calc(var(--circle-diameter) / 2);
+              --effect-height: calc(var(--effect-width) / 2 - 1px);
+              --effect-bg: var(--circle-bg);
+              --effect-border-radius: 1px;
+              --effect-transition: all .2s ease-in-out;
+            }
+
+            .switch-45987 input {
+              display: none;
+            }
+
+            .switch-45987 {
+              display: inline-block;
+            }
+
+            .switch-45987 svg {
+              -webkit-transition: var(--icon-transition);
+              -o-transition: var(--icon-transition);
+              transition: var(--icon-transition);
+              position: absolute;
+              height: auto;
+            }
+
+            .switch-45987 .checkmark-45987 {
+              width: var(--icon-checkmark-size);
+              color: var(--icon-checkmark-color);
+              -webkit-transform: scale(0);
+              -ms-transform: scale(0);
+              transform: scale(0);
+            }
+
+            .switch-45987 .cross-45987 {
+              width: var(--icon-cross-size);
+              color: var(--icon-cross-color);
+            }
+
+            .slider-45987 {
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              width: var(--switch-width);
+              height: var(--switch-height);
+              background: var(--switch-bg);
+              border-radius: 999px;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              position: relative;
+              -webkit-transition: var(--switch-transition);
+              -o-transition: var(--switch-transition);
+              transition: var(--switch-transition);
+              cursor: pointer;
+            }
+
+            .circle-45987 {
+              width: var(--circle-diameter);
+              height: var(--circle-diameter);
+              background: var(--circle-bg);
+              border-radius: inherit;
+              -webkit-box-shadow: var(--circle-shadow);
+              box-shadow: var(--circle-shadow);
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-transition: var(--circle-transition);
+              -o-transition: var(--circle-transition);
+              transition: var(--circle-transition);
+              z-index: 1;
+              position: absolute;
+              left: var(--switch-offset);
+            }
+
+            .slider-45987::before {
+              content: "";
+              position: absolute;
+              width: var(--effect-width);
+              height: var(--effect-height);
+              left: calc(var(--switch-offset) + (var(--effect-width) / 2));
+              background: var(--effect-bg);
+              border-radius: var(--effect-border-radius);
+              -webkit-transition: var(--effect-transition);
+              -o-transition: var(--effect-transition);
+              transition: var(--effect-transition);
+            }
+
+            /* actions */
+            .switch-45987 input:checked+.slider-45987 {
+              background: var(--switch-checked-bg);
+            }
+
+            .switch-45987 input:checked+.slider-45987 .checkmark-45987 {
+              -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+              transform: scale(1);
+            }
+
+            .switch-45987 input:checked+.slider-45987 .cross-45987 {
+              -webkit-transform: scale(0);
+              -ms-transform: scale(0);
+              transform: scale(0);
+            }
+
+            .switch-45987 input:checked+.slider-45987::before {
+              left: calc(100% - var(--effect-width) - (var(--effect-width) / 2) - var(--switch-offset));
+            }
+
+            .switch-45987 input:checked+.slider-45987 .circle-45987 {
+              left: calc(100% - var(--circle-diameter) - var(--switch-offset));
+              -webkit-box-shadow: var(--circle-checked-shadow);
+              box-shadow: var(--circle-checked-shadow);
+            }
+          </style>
+        `,
+          }}
+        />
+      }
+    />,
+  ];
+
   return (
     <div className="space-y-5 border-x-2">
       <div className="scroller" data-direction="left" data-speed="fast">
@@ -1313,8 +2274,8 @@ export const RamdonCards = () => {
       </div>
       <div className="scroller" data-direction="left" data-speed="fast">
         <div className="scroller__inner">
-          {cardsToLeft}
-          {cardsToLeft}
+          {cardsToLeft_TwoColumn}
+          {cardsToLeft_TwoColumn}
         </div>
       </div>
     </div>
