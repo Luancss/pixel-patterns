@@ -15,7 +15,7 @@ import {
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 
-const itemsPerPage = 16; 
+const itemsPerPage = 16;
 
 const CardsButton = () => {
   const [filter, setFilter] = useState("All");
@@ -943,6 +943,506 @@ const CardsButton = () => {
         </button>
       }
     />,
+    <Card
+      key={generateKey()}
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-t from-cyan-950/60"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+        <button class="btn-unique-hover-effect-8392jklm"> Hover me </button>
+        <style>
+          .btn-unique-hover-effect-8392jklm {
+          padding: 0.8em 1.8em;
+          border: 2px solid #17C3B2;
+          position: relative;
+          overflow: hidden;
+          background-color: transparent;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 16px;
+          transition: .3s;
+          z-index: 1;
+          font-family: inherit;
+          color: #17C3B2;
+          }
+
+          .btn-unique-hover-effect-8392jklm::before {
+          content: '';
+          width: 0;
+          height: 300%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          background: #17C3B2;
+          transition: .5s ease;
+          display: block;
+          z-index: -1;
+          }
+
+          .btn-unique-hover-effect-8392jklm:hover::before {
+          width: 105%;
+          }
+
+          .btn-unique-hover-effect-8392jklm:hover {
+          color: #111;
+          }
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-t from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+      <button class="btn-hover-effect-4782fghj"> Button </button>
+      <style>
+        .btn-hover-effect-4782fghj {
+          position: relative;
+          padding: 10px 20px;
+          border-radius: 7px;
+          border: 1px solid rgb(61, 106, 255);
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 2px;
+          background: transparent;
+          color: #fff;
+          overflow: hidden;
+          box-shadow: 0 0 0 0 transparent;
+          -webkit-transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+        }
+
+        .btn-hover-effect-4782fghj:hover {
+          background: rgb(61, 106, 255);
+          box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+          -webkit-transition: all 0.2s ease-out;
+          -moz-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+        }
+
+        .btn-hover-effect-4782fghj:hover::before {
+          -webkit-animation: sh02 0.5s 0s linear;
+          -moz-animation: sh02 0.5s 0s linear;
+          animation: sh02 0.5s 0s linear;
+        }
+
+        .btn-hover-effect-4782fghj::before {
+          content: '';
+          display: block;
+          width: 0px;
+          height: 86%;
+          position: absolute;
+          top: 7%;
+          left: 0%;
+          opacity: 0;
+          background: #fff;
+          box-shadow: 0 0 50px 30px #fff;
+          -webkit-transform: skewX(-20deg);
+          -moz-transform: skewX(-20deg);
+          -ms-transform: skewX(-20deg);
+          -o-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+        }
+
+        @keyframes sh02 {
+          from {
+            opacity: 0;
+            left: 0%;
+          }
+
+          50% {
+            opacity: 1;
+          }
+
+          to {
+            opacity: 0;
+            left: 100%;
+          }
+        }
+
+        .btn-hover-effect-4782fghj:active {
+          box-shadow: 0 0 0 0 transparent;
+          -webkit-transition: box-shadow 0.2s ease-in;
+          -moz-transition: box-shadow 0.2s ease-in;
+          transition: box-shadow 0.2s ease-in;
+        }
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-l from-blue-700/40"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+      <button class="space-btn" type="button">
+        <strong class="space-text">SPACE</strong>
+        <div class="stars-container">
+          <div class="stars"></div>
+        </div>
+        <div class="glow-effect">
+          <div class="glow-circle glow-circle1"></div>
+          <div class="glow-circle glow-circle2"></div>
+        </div>
+      </button>
+      <style>
+        .space-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 13rem;
+          height: 3rem;
+          background-size: 300% 300%;
+          cursor: pointer;
+          backdrop-filter: blur(1rem);
+          border-radius: 5rem;
+          transition: 0.5s;
+          animation: gradientAnimation 5s ease infinite;
+          border: double 4px transparent;
+          background-image: linear-gradient(#212121, #212121),
+            linear-gradient(
+              137.48deg,
+              #ffdb3b 10%,
+              #fe53bb 45%,
+              #8f51ea 67%,
+              #0044ff 87%
+            );
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .stars-container {
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          transition: 0.5s;
+          backdrop-filter: blur(1rem);
+          border-radius: 5rem;
+        }
+
+        .space-text {
+          z-index: 2;
+          font-family: "Avalors Personal Use";
+          font-size: 12px;
+          letter-spacing: 5px;
+          color: #ffffff;
+          text-shadow: 0 0 4px white;
+        }
+
+        .glow-effect {
+          position: absolute;
+          display: flex;
+          width: 12rem;
+        }
+
+        .glow-circle {
+          width: 100%;
+          height: 30px;
+          filter: blur(2rem);
+          animation: pulseAnimation 4s infinite;
+          z-index: -1;
+        }
+
+        .glow-circle1 {
+          background: rgba(254, 83, 186, 0.636);
+        }
+
+        .glow-circle2 {
+          background: rgba(142, 81, 234, 0.704);
+        }
+
+        .space-btn:hover .stars-container {
+          z-index: 1;
+          background-color: #212121;
+        }
+
+        .space-btn:hover {
+          transform: scale(1.1);
+        }
+
+        .space-btn:active {
+          border: double 4px #fe53bb;
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+          animation: none;
+        }
+
+        .space-btn:active .glow-circle {
+          background: #fe53bb;
+        }
+
+        .stars {
+          position: relative;
+          background: transparent;
+          width: 200rem;
+          height: 200rem;
+        }
+
+        .stars::after {
+          content: "";
+          position: absolute;
+          top: -10rem;
+          left: -100rem;
+          width: 100%;
+          height: 100%;
+          animation: starRotateAnimation 90s linear infinite;
+          background-image: radial-gradient(#ffffff 1px, transparent 1%);
+          background-size: 50px 50px;
+        }
+
+        .stars::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -50%;
+          width: 170%;
+          height: 500%;
+          animation: starAnimation 60s linear infinite;
+          background-image: radial-gradient(#ffffff 1px, transparent 1%);
+          background-size: 50px 50px;
+          opacity: 0.5;
+        }
+
+        @keyframes starAnimation {
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(-135rem);
+          }
+        }
+
+        @keyframes starRotateAnimation {
+          from {
+            transform: rotate(360deg);
+          }
+          to {
+            transform: rotate(0);
+          }
+        }
+
+        @keyframes gradientAnimation {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        @keyframes pulseAnimation {
+          0% {
+            transform: scale(0.75);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+          }
+          70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+          }
+          100% {
+            transform: scale(0.75);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+          }
+        }
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      information="Tailwind"
+      iconColor="#fff"
+      background="bg-gradient-to-r from-sky-500 to-indigo-700/70"
+      content={
+        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 duration-500">
+          <div className="translate-y-0 opacity-100 transition group-hover:-translate-y-[150%] group-hover:opacity-0">
+            Hover me
+          </div>
+          <div className="absolute translate-y-[150%] opacity-0 transition group-hover:translate-y-0 group-hover:opacity-100">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+            >
+              <path
+                d="M7.5 2C7.77614 2 8 2.22386 8 2.5L8 11.2929L11.1464 8.14645C11.3417 7.95118 11.6583 7.95118 11.8536 8.14645C12.0488 8.34171 12.0488 8.65829 11.8536 8.85355L7.85355 12.8536C7.75979 12.9473 7.63261 13 7.5 13C7.36739 13 7.24021 12.9473 7.14645 12.8536L3.14645 8.85355C2.95118 8.65829 2.95118 8.34171 3.14645 8.14645C3.34171 7.95118 3.65829 7.95118 3.85355 8.14645L7 11.2929L7 2.5C7 2.22386 7.22386 2 7.5 2Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        </button>
+      }
+    />,
+    <Card
+      key={generateKey()}
+      information="Tailwind"
+      iconColor="#fff"
+      background="bg-gradient-to-t from-slate-500/70 to-slate-800/30"
+      content={
+        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200">
+          <span>Hover me</span>
+          <div className="ml-1 transition duration-300 group-hover:rotate-[360deg]">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+            >
+              <path
+                d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        </button>
+      }
+    />,
+    <Card
+      key={generateKey()}
+      information="Tailwind"
+      iconColor="#fff"
+      background="bg-gradient-to-l from-slate-950 to-slate-800"
+      content={
+        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 duration-500">
+          <div className="relative inline-flex -translate-x-0 items-center transition group-hover:-translate-x-6">
+            <div className="absolute translate-x-0 opacity-100 transition group-hover:-translate-x-6 group-hover:opacity-0">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+              >
+                <path
+                  d="M7.22303 0.665992C7.32551 0.419604 7.67454 0.419604 7.77702 0.665992L9.41343 4.60039C9.45663 4.70426 9.55432 4.77523 9.66645 4.78422L13.914 5.12475C14.18 5.14607 14.2878 5.47802 14.0852 5.65162L10.849 8.42374C10.7636 8.49692 10.7263 8.61176 10.7524 8.72118L11.7411 12.866C11.803 13.1256 11.5206 13.3308 11.2929 13.1917L7.6564 10.9705C7.5604 10.9119 7.43965 10.9119 7.34365 10.9705L3.70718 13.1917C3.47945 13.3308 3.19708 13.1256 3.25899 12.866L4.24769 8.72118C4.2738 8.61176 4.23648 8.49692 4.15105 8.42374L0.914889 5.65162C0.712228 5.47802 0.820086 5.14607 1.08608 5.12475L5.3336 4.78422C5.44573 4.77523 5.54342 4.70426 5.58662 4.60039L7.22303 0.665992Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <span className="pl-6">Hover</span>
+            <div className="absolute right-0 translate-x-12 opacity-0 transition group-hover:translate-x-6 group-hover:opacity-100">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+              >
+                <path
+                  d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </button>
+      }
+    />,
+
+    <Card
+      key={generateKey()}
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-l from-blue-700/40 "
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+      <button class="btn-binary-pulse">
+        Hover me
+      </button>
+      <style>
+        .btn-binary-pulse {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-binary-pulse::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.btn-binary-pulse::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+}
+
+.btn-binary-pulse:hover::before, .btn-binary-pulse:hover::after {
+  transform: scale(0);
+}
+
+.btn-binary-pulse:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
   ];
 
   const filterCards = () => {
@@ -997,8 +1497,8 @@ const CardsButton = () => {
           Tailwind
         </button>
       </div>
-      <div className="grid grid-cols-4 gap-1 mb-14">{paginatedCards()}</div>
-      <Pagination>
+      <div className="grid grid-cols-4 gap-1">{paginatedCards()}</div>
+      <Pagination className="mt-8">
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
@@ -1011,7 +1511,10 @@ const CardsButton = () => {
               <PaginationLink
                 href="#"
                 onClick={() => handlePageChange(index + 1)}
-                className={cn("text-white",currentPage === index + 1 && "bg-blue-700/30")}
+                className={cn(
+                  "text-white",
+                  currentPage === index + 1 && "bg-blue-700/30"
+                )}
               >
                 {index + 1}
               </PaginationLink>
