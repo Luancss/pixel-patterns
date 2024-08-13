@@ -21,8 +21,6 @@ const CardsButton = () => {
   const [filter, setFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
 
-  let cardCounter = 1; 
-
   let counter = 1;
 
   const generateKey = () => `card-${counter++}`;

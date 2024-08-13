@@ -15,7 +15,7 @@ export const HeroSection = ({ title, description }: HeroSectionProps) => {
       </h1>
       <p className="text-lg text-gray-300  slide-in-right">{description}</p>
       <div className="flex items-center justify-center gap-4 fade-in">
-        <ButtonEffect href="https://github.com/Luancss" />
+        <ButtonEffect href="https://github.com/Luancss/pixel-patterns" />
       </div>
       <Navbar />
     </div>
