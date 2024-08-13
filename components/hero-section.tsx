@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonEffect from "./button-effect";
-import { Navbar } from "./navbar/page";
+import { Navbar } from "./navbar/navbar";
 
 interface HeroSectionProps {
   title: string;
@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ title, description }: HeroSectionProps) => {
   return (
-    <div className="max-w-[600px] flex flex-col items-center justify-center gap-y-7 mt-32">
+    <div className="max-w-[600px] flex flex-col items-center justify-center gap-y-7">
       <h1 className="text-6xl font-bold text-gray-100  slide-in-left">
         {title}
       </h1>
