@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ButtonEffect from "@/components/button-effect";
-import { Navbar } from "@/components/navbar/page";
 import { Toaster } from "sonner";
 import Background from "@/components/background";
 

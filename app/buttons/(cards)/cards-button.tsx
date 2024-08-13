@@ -2,11 +2,26 @@
 
 import { Card } from "@/components/cards/card";
 import { Button } from "@/components/ui/button";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 
+const itemsPerPage = 16; 
+
 const CardsButton = () => {
   const [filter, setFilter] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  let cardCounter = 1; 
 
   let counter = 1;
 
@@ -939,6 +954,19 @@ const CardsButton = () => {
     });
   };
 
+  const paginatedCards = () => {
+    const filteredCards = filterCards();
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return filteredCards.slice(startIndex, endIndex);
+  };
+
+  const totalPages = Math.ceil(filterCards().length / itemsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div>
       <div className="mb-4 space-x-2 flex items-center">
@@ -971,7 +999,36 @@ const CardsButton = () => {
           Tailwind
         </button>
       </div>
-      <div className="grid grid-cols-4 gap-1">{filterCards()}</div>
+      <div className="grid grid-cols-4 gap-1 mb-14">{paginatedCards()}</div>
+      <Pagination>
+        <PaginationContent>
+          <PaginationItem>
+            <PaginationPrevious
+              href="#"
+              onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+            />
+          </PaginationItem>
+          {[...Array(totalPages)].map((_, index) => (
+            <PaginationItem key={index}>
+              <PaginationLink
+                href="#"
+                onClick={() => handlePageChange(index + 1)}
+                className={cn("text-white",currentPage === index + 1 && "bg-blue-700/30")}
+              >
+                {index + 1}
+              </PaginationLink>
+            </PaginationItem>
+          ))}
+          <PaginationItem>
+            <PaginationNext
+              href="#"
+              onClick={() =>
+                handlePageChange(Math.min(totalPages, currentPage + 1))
+              }
+            />
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
     </div>
   );
 };
