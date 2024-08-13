@@ -7,7 +7,7 @@ interface HeroSectionProps {
   description: string;
 }
 
-const HeroSection = ({ title, description }: HeroSectionProps) => {
+export const HeroSection = ({ title, description }: HeroSectionProps) => {
   return (
     <div className="max-w-[600px] flex flex-col items-center justify-center gap-y-7 mt-32">
       <h1 className="text-6xl font-bold text-gray-100  slide-in-left">
