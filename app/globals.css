@@ -445,7 +445,7 @@
   width: 300px;
   height: 1px;
   transform: rotate(-45deg);
-  background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, #000, rgba(255, 255, 255, 0));
   animation: meteor 8.9s linear infinite;
 }
 .meteor-13:before {
@@ -455,8 +455,8 @@
   height: 5px;
   border-radius: 50%;
   margin-top: -2px;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 15px 3px #fff;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px 3px #000;
 }
 
 .meteor-14 {
@@ -476,7 +476,7 @@
   height: 5px;
   border-radius: 50%;
   margin-top: -2px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 15px 3px #fff;
 }
 
@@ -497,7 +497,7 @@
   height: 5px;
   border-radius: 50%;
   margin-top: -2px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 15px 3px #fff;
 }
 
@@ -533,7 +533,7 @@
   height: 2px;
   width: 25px;
   position: absolute;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), rgba(164, 163, 255, 0.85));
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.25), rgba(164, 163, 255, 0.85));
   border-radius: 100% 25% 25% 100%;
   filter: blur(1px);
   transform-origin: right;
@@ -578,5 +578,217 @@
   }
   1%, 4% {
     transform: scaleX(var(--trail));
+  }
+}
+
+.app {
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  margin-bottom: 3rem;
+}
+
+.scene {
+  transform: rotateX(-45deg) rotateY(-45deg) rotateZ(0deg);
+  transform-style: preserve-3d;
+  position: relative;
+  width: 13.12vmin;
+  height: 13.12vmin;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  transform: rotateX(0) rotateY(0) rotateZ(45deg);
+  transform-style: preserve-3d;
+  -webkit-animation: rotate 15s linear infinite;
+  animation: rotate 15s linear infinite;
+}
+
+.plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;
+  border-radius: 2px;
+  background: linear-gradient(rgba(66, 64, 191, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.front > .triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(66, 64, 191, 0.5), rgba(0, 0, 0, 0.5));
+  transform-origin: 100% 0;
+  transform: translateX(-100%) rotateY(-55deg);
+  width: 11.3622532976vmin;
+  height: 13.12vmin;
+  -webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0%);
+  clip-path: polygon(0 50%, 100% 100%, 100% 0%);
+}
+
+.pair--1 .triangle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(66, 64, 191, 0.5), rgba(0, 0, 0, 0.5));
+  transform-origin: 0% 0;
+  transform: translateX(13.12vmin) rotateY(55deg);
+  width: 11.3622532976vmin;
+  height: 13.12vmin;
+  -webkit-clip-path: polygon(0% 0, 100% 50%, 0% 100%);
+  clip-path: polygon(0% 0, 100% 50%, 0% 100%);
+}
+
+.pair--2 .triangle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(66, 64, 191, 0.5), rgba(0, 0, 0, 0.5));
+  transform-origin: 0% 100%;
+  transform: translateY(-100%) rotateX(55deg);
+  width: 13.12vmin;
+  height: 11.3622532976vmin;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 50% 0%);
+  clip-path: polygon(0 100%, 100% 100%, 50% 0%);
+}
+
+.back > .triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(66, 64, 191, 0.5), rgba(0, 0, 0, 0.5));
+  transform-origin: 0% 100%;
+  transform: translateY(-100%) rotateX(-55deg);
+  width: 13.12vmin;
+  height: 11.3622532976vmin;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 50% 0%);
+  clip-path: polygon(0 100%, 100% 100%, 50% 0%);
+}
+
+.back > .triangle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(66, 64, 191, 0.5), rgba(0, 0, 0, 0.5));
+  transform-origin: 0% 0%;
+  transform: translateY(13.12vmin) rotateX(55deg);
+  width: 13.12vmin;
+  height: 11.3622532976vmin;
+  -webkit-clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+  clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+}
+
+.line {
+  transform-style: preserve-3d;
+  position: absolute;
+  border-radius: inherit;
+}
+.line:after {
+  border-radius: inherit;
+  box-shadow: inherit;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+.line:nth-child(1):after, .line:nth-child(2):after {
+  transform: translateZ(0) rotateX(90deg);
+}
+.line:nth-child(3):after, .line:nth-child(4):after {
+  transform: translateZ(0) rotateY(90deg);
+}
+.line:nth-child(1) {
+  height: 2px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+.line:nth-child(2) {
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.line:nth-child(3) {
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+.line:nth-child(4) {
+  width: 2px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #fff;
+}
+
+.pair {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(white, blue);
+  border: 0.4px solid #555;
+}
+.pair--1 .front {
+  transform: translateZ(9.277240969152vmin);
+}
+.pair--1 .back {
+  transform: translateZ(-9.277240969152vmin);
+}
+.pair--2 {
+  transform: rotateX(90deg) rotateY(45deg) rotateZ(45deg);
+}
+.pair--2 .front {
+  transform: translateZ(9.277240969152vmin);
+}
+.pair--2 .back {
+  transform: translateZ(-9.277240969152vmin);
+}
+.pair--3 {
+  transform: rotateX(-90deg) rotateY(45deg) rotateZ(45deg);
+}
+.pair--3 .front {
+  transform: translateZ(9.277240969152vmin);
+}
+.pair--3 .back {
+  transform: translateZ(-9.277240969152vmin);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(2turn) rotateY(0deg) rotateZ(1turn);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(2turn) rotateY(0deg) rotateZ(1turn);
   }
 }

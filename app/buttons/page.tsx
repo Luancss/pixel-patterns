@@ -1,16 +1,18 @@
 import Geminid from "@/components/geminid";
 import HeroSection from "@/components/hero-section";
 import CardsButton from "./(cards)/cards-button";
+import Cubic from "@/components/cubic";
 
 const Buttons = () => {
   return (
     <>
       <Geminid />
+      <Cubic />
       <HeroSection
-        title="Card Components for Dev Enthusiasts"
-        description="Discover our curated card components, crafted for developers who love building stylish and functional interfaces. Perfect for portfolios, dashboards, and more, these components offer both flexibility and elegance."
+        title="Buttons"
+        description="Discover our curated card components, designed for developers who value style and functionality. Ideal for portfolios, dashboards, and more, they offer flexibility and elegance."
       />
-      <CardsButton/>
+      <CardsButton />
     </>
   );
 };

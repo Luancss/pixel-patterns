@@ -24,7 +24,7 @@ export default function RootLayout({
         <Toaster />
         <div className="relative h-full w-full bg-black">
           <Background />
-          <div className="flex min-h-screen flex-col">
+          <div className="flex min-h-screen flex-col p-32">
             <div className="flex flex-col gap-y-10 items-center text-center m-auto z-20 mb-16">
               {children}
             </div>

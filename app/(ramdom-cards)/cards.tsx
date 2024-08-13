@@ -657,7 +657,7 @@ export const RamdonCards = () => {
     <Card
       key={generateKey()}
       information="Tailwind"
-      iconColor="#000"
+      iconColor="#fff"
       background="bg-gradient-to-r from-neutral-950"
       content={
         <div className="flex justify-around gap-4 items-center px-4 py-1 bg-black rounded-[15px] ring-1 ring-white">
