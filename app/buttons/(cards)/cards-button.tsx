@@ -1,11 +1,9 @@
 "use client";
 
 import { Card } from "@/components/cards/card";
-import { Button } from "@/components/ui/button";
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
@@ -15,7 +13,7 @@ import {
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 
-const itemsPerPage = 16; 
+const itemsPerPage = 16;
 
 const CardsButton = () => {
   const [filter, setFilter] = useState("All");
@@ -1007,11 +1005,16 @@ const CardsButton = () => {
             />
           </PaginationItem>
           {[...Array(totalPages)].map((_, index) => (
-            <PaginationItem key={index}>
+            <PaginationItem
+              key={`${crypto.getRandomValues(new Uint32Array(1))}_${index}`}
+            >
               <PaginationLink
                 href="#"
                 onClick={() => handlePageChange(index + 1)}
-                className={cn("text-white",currentPage === index + 1 && "bg-blue-700/30")}
+                className={cn(
+                  "text-white",
+                  currentPage === index + 1 && "bg-blue-700/30"
+                )}
               >
                 {index + 1}
               </PaginationLink>
