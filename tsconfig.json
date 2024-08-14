@@ -6,6 +6,7 @@
     "strict": true,
     "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
