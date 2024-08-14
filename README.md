@@ -1,7 +1,7 @@
 <p align="center">
  <a href="#-demonstration">Demonstration</a> |
  <a href="#-deploy">Deploy</a> |
- <a href="#-technologies">Technologies</a> |
+ <a href="#-technologies">Technologies</a>
 </p>
 
 ---
