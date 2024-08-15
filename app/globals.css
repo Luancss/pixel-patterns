@@ -792,3 +792,232 @@
     transform: rotateX(2turn) rotateY(0deg) rotateZ(1turn);
   }
 }
+
+.container333 {
+  margin: -9rem 0 -5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 60em;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.ct {
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+  transform: rotateX(70deg) rotateY(0deg) rotateZ(0deg);
+  transform-style: preserve-3d;
+}
+
+.circle {
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+.circle-1 {
+  background: transparent;
+  width: 15%;
+  height: 15%;
+  top: 50%;
+  left: 50%;
+  margin-left: -7.5%;
+  margin-top: -7.5%;
+  border: 3px solid blue;
+  animation: wave 3000ms 60ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-2 {
+  background: transparent;
+  width: 22%;
+  height: 22%;
+  top: 50%;
+  left: 50%;
+  margin-left: -11%;
+  margin-top: -11%;
+  border: 3px solid rgb(1, 1, 255);
+  animation: wave 3000ms 120ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-3 {
+  background: transparent;
+  width: 29%;
+  height: 29%;
+  top: 50%;
+  left: 50%;
+  margin-left: -14.5%;
+  margin-top: -14.5%;
+  border: 3px solid blue;
+  animation: wave 3000ms 180ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-4 {
+  background: transparent;
+  width: 36%;
+  height: 36%;
+  top: 50%;
+  left: 50%;
+  margin-left: -18%;
+  margin-top: -18%;
+  border: 3px solid blue;
+  animation: wave 3000ms 240ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-5 {
+  background: transparent;
+  width: 43%;
+  height: 43%;
+  top: 50%;
+  left: 50%;
+  margin-left: -21.5%;
+  margin-top: -21.5%;
+  border: 3px solid blue;
+  animation: wave 3000ms 300ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-6 {
+  background: transparent;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -25%;
+  margin-top: -25%;
+  border: 3px solid blue;
+  animation: wave 3000ms 360ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-7 {
+  background: transparent;
+  width: 57%;
+  height: 57%;
+  top: 50%;
+  left: 50%;
+  margin-left: -28.5%;
+  margin-top: -28.5%;
+  border: 3px solid blue;
+  animation: wave 3000ms 420ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-8 {
+  background: transparent;
+  width: 64%;
+  height: 64%;
+  top: 50%;
+  left: 50%;
+  margin-left: -32%;
+  margin-top: -32%;
+  border: 3px solid blue;
+  animation: wave 3000ms 480ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-9 {
+  background: transparent;
+  width: 71%;
+  height: 71%;
+  top: 50%;
+  left: 50%;
+  margin-left: -35.5%;
+  margin-top: -35.5%;
+  border: 3px solid rgb(1, 1, 255, 0.9);
+  animation: wave 3000ms 540ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-10 {
+  background: transparent;
+  width: 78%;
+  height: 78%;
+  top: 50%;
+  left: 50%;
+  margin-left: -39%;
+  margin-top: -39%;
+  border: 3px solid rgb(1, 1, 255, 0.8);
+  animation: wave 3000ms 600ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-11 {
+  background: transparent;
+  width: 85%;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  margin-left: -42.5%;
+  margin-top: -42.5%;
+  border: 3px solid rgb(1, 1, 255, 0.7);
+  animation: wave 3000ms 660ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-12 {
+  background: transparent;
+  width: 92%;
+  height: 92%;
+  top: 50%;
+  left: 50%;
+  margin-left: -46%;
+  margin-top: -46%;
+  border: 3px solid rgb(1, 1, 255, 0.6);
+  animation: wave 3000ms 720ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-13 {
+  background: transparent;
+  width: 99%;
+  height: 99%;
+  top: 50%;
+  left: 50%;
+  margin-left: -49.5%;
+  margin-top: -49.5%;
+  border: 3px solid rgb(1, 1, 255, 0.5);
+  animation: wave 3000ms 780ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-14 {
+  background: transparent;
+  width: 106%;
+  height: 106%;
+  top: 50%;
+  left: 50%;
+  margin-left: -53%;
+  margin-top: -53%;
+  border: 3px solid rgb(1, 1, 255, 0.4);
+  animation: wave 3000ms 840ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+.circle-15 {
+  background: transparent;
+  width: 113%;
+  height: 113%;
+  top: 50%;
+  left: 50%;
+  margin-left: -56.5%;
+  margin-top: -56.5%;
+  border: 3px solid rgb(1, 1, 255, 0.3);
+  animation: wave 3000ms 900ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateZ(0px);
+  }
+  8% {
+    transform: translateZ(-40px);
+  }
+  20% {
+    transform: translateZ(30px);
+  }
+  40% {
+    transform: translateZ(-15px);
+  }
+  60% {
+    transform: translateZ(8px);
+  }
+  80% {
+    transform: translateZ(-4px);
+  }
+  100% {
+    transform: translateZ(1px);
+  }
+}

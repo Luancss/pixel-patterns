@@ -13,7 +13,7 @@ import {
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 
-const itemsPerPage = 16;
+const itemsPerPage = 12;
 
 const CardsButton = () => {
   const [filter, setFilter] = useState("All");
