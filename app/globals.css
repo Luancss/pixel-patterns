@@ -1226,7 +1226,7 @@
 
 .container-box {
   width: 134px;
-  height: 134px;
+  height: 134px; 
   margin: 0 auto 27px;
 }
 
@@ -1302,7 +1302,7 @@
   font-size: 0;
 }
 
-.group {
+.wave-group {
   display: inline-block;
   margin-right: var(--box-spacing);
   transform-style: preserve-3d;
