@@ -4,10 +4,12 @@ import HeroSection from "@/components/hero-section";
 import React from "react";
 import CardsInputs from "./(cards)/cards-inputs";
 import Wave from "@/components/wave";
+import Star from "@/components/star";
 
 const Inputs = () => {
   return (
     <>
+    <Star/>
       <Geminid />
       <Wave />
       <HeroSection
