@@ -3,10 +3,12 @@ import HeroSection from "@/components/hero-section";
 import React from "react";
 import Circle from "@/components/circle";
 import CardsLoaders from "./(cards)/cards-loaders";
+import Star from "@/components/star";
 
 const Cards = () => {
   return (
     <>
+      <Star />
       <Geminid />
       <Circle />
       <HeroSection

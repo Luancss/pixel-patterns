@@ -3,10 +3,12 @@ import HeroSection from "@/components/hero-section";
 import CardsButton from "./(cards)/cards-button";
 import Cubic from "@/components/cubic";
 import WaveBox from "@/components/wave-box";
+import Star from "@/components/star";
 
 const Buttons = () => {
   return (
     <>
+    <Star/>
       <Geminid />
       <WaveBox />
       <HeroSection

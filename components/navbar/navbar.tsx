@@ -50,6 +50,15 @@ export const Navbar = () => {
         asChild
         className={cn(
           "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
+          pathname === "/loaders" ? "border-[#fff]" : ""
+        )}
+      >
+        <Link href="/loaders">Loaders</Link>
+      </Button>
+      <Button
+        asChild
+        className={cn(
+          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
           pathname === "/checkboxes" ? "border-[#fff]" : ""
         )}
       >
@@ -63,15 +72,6 @@ export const Navbar = () => {
         )}
       >
         <Link href="/forms">Forms</Link>
-      </Button>
-      <Button
-        asChild
-        className={cn(
-          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
-          pathname === "/loaders" ? "border-[#fff]" : ""
-        )}
-      >
-        <Link href="/loaders">Loaders</Link>
       </Button>
     </div>
   );

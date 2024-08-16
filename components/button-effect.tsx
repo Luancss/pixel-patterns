@@ -1,14 +1,30 @@
-import Link from "next/link";
+"use client";
 
-export async function ButtonEffect({ href }: { href?: string }) {
-  const response = await fetch(
-    "https://api.github.com/repos/Luancss/pixel-patterns"
-  );
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
-  const data = await response.json();
-  const stars = data.stargazers_count;
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { Loader, Loader2 } from "lucide-react";
+
+export default function ButtonEffect({ href }: { href?: string }) {
+  const [stars, setStars] = useState<number | null>(null);
+
+  useEffect(() => {
+    const fetchStars = async () => {
+      try {
+        const response = await fetch(
+          "https://api.github.com/repos/Luancss/pixel-patterns"
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setStars(data.stargazers_count);
+      } catch (error) {
+        console.error("Failed to fetch stars:", error);
+      }
+    };
+
+    fetchStars();
+  }, []);
 
   return (
     <Link
@@ -51,11 +67,11 @@ export async function ButtonEffect({ href }: { href?: string }) {
           >
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
           </svg>
-          <span className="text-white ml-2">{stars}</span>
+          <span className="text-white ml-2">
+            {stars ?? <Loader2 className="w-4 h-4 animate-spin" />}
+          </span>
         </span>
       </span>
     </Link>
   );
 }
-
-export default ButtonEffect;
