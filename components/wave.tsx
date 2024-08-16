@@ -1,6 +1,6 @@
 import React from "react";
 
-const CubicRed = () => {
+const Wave = () => {
   return (
     <div className="container333">
       <div className="ct">
@@ -24,4 +24,4 @@ const CubicRed = () => {
   );
 };
 
-export default CubicRed;
+export default Wave;

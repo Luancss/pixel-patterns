@@ -3,13 +3,13 @@ import Geminid from "@/components/geminid";
 import HeroSection from "@/components/hero-section";
 import React from "react";
 import CardsInputs from "./(cards)/cards-inputs";
-import CubicRed from "@/components/cubic-red";
+import Wave from "@/components/wave";
 
 const Inputs = () => {
   return (
     <>
       <Geminid />
-      <CubicRed />
+      <Wave />
       <HeroSection
         title="Inputs"
         description="
