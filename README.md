@@ -18,10 +18,17 @@ Este projeto open source não só oferece uma biblioteca inicial de componentes,
 * Caso goste do projeto, de uma estrela ⭐ e compartilhe para me ajudar.
 
 ## 📷 Demonstration
-<p align="center">
-  <img alt="Home" src="/assets/pixxel.JPG" width="100%">
-</p>
 
+| Home Page  | Buttons Page | 
+| --- | --- |
+| ![page](https://github.com/user-attachments/assets/5eecf6e7-dabb-4075-96b6-b8fc308a2795) | ![buttons](https://github.com/user-attachments/assets/22a98690-0dbc-4d53-8d60-1b131a1bc26c)
+
+
+| Inputs Page | Loaders Page |
+| --- | --- |
+| ![inputs](https://github.com/user-attachments/assets/ddcdc2e5-b11f-4647-abe2-e44ffbad826f) | ![loaders](https://github.com/user-attachments/assets/c57090a7-cec2-4665-b21e-c210c73048fc) 
+
+![cards](https://github.com/user-attachments/assets/7282e2bd-b9ba-4792-8e00-d8d702960a10)
 
 ## 💻 Deploy
 
