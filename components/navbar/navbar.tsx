@@ -41,19 +41,19 @@ export const Navbar = () => {
         asChild
         className={cn(
           "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
-          pathname === "/cards" ? "border-[#fff]" : ""
+          pathname === "/loaders" ? "border-[#fff]" : ""
         )}
       >
-        <Link href="/cards">Cards</Link>
+        <Link href="/loaders">Loaders</Link>
       </Button>
       <Button
         asChild
         className={cn(
           "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
-          pathname === "/loaders" ? "border-[#fff]" : ""
+          pathname === "/cards" ? "border-[#fff]" : ""
         )}
       >
-        <Link href="/loaders">Loaders</Link>
+        <Link href="/cards">Cards</Link>
       </Button>
       <Button
         asChild
