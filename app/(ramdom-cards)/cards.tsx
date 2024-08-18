@@ -561,7 +561,7 @@ export const RamdonCards = () => {
       key={generateKey()}
       information="Css"
       iconColor="#fff"
-      background="bg-gradient-to-b from-zinc-950"
+      background="bg-gradient-to-t from-zinc-700/30"
       content={
         <div
           dangerouslySetInnerHTML={{
@@ -583,6 +583,7 @@ export const RamdonCards = () => {
 
             .wave-group .input {
               font-size: 16px;
+              color: #fff;
               padding: 10px 10px 10px 5px;
               display: block;
               width: 200px;
@@ -596,7 +597,7 @@ export const RamdonCards = () => {
             }
 
             .wave-group .label {
-              color: #999;
+              color: #fff;
               font-size: 18px;
               font-weight: normal;
               position: absolute;
@@ -758,6 +759,7 @@ export const RamdonCards = () => {
         </div>
       }
     />,
+   
     <Card
       key={generateKey()}
       information="Css"
@@ -1164,144 +1166,196 @@ export const RamdonCards = () => {
       }
     />,
     <Card
-      key={generateKey()}
-      information="Css"
-      background="bg-gradient-to-r from-slate-950 to-slate-900"
-      iconColor="#fff"
-      content={
-        <div className="card-container">
-          <div className="card-playing">
-            <div className="card-image"></div>
-            <div className="card-wave"></div>
-            <div className="card-wave"></div>
-            <div className="card-wave"></div>
-            <div className="card-infotop">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="card-icon"
-              >
-                <path
-                  fill="currentColor"
-                  d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784 14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701 3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476 19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091 12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466 16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402 15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864 19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528 16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68 20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"
-                ></path>
-              </svg>
-              <br />
-              UI / EX Designer
-              <br />
-              <div className="card-name">Luan Carlos</div>
-            </div>
-          </div>
-          <style jsx>{`
-            .card-container {
-              margin: 100px auto;
-              background: transparent;
-              box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
-              position: relative;
-              width: 200px;
-              height: 240px;
-              border-radius: 16px;
-              overflow: hidden;
-            }
-
-            .card-playing {
-              position: relative;
-              width: 100%;
-              height: 100%;
-            }
-
-            .card-image {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-            }
-
-            .card-wave {
-              position: absolute;
-              width: 540px;
-              height: 700px;
-              opacity: 0.6;
-              left: 0;
-              top: 0;
-              margin-left: -50%;
-              margin-top: -70%;
-              background: linear-gradient(
-                744deg,
-                #af40ff,
-                #5b42f3 60%,
-                #00ddeb
-              );
-            }
-
-            .card-wave:nth-child(2),
-            .card-wave:nth-child(3) {
-              top: 210px;
-            }
-
-            .card-playing .card-wave {
-              border-radius: 40%;
-              animation: wave 3000ms infinite linear;
-            }
-
-            .card-wave {
-              border-radius: 40%;
-              animation: wave 55s infinite linear;
-            }
-
-            .card-playing .card-wave:nth-child(2) {
-              animation-duration: 4000ms;
-            }
-
-            .card-wave:nth-child(2) {
-              animation-duration: 50s;
-            }
-
-            .card-playing .card-wave:nth-child(3) {
-              animation-duration: 5000ms;
-            }
-
-            .card-wave:nth-child(3) {
-              animation-duration: 45s;
-            }
-
-            @keyframes wave {
-              0% {
-                transform: rotate(0deg);
-              }
-              100% {
-                transform: rotate(360deg);
-              }
-            }
-
-            .card-icon {
-              width: 3em;
-              margin-top: -1em;
-              padding-bottom: 1em;
-            }
-
-            .card-infotop {
-              text-align: center;
-              font-size: 20px;
-              position: absolute;
-              top: 5.6em;
-              left: 0;
-              right: 0;
-              color: rgb(255, 255, 255);
-              font-weight: 600;
-            }
-
-            .card-name {
-              font-size: 14px;
-              font-weight: 100;
-              position: relative;
-              top: 1em;
-              text-transform: lowercase;
-            }
-          `}</style>
+    key={generateKey()}
+    information="Css"
+    iconColor="#fff"
+    background="bg-gradient-to-r from-slate-950"
+    content={
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+      <button class="space-btn" type="button">
+        <strong class="space-text">SPACE</strong>
+        <div class="stars-container">
+          <div class="stars"></div>
         </div>
-      }
-    />,
+        <div class="glow-effect">
+          <div class="glow-circle glow-circle1"></div>
+          <div class="glow-circle glow-circle2"></div>
+        </div>
+      </button>
+      <style>
+        .space-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 13rem;
+          height: 3rem;
+          background-size: 300% 300%;
+          cursor: pointer;
+          backdrop-filter: blur(1rem);
+          border-radius: 5rem;
+          transition: 0.5s;
+          animation: gradientAnimation 5s ease infinite;
+          border: double 4px transparent;
+          background-image: linear-gradient(#212121, #212121),
+            linear-gradient(
+              137.48deg,
+              #ffdb3b 10%,
+              #fe53bb 45%,
+              #8f51ea 67%,
+              #0044ff 87%
+            );
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .stars-container {
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          transition: 0.5s;
+          backdrop-filter: blur(1rem);
+          border-radius: 5rem;
+        }
+
+        .space-text {
+          z-index: 2;
+          font-family: "Avalors Personal Use";
+          font-size: 12px;
+          letter-spacing: 5px;
+          color: #ffffff;
+          text-shadow: 0 0 4px white;
+        }
+
+        .glow-effect {
+          position: absolute;
+          display: flex;
+          width: 12rem;
+        }
+
+        .glow-circle {
+          width: 100%;
+          height: 30px;
+          filter: blur(2rem);
+          animation: pulseAnimation 4s infinite;
+          z-index: -1;
+        }
+
+        .glow-circle1 {
+          background: rgba(254, 83, 186, 0.636);
+        }
+
+        .glow-circle2 {
+          background: rgba(142, 81, 234, 0.704);
+        }
+
+        .space-btn:hover .stars-container {
+          z-index: 1;
+          background-color: #212121;
+        }
+
+        .space-btn:hover {
+          transform: scale(1.1);
+        }
+
+        .space-btn:active {
+          border: double 4px #fe53bb;
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+          animation: none;
+        }
+
+        .space-btn:active .glow-circle {
+          background: #fe53bb;
+        }
+
+        .stars {
+          position: relative;
+          background: transparent;
+          width: 200rem;
+          height: 200rem;
+        }
+
+        .stars::after {
+          content: "";
+          position: absolute;
+          top: -10rem;
+          left: -100rem;
+          width: 100%;
+          height: 100%;
+          animation: starRotateAnimation 90s linear infinite;
+          background-image: radial-gradient(#ffffff 1px, transparent 1%);
+          background-size: 50px 50px;
+        }
+
+        .stars::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -50%;
+          width: 170%;
+          height: 500%;
+          animation: starAnimation 60s linear infinite;
+          background-image: radial-gradient(#ffffff 1px, transparent 1%);
+          background-size: 50px 50px;
+          opacity: 0.5;
+        }
+
+        @keyframes starAnimation {
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(-135rem);
+          }
+        }
+
+        @keyframes starRotateAnimation {
+          from {
+            transform: rotate(360deg);
+          }
+          to {
+            transform: rotate(0);
+          }
+        }
+
+        @keyframes gradientAnimation {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        @keyframes pulseAnimation {
+          0% {
+            transform: scale(0.75);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+          }
+          70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+          }
+          100% {
+            transform: scale(0.75);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+          }
+        }
+      </style>
+    `,
+        }}
+      />
+    }
+  />,
     <Card
       key={generateKey()}
       information="Css"
@@ -1365,196 +1419,91 @@ export const RamdonCards = () => {
       }
     />,
     <Card
-      key={generateKey()}
-      information="Css"
-      iconColor="#fff"
-      background="bg-gradient-to-r from-slate-950"
-      content={
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `
-        <button class="space-btn" type="button">
-          <strong class="space-text">SPACE</strong>
-          <div class="stars-container">
-            <div class="stars"></div>
-          </div>
-          <div class="glow-effect">
-            <div class="glow-circle glow-circle1"></div>
-            <div class="glow-circle glow-circle2"></div>
-          </div>
+    key={generateKey()}
+    information="Css"
+    iconColor="#fff"
+    background="bg-gradient-to-l from-red-950/60"
+    content={
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+        <button class="unique-btn-101">
+          <span class="unique-text-102">Delete</span>
+          <span class="unique-icon-103">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+            </svg>
+          </span>
         </button>
         <style>
-          .space-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 13rem;
-            height: 3rem;
-            background-size: 300% 300%;
+          .unique-btn-101 {
+            width: 150px;
+            height: 50px;
             cursor: pointer;
-            backdrop-filter: blur(1rem);
-            border-radius: 5rem;
-            transition: 0.5s;
-            animation: gradientAnimation 5s ease infinite;
-            border: double 4px transparent;
-            background-image: linear-gradient(#212121, #212121),
-              linear-gradient(
-                137.48deg,
-                #ffdb3b 10%,
-                #fe53bb 45%,
-                #8f51ea 67%,
-                #0044ff 87%
-              );
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-            position: relative;
-            overflow: hidden;
-          }
-
-          .stars-container {
-            position: absolute;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            transition: 0.5s;
-            backdrop-filter: blur(1rem);
-            border-radius: 5rem;
-          }
-
-          .space-text {
-            z-index: 2;
-            font-family: "Avalors Personal Use";
-            font-size: 12px;
-            letter-spacing: 5px;
-            color: #ffffff;
-            text-shadow: 0 0 4px white;
-          }
-
-          .glow-effect {
-            position: absolute;
             display: flex;
-            width: 12rem;
-          }
-
-          .glow-circle {
-            width: 100%;
-            height: 30px;
-            filter: blur(2rem);
-            animation: pulseAnimation 4s infinite;
-            z-index: -1;
-          }
-
-          .glow-circle1 {
-            background: rgba(254, 83, 186, 0.636);
-          }
-
-          .glow-circle2 {
-            background: rgba(142, 81, 234, 0.704);
-          }
-
-          .space-btn:hover .stars-container {
-            z-index: 1;
-            background-color: #212121;
-          }
-
-          .space-btn:hover {
-            transform: scale(1.1);
-          }
-
-          .space-btn:active {
-            border: double 4px #fe53bb;
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-            animation: none;
-          }
-
-          .space-btn:active .glow-circle {
-            background: #fe53bb;
-          }
-
-          .stars {
+            align-items: center;
+            background: #e62222;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
             position: relative;
-            background: transparent;
-            width: 200rem;
-            height: 200rem;
+            transition: background 200ms, box-shadow 200ms;
           }
 
-          .stars::after {
-            content: "";
+          .unique-btn-101, .unique-btn-101 span {
+            transition: transform 200ms, color 200ms;
+          }
+
+          .unique-text-102 {
+            transform: translateX(35px);
+            color: white;
+            font-weight: bold;
+          }
+
+          .unique-icon-103 {
             position: absolute;
-            top: -10rem;
-            left: -100rem;
-            width: 100%;
-            height: 100%;
-            animation: starRotateAnimation 90s linear infinite;
-            background-image: radial-gradient(#ffffff 1px, transparent 1%);
-            background-size: 50px 50px;
+            border-left: 1px solid #c41b1b;
+            transform: translateX(110px);
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: width 200ms, transform 200ms;
           }
 
-          .stars::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -50%;
-            width: 170%;
-            height: 500%;
-            animation: starAnimation 60s linear infinite;
-            background-image: radial-gradient(#ffffff 1px, transparent 1%);
-            background-size: 50px 50px;
-            opacity: 0.5;
+          .unique-btn-101 svg {
+            width: 15px;
+            fill: #eee;
           }
 
-          @keyframes starAnimation {
-            from {
-              transform: translateY(0);
-            }
-            to {
-              transform: translateY(-135rem);
-            }
+          .unique-btn-101:hover {
+            background: #ff3636;
           }
 
-          @keyframes starRotateAnimation {
-            from {
-              transform: rotate(360deg);
-            }
-            to {
-              transform: rotate(0);
-            }
+          .unique-btn-101:hover .unique-text-102 {
+            color: transparent;
           }
 
-          @keyframes gradientAnimation {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
+          .unique-btn-101:hover .unique-icon-103 {
+            width: 150px;
+            border-left: none;
+            transform: translateX(0);
           }
 
-          @keyframes pulseAnimation {
-            0% {
-              transform: scale(0.75);
-              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-            }
-            70% {
-              transform: scale(1);
-              box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-            }
-            100% {
-              transform: scale(0.75);
-              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-            }
+          .unique-btn-101:focus {
+            outline: none;
+          }
+
+          .unique-btn-101:active .unique-icon-103 svg {
+            transform: scale(0.8);
           }
         </style>
       `,
-          }}
-        />
-      }
-    />,
+        }}
+      />
+    }
+  />,
   ];
 
   const cardsToLeft_TwoColumn = [

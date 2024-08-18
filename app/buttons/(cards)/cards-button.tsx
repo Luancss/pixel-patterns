@@ -558,7 +558,7 @@ const CardsButton = () => {
       iconColor="#fff"
       background="bg-gradient-to-l from-slate-950"
       content={
-        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 duration-500">
+        <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-200 px-6 font-medium text-neutral-950 duration-500">
           <div className="translate-y-0 opacity-100 transition group-hover:-translate-y-[150%] group-hover:opacity-0">
             Hover me
           </div>
