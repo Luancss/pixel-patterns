@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "1.1.0",
+    "@react-email/code-block": "0.0.7",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "lucide-react": "0.426.0",

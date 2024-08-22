@@ -1,6 +1,6 @@
 import Geminid from "@/components/geminid";
 import HeroSection from "@/components/hero-section";
-import CardsButton from "./(cards)/cards-button";
+import CardsButton from "./(cards)/cards-buttons";
 import Cubic from "@/components/cubic";
 import WaveBox from "@/components/wave-box";
 import Star from "@/components/star";
