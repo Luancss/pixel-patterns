@@ -4,13 +4,35 @@ import { toast } from "sonner";
 import { Button } from "./ui/button";
 import { Check, CopyIcon } from "lucide-react";
 
+export default function CopyCard({ text, text2 }: { text: string; text2?: string }) {
+  const combinedText = text + (text2 ? `\n${text2}` : '');
+
+  return (
+    <div className="flex flex-col rounded-lg overflow-hidden my-6">
+      <div className="bg-gray-800 text-sm text-gray-200 px-6 py-1 flex items-center justify-between">
+        <p>Bash</p>
+        <Copy content={combinedText} />
+      </div>
+      <div className="text-base bg-black px-6 py-5">
+        <p className="text-gray-300 flex flex-col gap-y-2">
+          {text}
+        </p>
+        {text2 && (
+          <p className="text-gray-300 flex flex-col gap-y-2">
+            {text2}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
 const Copy = ({ content }: { content: string }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleClick = () => {
-    const contentToCopy = content;
     navigator.clipboard
-      .writeText(contentToCopy)
+      .writeText(content)
       .then(() => {
         setIsChecked(true);
         toast.success("Code copied!");
@@ -40,5 +62,3 @@ const Copy = ({ content }: { content: string }) => {
     </Button>
   );
 };
-
-export default Copy;

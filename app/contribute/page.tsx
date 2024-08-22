@@ -1,10 +1,12 @@
 "use client";
 
+import CopyCard from "@/components/copy";
 import Copy from "@/components/copy";
 import Geminid from "@/components/geminid";
 import Star from "@/components/star";
 import Image from "next/image";
 import React from "react";
+import Setup from "./(components)/setup";
 
 const Contribute = () => {
   return (
@@ -30,26 +32,8 @@ const Contribute = () => {
             height={400}
           />
         </div>
-        <div className="p-4 mx-auto relative z-10 text-left">
-          <h2 className="text-5xl font-bold text-gray-100 mb-11">Setup</h2>
-          <p className="text-base text-gray-300 my-4">
-            1. <span className="font-bold">Fork the Repository:</span> Click the
-            "Fork" button on the repository page to create a copy of the project
-            in your GitHub account.
-          </p>
-          <p className="text-base text-gray-300 my-4">
-            2. <span className="font-bold">Clone the Repository:</span> Clone
-            the forked repository to your local machine using the command:
-          </p>
-          <div className="flex flex-col rounded-lg overflow-hidden">
-            <div className="bg-gray-800 text-sm text-gray-200 px-6 py-1 flex items-center justify-between">
-              <p>Bash</p>
-              <Copy content="git clone https://github.com/Luancss/pixel-patterns" />
-            </div>
-            <div className="text-base bg-black px-6 py-5">
-              <p className="text-gray-300">git clone https://github.com/Luancss/pixel-patterns</p>
-            </div>
-          </div>
+        <div className="p-4 mx-auto relative z-10 text-left max-w-[1000px]">
+          <Setup />
         </div>
       </div>
     </>
