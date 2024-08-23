@@ -23,7 +23,7 @@ export default function RootLayout({
         <Toaster />
         <div className="relative h-full w-full bg-black">
           <Background />
-          <div className="flex min-h-screen flex-col pb-20">
+          <div className="flex min-h-screen flex-col pb-20 ">
             <div className="flex flex-col gap-y-10 items-center text-center m-auto z-20">
               {children}
             </div>
