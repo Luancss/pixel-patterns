@@ -2,6 +2,7 @@ import CopyCard from "@/components/copy";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import Started from "./started";
+import Image from "next/image";
 
 const Setup = () => {
   return (
@@ -32,6 +33,13 @@ const Setup = () => {
         Implement the necessary changes in the code, add new features, fix bugs,
         or improve the documentation.
       </p>
+      <p className="text-base text-gray-300 mt-10">
+        To acess a components folder, go to <span className="font-bold text-green-500">app/your
+        component/component/card-components.tsx</span> Within the card array, place the
+        card you want to add below all the others.
+      </p>
+      <p className="text-base text-gray-300 my-4">Example:</p>
+      <Image className="mt-4" src="/structure.png" alt="card" width={300} height={300} />
       <Started />
       <p className="text-base text-gray-300 my-4">
         5. <span className="font-bold text-blue-500">Commit Your Changes</span>:

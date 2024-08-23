@@ -1,6 +1,37 @@
-import { CodeBlock, dracula, atomDark, coldarkDark } from "@react-email/code-block";
+"use client";
+import { Button } from "@/components/ui/button";
+import {
+  CodeBlock,
+  dracula,
+  atomDark,
+  coldarkDark,
+} from "@react-email/code-block";
+import { Check, CopyIcon } from "lucide-react";
+import { useState } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { toast } from "sonner";
 
 export const CodeTailwind = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleClick = () => {
+    const contentToCopy = code;
+
+    navigator.clipboard
+      .writeText(contentToCopy)
+      .then(() => {
+        setIsChecked(true);
+        toast.success("Code copied!");
+
+        setTimeout(() => {
+          setIsChecked(false);
+        }, 2000);
+      })
+      .catch(() => {
+        toast.error("Failed to copy!");
+      });
+  };
+
   const code = `<Card
       key={generateKey()}
       iconColor="#fff" /* #fff or #000 */
@@ -12,11 +43,51 @@ export const CodeTailwind = () => {
     />,`;
 
   return (
-    <CodeBlock code={code} lineNumbers theme={dracula} language="javascript" />
+    <div className="relative">
+      <CodeBlock
+        code={code}
+        lineNumbers
+        theme={dracula}
+        language="javascript"
+      />
+      <div>
+        <Button
+          onClick={handleClick}
+          variant="link"
+          className="absolute top-0 right-0"
+        >
+          {isChecked ? (
+            <Check size={20} color="#fff" />
+          ) : (
+            <CopyIcon size={20} color="#fff" />
+          )}
+        </Button>
+      </div>
+    </div>
   );
 };
 
 export const CodeCss = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleClick = () => {
+    const contentToCopy = code;
+
+    navigator.clipboard
+      .writeText(contentToCopy)
+      .then(() => {
+        setIsChecked(true);
+        toast.success("Code copied!");
+
+        setTimeout(() => {
+          setIsChecked(false);
+        }, 2000);
+      })
+      .catch((err) => {
+        toast.error("Failed to copy!");
+      });
+  };
+
   const code = `<Card
       key={generateKey()}
       iconColor="#fff" /* #fff or #000 */
@@ -37,7 +108,27 @@ export const CodeCss = () => {
     />,`;
 
   return (
-    <CodeBlock code={code} lineNumbers theme={dracula} language="javascript" />
+    <div className="relative">
+      <CodeBlock
+        code={code}
+        lineNumbers
+        theme={dracula}
+        language="javascript"
+      />
+      <div>
+        <Button
+          onClick={handleClick}
+          variant="link"
+          className="absolute top-0 right-0"
+        >
+          {isChecked ? (
+            <Check size={20} color="#fff" />
+          ) : (
+            <CopyIcon size={20} color="#fff" />
+          )}
+        </Button>
+      </div>
+    </div>
   );
 };
 
@@ -45,16 +136,24 @@ export const CodeButtonError = () => {
   const code = `<button>Click me</button>`;
 
   return (
-    <CodeBlock code={code} lineNumbers theme={coldarkDark} language="javascript" />
+    <CodeBlock
+      code={code}
+      lineNumbers
+      theme={coldarkDark}
+      language="javascript"
+    />
   );
 };
 
 export const CodeButtonCorrect = () => {
-  const code = `<button class="content83501">Click me</button>`;
+  const code = `<button class="button83501">Click me</button>`;
 
   return (
-    <CodeBlock code={code} lineNumbers theme={coldarkDark} language="javascript" />
+    <CodeBlock
+      code={code}
+      lineNumbers
+      theme={coldarkDark}
+      language="javascript"
+    />
   );
 };
-
-

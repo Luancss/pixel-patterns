@@ -37,7 +37,7 @@ export const Card = ({
           setIsChecked(false);
         }, 2000);
       })
-      .catch((err) => {
+      .catch(() => {
         toast.error("Failed to copy!");
       });
   };
