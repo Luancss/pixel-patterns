@@ -6,16 +6,16 @@
 
 ---
 
-O Pixel Patterns é um projeto voltado para desenvolvedores que visa simplificar a integração de componentes CSS e Tailwind em seus projetos. A aplicação permite que você copie componentes prontos com apenas um clique, facilitando a estilização e a construção de interfaces de forma rápida e eficiente.
+Pixel Patterns is a project aimed at developers that simplifies the integration of CSS and Tailwind components into their projects. The application allows you to copy ready-to-use components with just one click, making styling and building interfaces quick and efficient.
 
-Este projeto open source não só oferece uma biblioteca inicial de componentes, mas também permite que a comunidade contribua com seus próprios componentes. Com uma interface intuitiva e funcionalidades em constante expansão, o Pixel Patterns é ideal para quem busca uma maneira prática de melhorar o desenvolvimento front-end.
+This open-source project not only offers an initial library of components but also allows the community to contribute their own components. With an intuitive interface and constantly expanding features, Pixel Patterns is ideal for those looking for a practical way to enhance front-end development.
 
-**Objetivos**:
-  - Facilitar o uso de componentes CSS e Tailwind com um clique para copiar
-  - Permitir que a comunidade contribua com seus próprios componentes
-  - Expansão contínua com novas funcionalidades e componentes
+**Goals**:
+  - Facilitate the use of CSS and Tailwind components with a one-click copy feature
+  - Allow the community to contribute their own components
+  - Continuous expansion with new features and components
 
-* Caso goste do projeto, de uma estrela ⭐ e compartilhe para me ajudar.
+* If you like the project, give it a star ⭐ and share to help out.
 
 ## 📷 Demonstration
 
@@ -32,12 +32,12 @@ Este projeto open source não só oferece uma biblioteca inicial de componentes,
 
 ## 💻 Deploy
 
-Clique no link a seguir visualizar o deploy: OFF!
+Click the following link to view the deploy: OFF!
 
 
 ## 🚀 Technologies
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+This project was developed with the following technologies:
 
 ✔ [NextJS]
 <br/>
@@ -45,7 +45,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <br/>
 ✔ [TypeScript]
 <br/>
-✔ [Css]
+✔ [CSS]
 <br/>
 ✔ [Tailwind CSS]
 <br/>
@@ -55,7 +55,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 <img alt="Luancss" title="Luancss" src="https://avatars.githubusercontent.com/u/104950187?v=4" width="100">
 <p>
-    Made with 💜 by Luancss
+    Made by Luancss
 </p>
 <p align="left">
     <a href="https://www.linkedin.com/in/luan-carlos-30035b246/" target="_blank">
