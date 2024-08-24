@@ -9,11 +9,11 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex gap-x-4 mt-7 mb-10 slide-in-down">
+   <div className="flex flex-wrap lg:flex-nowrap gap-4 mt-7 mb-10 slide-in-down items-center justify-center"> 
       <Button
         asChild
         className={cn(
-          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
+          "border-2 border-[#646464] rounded-lg text-white px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base hover:border-[#fff] cursor-pointer transition",
           pathname === "/" ? "border-[#fff]" : ""
         )}
       >
@@ -22,7 +22,7 @@ export const Navbar = () => {
       <Button
         asChild
         className={cn(
-          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
+          "border-2 border-[#646464] rounded-lg text-white px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base hover:border-[#fff] cursor-pointer transition",
           pathname === "/buttons" ? "border-[#fff]" : ""
         )}
       >
@@ -31,7 +31,7 @@ export const Navbar = () => {
       <Button
         asChild
         className={cn(
-          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
+          "border-2 border-[#646464] rounded-lg text-white px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base hover:border-[#fff] cursor-pointer transition",
           pathname === "/inputs" ? "border-[#fff]" : ""
         )}
       >
@@ -40,7 +40,7 @@ export const Navbar = () => {
       <Button
         asChild
         className={cn(
-          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
+          "border-2 border-[#646464] rounded-lg text-white px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base hover:border-[#fff] cursor-pointer transition",
           pathname === "/loaders" ? "border-[#fff]" : ""
         )}
       >
@@ -49,7 +49,7 @@ export const Navbar = () => {
       <Button
         asChild
         className={cn(
-          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
+          "border-2 border-[#646464] rounded-lg text-white px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base hover:border-[#fff] cursor-pointer transition",
           pathname === "/cards" ? "border-[#fff]" : ""
         )}
       >
@@ -58,7 +58,7 @@ export const Navbar = () => {
       <Button
         asChild
         className={cn(
-          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
+          "border-2 border-[#646464] rounded-lg text-white px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base hover:border-[#fff] cursor-pointer transition",
           pathname === "/checkboxes" ? "border-[#fff]" : ""
         )}
       >
@@ -67,7 +67,7 @@ export const Navbar = () => {
       <Button
         asChild
         className={cn(
-          "border-2 border-[#646464] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition",
+          "border-2 border-[#646464] rounded-lg text-white px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base hover:border-[#fff] cursor-pointer transition",
           pathname === "/forms" ? "border-[#fff]" : ""
         )}
       >

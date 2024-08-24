@@ -34,12 +34,21 @@ const Setup = () => {
         or improve the documentation.
       </p>
       <p className="text-base text-gray-300 mt-10">
-        To acess a components folder, go to <span className="font-bold text-green-500">app/your
-        component/component/card-components.tsx</span> Within the card array, place the
-        card you want to add below all the others.
+        To acess a components folder, go to{" "}
+        <span className="font-bold text-green-500">
+          app/your component/component/card-components.tsx
+        </span>{" "}
+        Within the card array, place the card you want to add below all the
+        others.
       </p>
       <p className="text-base text-gray-300 my-4">Example:</p>
-      <Image className="mt-4" src="/structure.png" alt="card" width={300} height={300} />
+      <Image
+        className="mt-4"
+        src="/structure.png"
+        alt="card"
+        width={300}
+        height={300}
+      />
       <Started />
       <p className="text-base text-gray-300 my-4">
         5. <span className="font-bold text-blue-500">Commit Your Changes</span>:
@@ -53,7 +62,7 @@ const Setup = () => {
         />
       </div>
       <p className="text-base text-gray-300 my-4">
-        6.
+        6.{" "}
         <span className="font-bold text-blue-500">
           Push Your Changes to GitHub
         </span>
