@@ -27,7 +27,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   poweredByHeader: false,
-  async headers() {
+  images: {
+    domains: ['images.unsplash.com', 'avatars.githubusercontent.com'],
+  }, async headers() {
     return [
       {
         source: "/(.*)",
