@@ -46,7 +46,7 @@ export const CardSpecific = ({
     <section className="mx-auto justify-items-center justify-content-center">
       <div
         className={cn(
-          `flex flex-col items-center justify-center w-[500px] h-[400px] rounded-xl relative card`,
+          `flex flex-col items-center justify-center w-[370px] h-[400px] md:w-[500px] md:h-[400px] p-4 rounded-xl relative card`,
           background ? `${background}` : "bg-[#808080]"
         )}
       >

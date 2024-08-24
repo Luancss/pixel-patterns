@@ -3,6 +3,7 @@ import ButtonEffect from "./button-effect";
 import { Navbar } from "./navbar/navbar";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { FlipWords } from "./ui/flip-words";
 
 interface HeroSectionProps {
   title: string;
