@@ -820,6 +820,548 @@ const CardsCheckboxes = () => {
         />
       }
     />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Tailwind"
+      background="bg-gradient-to-t from-gray-800"
+      content={
+        <label className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center">
+          <input title="input" className="hidden peer" type="checkbox" />
+          <div className="w-[50%] h-[2px] bg-white rounded-sm transition-all duration-300 origin-center rotate-90 -translate-x-[0.3rem] translate-y-[0.1rem] peer-checked:translate-y-[0.1rem]"></div>
+          <div className="w-[50%] h-[2px] bg-white rounded-md transition-all duration-300 origin-center rotate-90 translate-x-[0.3rem] -translate-y-[0.05rem] peer-checked:rotate-[-30deg] peer-checked:translate-y-[0.22rem] peer-checked:translate-x-[0.15rem]"></div>
+          <div className="w-[50%] h-[2px] bg-white rounded-md transition-all duration-300 origin-center rotate-90 translate-x-[0.3rem] -translate-y-[0.16rem] peer-checked:rotate-[30deg] peer-checked:translate-y-[-0.4rem] peer-checked:translate-x-[0.15rem]"></div>
+        </label>
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-r from-orange-700/40 to-gray-950/30"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<label class="container_xzq7oHyGkS">
+  <input checked="checked" type="checkbox">
+  <div class="checkmark_sQp1jZVt8X"></div>
+</label>
+      <style>
+.container_xzq7oHyGkS input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container_xzq7oHyGkS {
+  display: flex;
+  gap: 10px;
+}
+
+/* Create a custom checkbox */
+.checkmark_sQp1jZVt8X {
+  position: relative;
+  box-shadow: rgb(255, 84, 0) 0px 0px 0px 2px;
+  background-color: rgba(16, 16, 16, 0.5);
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: -1px;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  transform-origin: 0px 10px;
+  border-radius: 4px;
+  margin: -1px 10px 0px 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container_xzq7oHyGkS input:checked ~ .checkmark_sQp1jZVt8X {
+  box-shadow: rgb(255, 84, 0) 0px 0px 0px 2px;
+  background-color: rgba(245, 24, 24, 0.5);
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: -1px;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  transform-origin: 0px 10px;
+  border-radius: 4px;
+  margin: -1px 10px 0px 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.checkmark_sQp1jZVt8X:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container_xzq7oHyGkS input:checked ~ .checkmark_sQp1jZVt8X:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_xzq7oHyGkS .checkmark_sQp1jZVt8X:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+  transition: all 500ms ease-in-out;
+}
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-[#000]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+
+<label class="container_Yf4KxPnGz2">
+  <input type="checkbox">
+  <svg height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path d="M9.362,9.158c0,0-3.16,0.35-5.268,0.584c-0.19,0.023-0.358,0.15-0.421,0.343s0,0.394,0.14,0.521 c1.566,1.429,3.919,3.569,3.919,3.569c-0.002,0-0.646,3.113-1.074,5.19c-0.036,0.188,0.032,0.387,0.196,0.506 c0.163,0.119,0.373,0.121,0.538,0.028c1.844-1.048,4.606-2.624,4.606-2.624s2.763,1.576,4.604,2.625 c0.168,0.092,0.378,0.09,0.541-0.029c0.164-0.119,0.232-0.318,0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191 s2.353-2.14,3.919-3.566c0.14-0.131,0.202-0.332,0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586 s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375,0.122-0.453,0.294C10.671,6.26,9.362,9.158,9.362,9.158z"></path></g></g></svg>
+</label>
+      <style>
+.container_Yf4KxPnGz2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container_Yf4KxPnGz2 {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container_Yf4KxPnGz2 svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s;
+  fill: #666;
+}
+
+.container_Yf4KxPnGz2 svg:hover {
+  transform: scale(1.1);
+}
+
+.container_Yf4KxPnGz2 input:checked ~ svg {
+  fill: #ffeb49;
+}
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#000"
+      information="Css"
+      background="bg-[#fff]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<label class="burger_qx9VtLzJ38" for="burger_qx9VtLzJ38">
+  <input type="checkbox" id="burger_qx9VtLzJ38">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+      <style>
+.burger_qx9VtLzJ38 {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger_qx9VtLzJ38 input {
+  display: none;
+}
+
+.burger_qx9VtLzJ38 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger_qx9VtLzJ38 span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger_qx9VtLzJ38 span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger_qx9VtLzJ38 span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger_qx9VtLzJ38 input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger_qx9VtLzJ38 input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger_qx9VtLzJ38 input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-[#000]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+
+<div class="like-wrapper_R7t4LgkY9A">
+  <input class="check_Vn2qJ8hX1M" type="checkbox" id="like-toggle_4Pj7KmB3zN" />
+  <label class="container_D8l5GfW6Qe" for="like-toggle_4Pj7KmB3zN">
+    <svg
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon_C9n8JrX2Pa inactive_M5t4HjL7Rw"
+    >
+      <path
+        d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"
+      ></path>
+    </svg>
+    <svg
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon_C9n8JrX2Pa active_T7m9NzR4Kl"
+    >
+      <path
+        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"
+      ></path>
+    </svg>
+    <div class="checkmark_K5n3QlX7Az"></div>
+    <span class="like-text_P2b4FjT9Xo">Like</span>
+  </label>
+</div>
+      <style>
+.like-wrapper_R7t4LgkY9A {
+  --gap: 0.5em;
+  --radius: 0.35em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  --dot-bg: #212121;
+  --dot-color: #313131;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+  border: 0.1em solid #313131;
+  padding: 0.5em;
+  border-radius: var(--radius);
+  box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.check_Vn2qJ8hX1M[type="checkbox"] {
+  display: none;
+}
+
+.container_D8l5GfW6Qe {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -0.25em;
+  margin-bottom: -0.25em;
+}
+
+.icon_C9n8JrX2Pa {
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 0.5em;
+  fill: white;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.icon_C9n8JrX2Pa.active_T7m9NzR4Kl {
+  display: none;
+  fill: #f52121;
+}
+
+.check_Vn2qJ8hX1M[type="checkbox"]:checked + .container_D8l5GfW6Qe .icon_C9n8JrX2Pa.active_T7m9NzR4Kl {
+  display: inline-block;
+  animation: wiggle_A2m4FjT7Xo 0.5s ease-in-out;
+}
+
+.check_Vn2qJ8hX1M[type="checkbox"]:checked + .container_D8l5GfW6Qe .icon_C9n8JrX2Pa.inactive_M5t4HjL7Rw {
+  display: none;
+}
+
+.like-text_P2b4FjT9Xo {
+  margin-left: 0.5em;
+  padding: 0.5em;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bolder;
+}
+
+@keyframes wiggle_A2m4FjT7Xo {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-b from-blue-600 to-gray-950/30"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<label class="x42-container__interactive--4r9v">
+  <input type="checkbox">
+  <svg viewBox="0 0 64 64" height="2em" width="2em">
+    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="x42-path__stroke--interactive"></path>
+  </svg>
+</label>
+      <style>
+.x42-container__interactive--4r9v {
+  cursor: pointer;
+}
+
+.x42-container__interactive--4r9v input {
+  display: none;
+}
+
+.x42-container__interactive--4r9v svg {
+  overflow: visible;
+}
+
+.x42-path__stroke--interactive {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.x42-container__interactive--4r9v input:checked ~ svg .x42-path__stroke--interactive {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-l from-green-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<label class="x65-container__toggle--7z3k">
+  <input type="checkbox">
+  <div class="x65-checkmark__box--t8x9">
+    <svg viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" class="x65-icon__svg--k4v7">
+      <path d="M 24.10 6.29 Q 28.34 7.56 28.00 12.00 Q 27.56 15.10 27.13 18.19 A 0.45 0.45 4.5 0 0 27.57 18.70 Q 33.16 18.79 38.75 18.75 Q 42.13 18.97 43.23 21.45 Q 43.91 22.98 43.27 26.05 Q 40.33 40.08 40.19 40.44 Q 38.85 43.75 35.50 43.75 Q 21.75 43.75 7.29 43.75 A 1.03 1.02 0.0 0 1 6.26 42.73 L 6.42 19.43 A 0.54 0.51 -89.4 0 1 6.93 18.90 L 14.74 18.79 A 2.52 2.31 11.6 0 0 16.91 17.49 L 22.04 7.17 A 1.74 1.73 21.6 0 1 24.10 6.29 Z M 21.92 14.42 Q 20.76 16.58 19.74 18.79 Q 18.74 20.93 18.72 23.43 Q 18.65 31.75 18.92 40.06 A 0.52 0.52 88.9 0 0 19.44 40.56 L 35.51 40.50 A 1.87 1.83 5.9 0 0 37.33 39.05 L 40.51 23.94 Q 40.92 22.03 38.96 21.97 L 23.95 21.57 A 0.49 0.47 2.8 0 1 23.47 21.06 Q 23.76 17.64 25.00 12.00 Q 25.58 9.36 24.28 10.12 Q 23.80 10.40 23.50 11.09 Q 22.79 12.80 21.92 14.42 Z M 15.57 22.41 A 0.62 0.62 0 0 0 14.95 21.79 L 10.01 21.79 A 0.62 0.62 0 0 0 9.39 22.41 L 9.39 40.07 A 0.62 0.62 0 0 0 10.01 40.69 L 14.95 40.69 A 0.62 0.62 0 0 0 15.57 40.07 L 15.57 22.41 Z" fill-opacity="1.000"></path>
+      <circle r="1.51" cy="37.50" cx="12.49" fill-opacity="1.000"></circle>
+    </svg>
+  </div>
+  <p class="x65-like__text--j2x1">Liked!</p>
+</label>
+
+      <style>
+.x65-container__toggle--7z3k input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.x65-container__toggle--7z3k {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.x65-checkmark__box--t8x9 {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 3em;
+  width: 3em;
+  background-color: #171717;
+  border-radius: 10px;
+  transition: .2s ease-in-out;
+  z-index: 2;
+}
+
+.x65-like__text--j2x1 {
+  position: relative;
+  font-size: 0.8em;
+  top: -3.5em;
+  text-align: center;
+  z-index: -1;
+}
+
+.x65-icon__svg--k4v7 {
+  margin: 0.2em;
+  fill: white;
+  transition: .4s ease-in-out;
+}
+
+.x65-checkmark__box--t8x9:hover {
+  background-color: white;
+}
+
+.x65-checkmark__box--t8x9:hover .x65-icon__svg--k4v7 {
+  fill: black;
+  transform: rotate(-8deg);
+  transform-origin: bottom left;
+}
+
+/* When the checkbox is checked, add a green background */
+.x65-container__toggle--7z3k input:checked ~ .x65-checkmark__box--t8x9 {
+  background-color: limegreen;
+}
+
+.x65-container__toggle--7z3k input:checked ~ .x65-like__text--j2x1 {
+  color: white;
+  animation: 0.6s up_3951;
+}
+
+.x65-container__toggle--7z3k input:checked ~ .x65-checkmark__box--t8x9 .x65-icon__svg--k4v7 {
+  fill: white;
+  transform: none;
+  animation: 0.5s jump_3951;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.x65-checkmark__box--t8x9:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.x65-container__toggle--7z3k input:checked ~ .x65-checkmark__box--t8x9:after {
+  display: block;
+}
+
+@keyframes up_3951 {
+  100% {
+    transform: translateY(-2em);
+  }
+}
+
+@keyframes jump_3951 {
+  50% {
+    transform-origin: center;
+    transform: translateY(-0.5em) rotate(-8deg);
+  }
+
+  100% {
+    transform-origin: center;
+    transform: translateY(0em);
+  }
+}
+
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
   ];
 
   const filterCards = () => {
@@ -874,7 +1416,9 @@ const CardsCheckboxes = () => {
           Tailwind
         </button>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1">{paginatedCards()}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1">
+        {paginatedCards()}
+      </div>
       <Pagination className="mt-8">
         <PaginationContent>
           <PaginationItem>
