@@ -1441,6 +1441,351 @@ const CardsButton = () => {
         />
       }
     />,
+    <Card
+    key={generateKey()}
+    information="Css"
+    iconColor="#fff"
+    background="bg-[#000]"
+    content={
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+    <button class="btn-U4zrJd">
+    <div class="wrapper-ZX2g8w">
+      <p class="text-Ey92Vu">Flowers</p>
+
+      <div class="flower-Hg2x7L flower1-Qp4zRf">
+        <div class="petal-Po8sXj one-D3LmK9"></div>
+        <div class="petal-Po8sXj two-N8Wq6X"></div>
+        <div class="petal-Po8sXj three-F2Gz7M"></div>
+        <div class="petal-Po8sXj four-L3YkB7"></div>
+      </div>
+      <div class="flower-Hg2x7L flower2-Ry9wMn">
+        <div class="petal-Po8sXj one-D3LmK9"></div>
+        <div class="petal-Po8sXj two-N8Wq6X"></div>
+        <div class="petal-Po8sXj three-F2Gz7M"></div>
+        <div class="petal-Po8sXj four-L3YkB7"></div>
+      </div>
+      <div class="flower-Hg2x7L flower3-Kr8bVp">
+        <div class="petal-Po8sXj one-D3LmK9"></div>
+        <div class="petal-Po8sXj two-N8Wq6X"></div>
+        <div class="petal-Po8sXj three-F2Gz7M"></div>
+        <div class="petal-Po8sXj four-L3YkB7"></div>
+      </div>
+      <div class="flower-Hg2x7L flower4-Tg5xPr">
+        <div class="petal-Po8sXj one-D3LmK9"></div>
+        <div class="petal-Po8sXj two-N8Wq6X"></div>
+        <div class="petal-Po8sXj three-F2Gz7M"></div>
+        <div class="petal-Po8sXj four-L3YkB7"></div>
+      </div>
+      <div class="flower-Hg2x7L flower5-Ly7zPw">
+        <div class="petal-Po8sXj one-D3LmK9"></div>
+        <div class="petal-Po8sXj two-N8Wq6X"></div>
+        <div class="petal-Po8sXj three-F2Gz7M"></div>
+        <div class="petal-Po8sXj four-L3YkB7"></div>
+      </div>
+      <div class="flower-Hg2x7L flower6-Qg1zNr">
+        <div class="petal-Po8sXj one-D3LmK9"></div>
+        <div class="petal-Po8sXj two-N8Wq6X"></div>
+        <div class="petal-Po8sXj three-F2Gz7M"></div>
+        <div class="petal-Po8sXj four-L3YkB7"></div>
+      </div>
+    </div>
+    </button>
+
+        <style>
+    .btn-U4zrJd {
+    height: 4em;
+    width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0px solid black;
+    cursor: pointer;
+    }
+
+    .wrapper-ZX2g8w {
+    height: 2em;
+    width: 8em;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .text-Ey92Vu {
+    font-size: 17px;
+    z-index: 1;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s ease;
+    }
+
+    .flower-Hg2x7L {
+    display: grid;
+    grid-template-columns: 1em 1em;
+    position: absolute;
+    transition: grid-template-columns 0.8s ease;
+    }
+
+    .flower1-Qp4zRf {
+    top: -12px;
+    left: -13px;
+    transform: rotate(5deg);
+    }
+
+    .flower2-Ry9wMn {
+    bottom: -5px;
+    left: 8px;
+    transform: rotate(35deg);
+    }
+
+    .flower3-Kr8bVp {
+    bottom: -15px;
+    transform: rotate(0deg);
+    }
+
+    .flower4-Tg5xPr {
+    top: -14px;
+    transform: rotate(15deg);
+    }
+
+    .flower5-Ly7zPw {
+    right: 11px;
+    top: -3px;
+    transform: rotate(25deg);
+    }
+
+    .flower6-Qg1zNr {
+    right: -15px;
+    bottom: -15px;
+    transform: rotate(30deg);
+    }
+
+    .petal-Po8sXj {
+    height: 1em;
+    width: 1em;
+    border-radius: 40% 70% / 7% 90%;
+    background: linear-gradient(#07a6d7, #93e0ee);
+    border: 0.5px solid #96d1ec;
+    z-index: 0;
+    transition: width 0.8s ease, height 0.8s ease;
+    }
+
+    .two-N8Wq6X {
+    transform: rotate(90deg);
+    }
+
+    .three-F2Gz7M {
+    transform: rotate(270deg);
+    }
+
+    .four-L3YkB7 {
+    transform: rotate(180deg);
+    }
+
+    .btn-U4zrJd:hover .petal-Po8sXj {
+    background: linear-gradient(#0761d7, #93bdee);
+    border: 0.5px solid #96b4ec;
+    }
+
+    .btn-U4zrJd:hover .flower-Hg2x7L {
+    grid-template-columns: 1.5em 1.5em;
+    }
+
+    .btn-U4zrJd:hover .flower-Hg2x7L .petal-Po8sXj {
+    width: 1.5em;
+    height: 1.5em;
+    }
+
+    .btn-U4zrJd:hover .text-Ey92Vu {
+    background: rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-U4zrJd:hover div.flower1-Qp4zRf {
+    animation: 15s linear 0s normal none infinite running flower1-Qp4zRf;
+    }
+
+    @keyframes flower1-Qp4zRf {
+    0% {
+      transform: rotate(5deg);
+    }
+
+    100% {
+      transform: rotate(365deg);
+    }
+    }
+
+    .btn-U4zrJd:hover div.flower2-Ry9wMn {
+    animation: 13s linear 1s normal none infinite running flower2-Ry9wMn;
+    }
+
+    @keyframes flower2-Ry9wMn {
+    0% {
+      transform: rotate(35deg);
+    }
+
+    100% {
+      transform: rotate(-325deg);
+    }
+    }
+
+    .btn-U4zrJd:hover div.flower3-Kr8bVp {
+    animation: 16s linear 1s normal none infinite running flower3-Kr8bVp;
+    }
+
+    @keyframes flower3-Kr8bVp {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+    }
+
+    .btn-U4zrJd:hover div.flower4-Tg5xPr {
+    animation: 17s linear 1s normal none infinite running flower4-Tg5xPr;
+    }
+
+    @keyframes flower4-Tg5xPr {
+    0% {
+      transform: rotate(15deg);
+    }
+
+    100% {
+      transform: rotate(375deg);
+    }
+    }
+
+    .btn-U4zrJd:hover div.flower5-Ly7zPw {
+    animation: 20s linear 1s normal none infinite running flower5-Ly7zPw;
+    }
+
+    @keyframes flower5-Ly7zPw {
+    0% {
+      transform: rotate(25deg);
+    }
+
+    100% {
+      transform: rotate(-335deg);
+    }
+    }
+
+    .btn-U4zrJd:hover div.flower6-Qg1zNr {
+    animation: 15s linear 1s normal none infinite running flower6-Qg1zNr;
+    }
+
+    @keyframes flower6-Qg1zNr {
+    0% {
+      transform: rotate(30deg);
+    }
+
+    100% {
+      transform: rotate(390deg);
+    }
+    }
+
+        </style>
+      `,
+            }}
+          />
+        }
+      />,
+      <Card
+      key={generateKey()}
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-b from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+    <button class="btn-5jD8wL">
+    <div class="svg-wrapper-2k8VnR">
+    <div class="svg-container-9LrZyP">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        class="icon-M7zQxT"
+      >
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path
+          fill="currentColor"
+          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+        ></path>
+      </svg>
+    </div>
+    </div>
+    <span class="text-3nL2Rb">Send</span>
+    </button>
+      <style>
+    .btn-5jD8wL {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    }
+
+    .text-3nL2Rb {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+    }
+
+    .icon-M7zQxT {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+    }
+
+    .btn-5jD8wL:hover .svg-container-9LrZyP {
+    animation: fly-1-5Zk8L3 0.6s ease-in-out infinite alternate;
+    }
+
+    .btn-5jD8wL:hover .icon-M7zQxT {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+    }
+
+    .btn-5jD8wL:hover .text-3nL2Rb {
+    transform: translateX(5em);
+    }
+
+    .btn-5jD8wL:active {
+    transform: scale(0.95);
+    }
+
+    @keyframes fly-1-5Zk8L3 {
+    from {
+    transform: translateY(0.1em);
+    }
+
+    to {
+    transform: translateY(-0.1em);
+    }
+    }
+
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
   ];
 
   const filterCards = () => {
