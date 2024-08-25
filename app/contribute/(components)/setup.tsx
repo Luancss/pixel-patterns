@@ -17,7 +17,7 @@ const Setup = () => {
         2. <span className="font-bold text-blue-500">Clone the Repository</span>
         : Clone the forked repository to your local machine using the command:
       </p>
-      <div className="ml-8">
+      <div className="md:ml-8">
         <CopyCard text="git clone https://github.com/Luancss/pixel-patterns" />
       </div>
       <p className="text-base text-gray-300 my-4">
@@ -25,7 +25,7 @@ const Setup = () => {
         Create a branch to make your changes. Give it a name that clearly
         describes what you’re working on:
       </p>
-      <div className="ml-8">
+      <div className="md:ml-8">
         <CopyCard text="git checkout -b my-feature" />
       </div>
       <p className="text-base text-gray-300 my-4">
@@ -55,7 +55,7 @@ const Setup = () => {
         After completing your changes, commit them with a clear and descriptive
         message:
       </p>
-      <div className="ml-8">
+      <div className="md:ml-8">
         <CopyCard
           text="git add ."
           text2='git commit -m "Add new feature for XYZ"'
@@ -68,7 +68,7 @@ const Setup = () => {
         </span>
         : Push your changes to your repository on GitHub:
       </p>
-      <div className="ml-8">
+      <div className="md:ml-8">
         <CopyCard text="git push origin my-feature" />
       </div>
       <p className="text-base text-gray-300 my-4">

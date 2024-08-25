@@ -3,12 +3,10 @@ import { Button } from "@/components/ui/button";
 import {
   CodeBlock,
   dracula,
-  atomDark,
   coldarkDark,
 } from "@react-email/code-block";
 import { Check, CopyIcon } from "lucide-react";
 import { useState } from "react";
-import { renderToStaticMarkup } from "react-dom/server";
 import { toast } from "sonner";
 
 export const CodeTailwind = () => {
