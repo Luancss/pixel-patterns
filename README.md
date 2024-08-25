@@ -32,7 +32,7 @@ This open-source project not only offers an initial library of components but al
 
 ## 💻 Deploy
 
-Click the following link to view the deploy: OFF!
+Click the following link to view the <a target="_blank" href="https://pixel-patterns-mauve.vercel.app/">deploy</a>
 
 
 ## 🚀 Technologies
