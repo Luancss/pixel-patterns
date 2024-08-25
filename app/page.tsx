@@ -8,6 +8,7 @@ import Link from "next/link";
 import { FlipWords } from "@/components/ui/flip-words";
 import ButtonEffect from "@/components/button-effect";
 import { Navbar } from "@/components/navbar/navbar";
+import Footer from "@/components/footer";
 export default function Home() {
   const words = ["enthusiast", "lovers", "fanatic", "admirer"];
 
@@ -33,6 +34,7 @@ export default function Home() {
         <Navbar />
       </div>
       <RamdonCards />
+      <Footer/>
     </>
   );
 }
