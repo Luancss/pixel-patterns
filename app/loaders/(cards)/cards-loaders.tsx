@@ -1931,7 +1931,6 @@ const CardsLoaders = () => {
         />
       }
     />,
-
     <Card
       key={generateKey()}
       iconColor="#fff"
@@ -2207,9 +2206,485 @@ const CardsLoaders = () => {
       content={
         <div
           className="loader border-t-2 rounded-full border-yellow-500 bg-yellow-300 animate-spin
-aspect-square w-8 flex justify-center items-center text-yellow-700"
+          aspect-square w-8 flex justify-center items-center text-yellow-700"
         >
           $
+        </div>
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-b from-yellow-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<div class="loader-up"></div>
+      <style>
+.loader-up {
+position: relative;
+font-size: 16px;
+width: 5.5em;
+height: 5.5em;
+}
+
+.loader-up:before {
+content: '';
+position: absolute;
+transform: translate(-50%, -50%) rotate(45deg);
+height: 100%;
+width: 4px;
+background: #fff;
+left: 50%;
+top: 50%;
+}
+
+.loader-up:after {
+content: '';
+position: absolute;
+left: 0.2em;
+bottom: 0.18em;
+width: 1em;
+height: 1em;
+background-color: orange;
+border-radius: 15%;
+animation: rollingRock 2.5s cubic-bezier(.79, 0, .47, .97) infinite;
+}
+
+@keyframes rollingRock {
+0% {
+  transform: translate(0, -1em) rotate(-45deg)
+}
+
+5% {
+  transform: translate(0, -1em) rotate(-50deg)
+}
+
+20% {
+  transform: translate(1em, -2em) rotate(47deg)
+}
+
+25% {
+  transform: translate(1em, -2em) rotate(45deg)
+}
+
+30% {
+  transform: translate(1em, -2em) rotate(40deg)
+}
+
+45% {
+  transform: translate(2em, -3em) rotate(137deg)
+}
+
+50% {
+  transform: translate(2em, -3em) rotate(135deg)
+}
+
+55% {
+  transform: translate(2em, -3em) rotate(130deg)
+}
+
+70% {
+  transform: translate(3em, -4em) rotate(217deg)
+}
+
+75% {
+  transform: translate(3em, -4em) rotate(220deg)
+}
+
+100% {
+  transform: translate(0, -1em) rotate(-225deg)
+}
+}
+    
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-t from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+
+<div class="spinner54344">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+        <style> 
+
+.spinner54344 {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-left: -75px;
+}
+
+.spinner54344 span {
+  position: absolute;
+  top: 50%;
+  left: var(--left);
+  width: 35px;
+  height: 7px;
+  background: #ffff;
+  animation: dominos 1s ease infinite;
+  box-shadow: 2px 2px 3px 0px black;
+}
+
+.spinner54344 span:nth-child(1) {
+  --left: 80px;
+  animation-delay: 0.125s;
+}
+
+.spinner54344 span:nth-child(2) {
+  --left: 70px;
+  animation-delay: 0.3s;
+}
+
+.spinner54344 span:nth-child(3) {
+  left: 60px;
+  animation-delay: 0.425s;
+}
+
+.spinner54344 span:nth-child(4) {
+  animation-delay: 0.54s;
+  left: 50px;
+}
+
+.spinner54344 span:nth-child(5) {
+  animation-delay: 0.665s;
+  left: 40px;
+}
+
+.spinner54344 span:nth-child(6) {
+  animation-delay: 0.79s;
+  left: 30px;
+}
+
+.spinner54344 span:nth-child(7) {
+  animation-delay: 0.915s;
+  left: 20px;
+}
+
+.spinner54344 span:nth-child(8) {
+  left: 10px;
+}
+
+@keyframes dominos {
+  50% {
+    opacity: 0.7;
+  }
+
+  75% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  80% {
+    opacity: 1;
+  }
+}
+
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-t from-red-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+
+<div class="loader7s883"></div>
+        <style> 
+.loader7s883 {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  position: relative;
+}
+
+.loader7s883:before {
+  content: '';
+  width: 48px;
+  height: 5px;
+  background: #f0808050;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow324 0.5s linear infinite;
+}
+
+.loader7s883:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #f08080;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  animation: jump7456 0.5s linear infinite;
+}
+
+@keyframes jump7456 {
+  15% {
+    border-bottom-right-radius: 3px;
+  }
+
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+
+  50% {
+    transform: translateY(18px) scale(1, .9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes shadow324 {
+
+  0%,
+    100% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-t from-blue-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<svg class="loader22g34" viewBox="25 25 50 50">
+  <circle class="circle2344f" r="20" cy="50" cx="50"></circle>
+</svg>
+
+        <style> 
+.loader22g34 {
+ width: 3.25em;
+ transform-origin: center;
+ animation: rotate4 2s linear infinite;
+}
+
+.circle2344f {
+ fill: none;
+ stroke: hsl(214, 97%, 59%);
+ stroke-width: 2;
+ stroke-dasharray: 1, 200;
+ stroke-dashoffset: 0;
+ stroke-linecap: round;
+ animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes dash4 {
+ 0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
+
+ 50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
+
+ 100% {
+  stroke-dashoffset: -125px;
+ }
+}
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-gradient-to-t from-gray-700"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<div class="loader99ksjr2"></div>
+      <style> 
+.loader99ksjr2 {
+  width: 120px;
+  height: 150px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#ddd 50%, #bbb 51%),
+    linear-gradient(#ddd, #ddd), linear-gradient(#ddd, #ddd),
+    radial-gradient(ellipse at center, #aaa 25%, #eee 26%, #eee 50%, #0000 55%),
+    radial-gradient(ellipse at center, #aaa 25%, #eee 26%, #eee 50%, #0000 55%),
+    radial-gradient(ellipse at center, #aaa 25%, #eee 26%, #eee 50%, #0000 55%);
+  background-position: 0 20px, 45px 0, 8px 6px, 55px 3px, 75px 3px, 95px 3px;
+  background-size: 100% 4px, 1px 23px, 30px 8px, 15px 15px, 15px 15px, 15px 15px;
+  position: relative;
+  border-radius: 6%;
+  animation: shake 3s ease-in-out infinite;
+  transform-origin: 60px 180px;
+}
+
+.loader99ksjr2:before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 100%;
+  width: 7px;
+  height: 5px;
+  background: #aaa;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 102px 0 #aaa;
+}
+
+.loader99ksjr2:after {
+  content: "";
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  background-color: #bbdefb;
+  background-image: linear-gradient( to right, #0004 0%, #0004 49%, #0000 50%, #0000 100% ),
+    linear-gradient(135deg, #64b5f6 50%, #607d8b 51%);
+  background-size: 30px 100%, 90px 80px;
+  border-radius: 50%;
+  background-repeat: repeat, no-repeat;
+  background-position: 0 0;
+  box-sizing: border-box;
+  border: 10px solid #DDD;
+  box-shadow: 0 0 0 4px #999 inset, 0 0 6px 6px #0004 inset;
+  animation: spin 3s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  50% {
+    transform: rotate(360deg)
+  }
+
+  75% {
+    transform: rotate(750deg)
+  }
+
+  100% {
+    transform: rotate(1800deg)
+  }
+}
+
+@keyframes shake {
+  65%, 80%, 88%, 96% {
+    transform: rotate(0.5deg)
+  }
+
+  50%, 75%, 84%, 92% {
+    transform: rotate(-0.5deg)
+  }
+
+  0%, 50%, 100% {
+    transform: rotate(0)
+  }
+}
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Tailwind"
+      background="bg-[#000]"
+      content={
+        <div className="flex-col gap-4 w-full flex items-center justify-center">
+          <div className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+            <div className="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"></div>
+          </div>
+        </div>
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Tailwind"
+      background="bg-gradient-to-l from-red-700/20"
+      content={
+        <div className="flex flex-row gap-2">
+          <div className="w-4 h-4 rounded-full bg-red-500 animate-bounce"></div>
+          <div className="w-4 h-4 rounded-full bg-red-500 animate-bounce [animation-delay:-.3s]"></div>
+          <div className="w-4 h-4 rounded-full bg-red-500 animate-bounce [animation-delay:-.5s]"></div>
+        </div>
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Tailwind"
+      background="bg-gradient-to-r from-blue-700/20"
+      content={
+        <div className="flex flex-row gap-2">
+          <div className="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:.7s]"></div>
+          <div className="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:.3s]"></div>
+          <div className="w-4 h-4 rounded-full bg-blue-700 animate-bounce [animation-delay:.7s]"></div>
         </div>
       }
     />,
@@ -2267,7 +2742,9 @@ aspect-square w-8 flex justify-center items-center text-yellow-700"
           Tailwind
         </button>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1">{paginatedCards()}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1">
+        {paginatedCards()}
+      </div>
       <Pagination className="mt-8">
         <PaginationContent>
           <PaginationItem>
