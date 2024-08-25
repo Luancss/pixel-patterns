@@ -1816,7 +1816,7 @@ const CardsButton = () => {
           onClick={() => setFilter("All")}
           className={cn(
             "text-slate-50 px-2 py-1 text-sm rounded",
-            filter === "All" && " bg-blue-700/30"
+            filter === "All" && "bg-blue-700/30"
           )}
         >
           All
@@ -1825,7 +1825,7 @@ const CardsButton = () => {
           onClick={() => setFilter("Css")}
           className={cn(
             "text-slate-50 px-2 py-1 text-sm rounded",
-            filter === "Css" && " bg-blue-700/30"
+            filter === "Css" && "bg-blue-700/30"
           )}
         >
           CSS
@@ -1834,7 +1834,7 @@ const CardsButton = () => {
           onClick={() => setFilter("Tailwind")}
           className={cn(
             "text-slate-50 px-2 py-1 text-sm rounded",
-            filter === "Tailwind" && " bg-blue-700/30"
+            filter === "Tailwind" && "bg-blue-700/30"
           )}
         >
           Tailwind
