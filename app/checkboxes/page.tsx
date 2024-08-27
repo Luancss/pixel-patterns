@@ -13,7 +13,7 @@ const Inputs = () => {
       <Geminid />
       <WaveLittle />
       <HeroSection
-        title="Inputs"
+        title="Checkboxes"
         description="
         Check out our sleek and functional input components, crafted for modern forms and interfaces. They blend flexibility with elegance, enhancing user experience effortlessly."
       />
