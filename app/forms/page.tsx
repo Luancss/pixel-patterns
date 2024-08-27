@@ -5,7 +5,7 @@ const Forms = () => {
   return (
     <HeroSection
       title="Forms"
-      description="Check out our forms components, crafted with Tailwind CSS and Framer Motion."
+      description="Developing..."
     />
   )
 }
