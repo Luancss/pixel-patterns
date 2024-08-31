@@ -1,9 +1,7 @@
-import Geminid from "@/components/geminid";
-import HeroSection from "@/components/hero-section";
-import React from "react";
-import Circle from "@/components/circle";
+import { HeroSection } from "@/components/layout";
+import { Circle, Geminid, Star } from "@/components/shapes";
+
 import CardsLoaders from "./(cards)/cards-loaders";
-import Star from "@/components/star";
 
 const Cards = () => {
   return (

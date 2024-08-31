@@ -1,6 +1,6 @@
 import React from "react";
 
-const Circle = () => {
+export const Circle = () => {
   return (
     <div className="conte-esfera">
       <div className="contenedor">
@@ -413,5 +413,3 @@ const Circle = () => {
     </div>
   );
 };
-
-export default Circle;

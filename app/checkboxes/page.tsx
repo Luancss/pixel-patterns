@@ -1,15 +1,13 @@
+import { WaveLittle } from "@/components/wave";
+import { HeroSection } from "@/components/layout";
+import { Geminid, Star } from "@/components/shapes";
 
-import Geminid from "@/components/geminid";
-import HeroSection from "@/components/hero-section";
-import React from "react";
-import Star from "@/components/star";
-import WaveLittle from "@/components/wave-little";
 import CardsCheckboxes from "./(cards)/cards-checkboxes";
 
 const Inputs = () => {
   return (
     <>
-    <Star/>
+      <Star />
       <Geminid />
       <WaveLittle />
       <HeroSection

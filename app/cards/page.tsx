@@ -1,14 +1,12 @@
-import Geminid from "@/components/geminid";
-import HeroSection from "@/components/hero-section";
-import React from "react";
-import Box from "@/components/box";
-import Star from "@/components/star";
+import { HeroSection } from "@/components/layout";
+import { Box, Geminid, Star } from "@/components/shapes";
+
 import CardCards from "./(cards)/card-cards";
 
 const Cards = () => {
   return (
     <>
-    <Star/>
+      <Star />
       <Geminid />
       <Box />
       <HeroSection

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Star = () => {
+export const Star = () => {
   return (
     <>
       <div id="stars"></div>
@@ -9,5 +9,3 @@ const Star = () => {
     </>
   );
 };
-
-export default Star;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Box = () => {
+export const Box = () => {
   return (
     <div className="container-box">
       <div className="container-box-cube">
@@ -14,5 +14,3 @@ const Box = () => {
     </div>
   );
 };
-
-export default Box;

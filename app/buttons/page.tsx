@@ -1,14 +1,13 @@
-import Geminid from "@/components/geminid";
-import HeroSection from "@/components/hero-section";
+import { WaveBox } from "@/components/wave";
+import { HeroSection } from "@/components/layout";
+import { Geminid, Star } from "@/components/shapes";
+
 import CardsButton from "./(cards)/cards-buttons";
-import Cubic from "@/components/cubic";
-import WaveBox from "@/components/wave-box";
-import Star from "@/components/star";
 
 const Buttons = () => {
   return (
     <>
-    <Star/>
+      <Star />
       <Geminid />
       <WaveBox />
       <HeroSection

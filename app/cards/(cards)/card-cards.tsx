@@ -1,15 +1,14 @@
 "use client";
 
-import { Card } from "@/components/cards/card";
-import { CardSpecific } from "@/components/cards/card-specific";
 import {
   Pagination,
-  PaginationContent,
   PaginationItem,
   PaginationLink,
   PaginationNext,
+  PaginationContent,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@/components/ui";
+import { CardSpecific } from "@/components/cards";
 
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";

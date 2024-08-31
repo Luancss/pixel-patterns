@@ -1,13 +1,12 @@
 "use client";
 
-import CopyCard from "@/components/copy";
-import Copy from "@/components/copy";
-import Geminid from "@/components/geminid";
-import Star from "@/components/star";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+
+import { Geminid, Star } from "@/components/shapes";
+import { AnimatedTooltipPreview } from "@/components/ui";
+
 import Setup from "./(components)/setup";
-import { AnimatedTooltipPreview } from "@/components/ui/animated-tooltip-preview";
 
 const Contribute = () => {
   return (

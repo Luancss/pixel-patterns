@@ -1,13 +1,10 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import {
-  CodeBlock,
-  dracula,
-  coldarkDark,
-} from "@react-email/code-block";
-import { Check, CopyIcon } from "lucide-react";
-import { useState } from "react";
 import { toast } from "sonner";
+import { useState } from "react";
+import { Check, CopyIcon } from "lucide-react";
+import { dracula, CodeBlock, coldarkDark } from "@react-email/code-block";
+
+import { Button } from "@/components/ui";
 
 export const CodeTailwind = () => {
   const [isChecked, setIsChecked] = useState(false);

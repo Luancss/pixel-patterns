@@ -1,6 +1,6 @@
 import React from "react";
 
-const WaveBox: React.FC = () => {
+export const WaveBox = () => {
   return (
     <div className="wave-container">
       <div className="canvas">
@@ -164,5 +164,3 @@ const WaveBox: React.FC = () => {
     </div>
   );
 };
-
-export default WaveBox;

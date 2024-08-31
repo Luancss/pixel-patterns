@@ -1,13 +1,8 @@
-import HeroSection from '@/components/hero-section';
-import React from 'react'
+import { HeroSection } from "@/components/layout";
+import React from "react";
 
 const Forms = () => {
-  return (
-    <HeroSection
-      title="Forms"
-      description="Developing..."
-    />
-  )
-}
+  return <HeroSection title="Forms" description="Developing..." />;
+};
 
 export default Forms;
