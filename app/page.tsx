@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ButtonEffect } from "@/components";
+import { ButtonEffect } from "@/components/button-effect";
 import { Button, FlipWords } from "@/components/ui";
 import { Footer, Navbar } from "@/components/layout";
 import { Cubic, Geminid, Star } from "@/components/shapes";
