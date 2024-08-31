@@ -104,7 +104,7 @@ export const RamdonCards = () => {
               <span className="text-slate-500">&lt;</span>
               <span className="text-pink-400">Flex</span>
               <span className="ml-2 text-violet-400">
-                classNameName<span className="text-slate-500">=</span>
+                className<span className="text-slate-500">=</span>
                 <span className="relative inline-block px-1 before:absolute before:-inset-0.5 before:block before:rounded before:bg-blue-500/10">
                   <span className="relative text-blue-400">"mt-3"</span>
                 </span>
@@ -759,7 +759,7 @@ export const RamdonCards = () => {
         </div>
       }
     />,
-   
+
     <Card
       key={generateKey()}
       information="Css"
@@ -1166,14 +1166,14 @@ export const RamdonCards = () => {
       }
     />,
     <Card
-    key={generateKey()}
-    information="Css"
-    iconColor="#fff"
-    background="bg-gradient-to-r from-slate-950"
-    content={
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
+      key={generateKey()}
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-r from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
       <button class="space-btn" type="button">
         <strong class="space-text">SPACE</strong>
         <div class="stars-container">
@@ -1352,10 +1352,10 @@ export const RamdonCards = () => {
         }
       </style>
     `,
-        }}
-      />
-    }
-  />,
+          }}
+        />
+      }
+    />,
     <Card
       key={generateKey()}
       information="Css"
@@ -1419,14 +1419,14 @@ export const RamdonCards = () => {
       }
     />,
     <Card
-    key={generateKey()}
-    information="Css"
-    iconColor="#fff"
-    background="bg-gradient-to-l from-red-950/60"
-    content={
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
+      key={generateKey()}
+      information="Css"
+      iconColor="#fff"
+      background="bg-gradient-to-l from-red-950/60"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
         <button class="unique-btn-101">
           <span class="unique-text-102">Delete</span>
           <span class="unique-icon-103">
@@ -1500,10 +1500,10 @@ export const RamdonCards = () => {
           }
         </style>
       `,
-        }}
-      />
-    }
-  />,
+          }}
+        />
+      }
+    />,
   ];
 
   const cardsToLeft_TwoColumn = [

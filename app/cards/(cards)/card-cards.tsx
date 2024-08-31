@@ -285,7 +285,7 @@ const CardCards = () => {
               <span className="text-slate-500">&lt;</span>
               <span className="text-pink-400">Flex</span>
               <span className="ml-2 text-violet-400">
-                classNameName<span className="text-slate-500">=</span>
+                className<span className="text-slate-500">=</span>
                 <span className="relative inline-block px-1 before:absolute before:-inset-0.5 before:block before:rounded before:bg-blue-500/10">
                   <span className="relative text-blue-400">"mt-3"</span>
                 </span>
@@ -338,7 +338,7 @@ const CardCards = () => {
                 </span>
               </span>
               <span className="ml-2 text-violet-400">
-                classNameName<span className="text-slate-500">=</span>
+                className<span className="text-slate-500">=</span>
                 <span className="relative inline-block px-1 before:absolute before:-inset-0.5 before:block before:rounded before:bg-blue-500/10">
                   <span className="relative text-blue-400">"mt-3"</span>
                 </span>
@@ -974,7 +974,9 @@ const CardCards = () => {
           Tailwind
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">{paginatedCards()}</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        {paginatedCards()}
+      </div>
       <Pagination className="mt-8">
         <PaginationContent>
           <PaginationItem>
