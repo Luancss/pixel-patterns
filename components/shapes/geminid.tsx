@@ -1,6 +1,6 @@
 import React from "react";
 
-const Geminid = () => {
+export const Geminid = () => {
   return (
     <>
       <div
@@ -840,5 +840,3 @@ const Geminid = () => {
     </>
   );
 };
-
-export default Geminid;

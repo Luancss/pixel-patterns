@@ -1,17 +1,18 @@
 "use client";
 
-import { Card } from "@/components/cards/card";
+import React, { useState } from "react";
+
 import {
   Pagination,
-  PaginationContent,
   PaginationItem,
   PaginationLink,
   PaginationNext,
+  PaginationContent,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "@/components/ui";
+import { Card } from "@/components/cards";
 
 import { cn } from "@/lib/utils";
-import React, { useState } from "react";
 
 const itemsPerPage = 12;
 
@@ -962,7 +963,7 @@ const CardsInputs = () => {
     //   iconColor="#000"
     //   background="bg-gradient-to-r from-gray-950"
     //   content={
-        
+
     //   }
     // />,
   ];

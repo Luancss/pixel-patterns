@@ -1,6 +1,6 @@
 import React from "react";
 
-const Meteor = () => {
+export const Meteor = () => {
   return (
     <>
       <div className="star"></div>
@@ -22,5 +22,3 @@ const Meteor = () => {
     </>
   );
 };
-
-export default Meteor;

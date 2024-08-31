@@ -1,9 +1,10 @@
 import React from "react";
-import ButtonEffect from "./button-effect";
-import { Navbar } from "./navbar/navbar";
-import { Button } from "./ui/button";
 import Link from "next/link";
-import { FlipWords } from "./ui/flip-words";
+
+import { Button } from "../ui";
+import { ButtonEffect } from "../button-effect";
+
+import { Navbar } from "./navbar";
 
 interface HeroSectionProps {
   title: string;
@@ -29,5 +30,3 @@ export const HeroSection = ({ title, description }: HeroSectionProps) => {
     </div>
   );
 };
-
-export default HeroSection;

@@ -1,15 +1,13 @@
-import Cubic from "@/components/cubic";
-import Geminid from "@/components/geminid";
-import HeroSection from "@/components/hero-section";
-import React from "react";
+import { Wave } from "@/components/wave";
+import { HeroSection } from "@/components/layout";
+import { Geminid, Star } from "@/components/shapes";
+
 import CardsInputs from "./(cards)/cards-inputs";
-import Wave from "@/components/wave";
-import Star from "@/components/star";
 
 const Inputs = () => {
   return (
     <>
-    <Star/>
+      <Star />
       <Geminid />
       <Wave />
       <HeroSection

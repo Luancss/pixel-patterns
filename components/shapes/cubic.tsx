@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cubic = () => {
+export const Cubic = () => {
   return (
     <div className="app">
       <div className="scene">
@@ -63,5 +63,3 @@ const Cubic = () => {
     </div>
   );
 };
-
-export default Cubic;

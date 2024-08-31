@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Loader, Loader2 } from "lucide-react";
 
-export default function ButtonEffect({ href }: { href?: string }) {
+export const ButtonEffect = ({ href }: { href?: string }) => {
   const [stars, setStars] = useState<number | null>(null);
 
   useEffect(() => {
@@ -74,4 +74,4 @@ export default function ButtonEffect({ href }: { href?: string }) {
       </span>
     </Link>
   );
-}
+};

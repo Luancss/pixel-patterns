@@ -1,14 +1,12 @@
-import { RamdonCards } from "./(ramdom-cards)/cards";
-import HeroSection from "@/components/hero-section";
-import Geminid from "@/components/geminid";
-import Cubic from "@/components/cubic";
-import Star from "@/components/star";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { FlipWords } from "@/components/ui/flip-words";
-import ButtonEffect from "@/components/button-effect";
-import { Navbar } from "@/components/navbar/navbar";
-import Footer from "@/components/footer";
+
+import { ButtonEffect } from "@/components";
+import { Button, FlipWords } from "@/components/ui";
+import { Footer, Navbar } from "@/components/layout";
+import { Cubic, Geminid, Star } from "@/components/shapes";
+
+import { RamdonCards } from "./(ramdom-cards)/cards";
+
 export default function Home() {
   const words = ["enthusiast", "lovers", "fanatic", "admirer"];
 
@@ -34,7 +32,7 @@ export default function Home() {
         <Navbar />
       </div>
       <RamdonCards />
-      <Footer/>
+      <Footer />
     </>
   );
 }
