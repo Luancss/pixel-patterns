@@ -2079,6 +2079,39 @@ const CardsButton = () => {
         </button>
       }
     />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-[bg-gradient-to-r from-sky-500 to-indigo-700/70]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+          <button class="btn-ligth-1993">Hover me</button>
+          <style>
+            .btn-ligth-1993 {
+             color: #B0C4DE;
+             padding: 10px 20px;
+             border-radius: 8px;
+             border: none;             
+             font-weight: 500;
+             background-color: #52a06f;
+             box-shadow: 0px 5px 9px #12c757;
+             cursor: pointer;
+  
+            }
+            .btn-ligth-1993:hover {  
+             color: #fff;         
+             background-color: #53e088;
+             box-shadow: 0px 8px 45px #12c757;            
+            }
+          </style>
+        `,
+          }}
+        />
+      }
+    />,
   ];
 
   const filterCards = () => {
