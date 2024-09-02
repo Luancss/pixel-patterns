@@ -2083,7 +2083,7 @@ const CardsButton = () => {
       key={generateKey()}
       iconColor="#fff"
       information="Css"
-      background="bg-[bg-gradient-to-r from-sky-500 to-indigo-700/70]"
+      background="bg-[#000]"
       content={
         <div
           dangerouslySetInnerHTML={{
@@ -2108,6 +2108,267 @@ const CardsButton = () => {
             }
           </style>
         `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-[#000]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `        
+        <button class="button"><a >Click Me</a></button>
+        <style>
+          .button{
+            position:relative;
+            display:inline-block;
+            }
+
+          .button a{
+            color:white;
+            font-family:Helvetica, sans-serif;
+            font-weight:bold;
+            font-size:20px;
+            text-align: center;
+            text-decoration:none;
+            background-color:#FFA12B;
+            display:block;
+            position:relative;
+            padding:10px 20px;
+
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            text-shadow: 0px 1px 0px #000;
+            filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+            -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+            -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+            box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+          }
+
+          .button a:active{
+            top:10px;
+            background-color:#F78900;
+
+            -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+            -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+            box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+          }
+
+          .button:after{
+            content:"";
+            height:100%;
+            width:100%;
+            padding:4px;
+            position: absolute;
+            bottom:-15px;
+            left:-4px;
+            z-index:-1;
+            background-color:#2B1800;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+          }
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-[#000]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+         <button class="btn btn-one"><span>Hover Me</span></button>
+        <style>
+
+        .btn {
+          line-height: 50px;
+          height: 50px;
+          text-align: center;
+          width: 150px;
+          cursor: pointer;
+              }
+
+        .btn-one {
+          color: #FFF;
+          transition: all 0.3s;
+          position: relative;
+        }
+        .btn-one span {
+          transition: all 0.3s;
+        }
+        .btn-one::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          opacity: 0;
+          transition: all 0.3s;
+          border-top-width: 1px;
+          border-bottom-width: 1px;
+          border-top-style: solid;
+          border-bottom-style: solid;
+          border-top-color: rgba(255,255,255,0.5);
+          border-bottom-color: rgba(255,255,255,0.5);
+          transform: scale(0.1, 1);
+        }
+        .btn-one:hover span {
+          letter-spacing: 2px;
+        }
+        .btn-one:hover::before {
+          opacity: 1; 
+          transform: scale(1, 1); 
+        }
+        .btn-one::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          transition: all 0.3s;
+          background-color: rgba(255,255,255,0.1);
+        }
+        .btn-one:hover::after {
+          opacity: 0; 
+          transform: scale(0.1, 1);
+        }
+
+        </style>
+      `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-[#000]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+      <div class="btn btn-two"><span>Hover Me</span></div>
+      <style>
+        .btn-two {
+          color: #FFF;
+          transition: all 0.5s;
+          position: relative; 
+                  }
+          .btn-two span {
+            z-index: 2; 
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%; 
+          }
+          .btn-two::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.5s;
+            border: 1px solid rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.1);
+          }
+          .btn-two::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.5s;
+            border: 1px solid rgba(255,255,255,0.2);
+            background-color: rgba(255,255,255,0.1);
+          }
+          .btn-two:hover::before {
+            transform: rotate(-45deg);
+            background-color: rgba(255,255,255,0);
+          }
+          .btn-two:hover::after {
+            transform: rotate(45deg);
+            background-color: rgba(255,255,255,0);
+          }
+
+      </style>
+    `,
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
+      information="Css"
+      background="bg-[#000]"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+     <div class="btn btn-three"><span>Hover Me</span></div>
+     <style>
+       .btn-three {
+          color: #FFF;
+          transition: all 0.5s;
+          position: relative;
+                  }
+       .btn-three::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 1;
+         background-color: rgba(255,255,255,0.1);
+         transition: all 0.3s;
+       }
+       .btn-three:hover::before {
+         opacity: 0 ;
+         transform: scale(0.5,0.5);
+       }
+       .btn-three::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 1;
+         opacity: 0;
+         transition: all 0.3s;
+         border: 1px solid rgba(255,255,255,0.5);
+         transform: scale(1.2,1.2);
+       }
+       .btn-three:hover::after {
+         opacity: 1;
+         transform: scale(1,1);
+       }
+     </style>
+   `,
           }}
         />
       }
