@@ -1177,7 +1177,7 @@ gap: 10px;
       information="Tailwind"
       background="bg-gradient-to-b from-slate-950"
       content={
-        <div className="flex justify-center items-center min-h-screen">
+        <div className="flex justify-center items-center">
           <div className="max-w-[720px] mx-auto">
             <div className="relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
               <div className="relative grid mx-4 mb-4 -mt-6 overflow-hidden text-white shadow-lg h-28 place-items-center rounded-xl bg-gradient-to-tr from-gray-900 to-gray-800 bg-clip-border shadow-gray-900/20">
