@@ -15,7 +15,7 @@ export default function Home() {
       <Star />
       <Geminid />
       <Cubic />
-      <div className="max-w-[600px] flex flex-col items-center justify-center gap-y-7">
+      <div className="max-w-[600px] flex flex-col items-center justify-center gap-y-7 text-center">
         <Button className="bg-yellow-950/30 hover:bg-yellow-950/10 text-yellow-500 px-4 py-2 sm:px-6 sm:py-3">
           <Link href="/contribute">Contribute to this project! 💡</Link>
         </Button>
