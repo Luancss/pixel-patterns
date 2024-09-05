@@ -1841,3 +1841,157 @@
     transform: rotate(135deg);
   }
 }
+
+@media (max-width: 700px) {
+  .containerCircle {
+    width: 8em;
+    height: 4em;
+    font-size: 40px;
+    margin-top: -2.4rem;
+  }
+
+  .waveCircle {
+    border-width: 0.08em;
+  }
+
+  .waveCircle:nth-child(1) {
+    width: 7.61em;
+    height: 7.61em;
+    bottom: -3.81em;
+    left: 0.195em;
+  }
+
+  .waveCircle:nth-child(2) {
+    width: 7.22em;
+    height: 7.22em;
+    bottom: -3.61em;
+    left: 0.39em;
+  }
+
+  .waveCircle:nth-child(3) {
+    width: 6.83em;
+    height: 6.83em;
+    bottom: -3.41em;
+    left: 0.585em;
+  }
+
+  .waveCircle:nth-child(4) {
+    width: 6.44em;
+    height: 6.44em;
+    bottom: -3.22em;
+    left: 0.78em;
+  }
+
+  .waveCircle:nth-child(5) {
+    width: 6.05em;
+    height: 6.05em;
+    bottom: -3.02em;
+    left: 0.975em;
+  }
+
+  .waveCircle:nth-child(6) {
+    width: 5.66em;
+    height: 5.66em;
+    bottom: -2.83em;
+    left: 1.17em;
+  }
+
+  .waveCircle:nth-child(7) {
+    width: 5.27em;
+    height: 5.27em;
+    bottom: -2.64em;
+    left: 1.365em;
+  }
+
+  .waveCircle:nth-child(8) {
+    width: 4.88em;
+    height: 4.88em;
+    bottom: -2.44em;
+    left: 1.56em;
+  }
+
+  .waveCircle:nth-child(9) {
+    width: 4.49em;
+    height: 4.49em;
+    bottom: -2.24em;
+    left: 1.755em;
+  }
+
+  .waveCircle:nth-child(10) {
+    width: 4.1em;
+    height: 4.1em;
+    bottom: -2.04em;
+    left: 1.95em;
+  }
+
+  .waveCircle:nth-child(11) {
+    width: 3.71em;
+    height: 3.71em;
+    bottom: -1.84em;
+    left: 2.145em;
+  }
+
+  .waveCircle:nth-child(12) {
+    width: 3.32em;
+    height: 3.32em;
+    bottom: -1.64em;
+    left: 2.34em;
+  }
+
+  .waveCircle:nth-child(13) {
+    width: 2.93em;
+    height: 2.93em;
+    bottom: -1.44em;
+    left: 2.535em;
+  }
+
+  .waveCircle:nth-child(14) {
+    width: 2.54em;
+    height: 2.54em;
+    bottom: -1.23em;
+    left: 2.73em;
+  }
+
+  .waveCircle:nth-child(15) {
+    width: 2.15em;
+    height: 2.15em;
+    bottom: -1.02em;
+    left: 2.925em;
+  }
+
+  .waveCircle:nth-child(16) {
+    width: 1.76em;
+    height: 1.76em;
+    bottom: -0.81em;
+    left: 3.12em;
+  }
+
+  .waveCircle:nth-child(17) {
+    width: 1.38em;
+    height: 1.38em;
+    bottom: -0.61em;
+    left: 3.315em;
+  }
+
+  .waveCircle:nth-child(18) {
+    width: 0.98em;
+    height: 0.98em;
+    bottom: -0.49em;
+    left: 3.51em;
+  }
+
+  .waveCircle:nth-child(19) {
+    width: 0.59em;
+    height: 0.59em;
+    bottom: -0.29em;
+    left: 3.705em;
+  }
+
+  .waveCircle:nth-child(20) {
+    width: 0.2em;
+    height: 0.2em;
+    bottom: -0.1em;
+    left: 3.9em;
+  }
+}
+

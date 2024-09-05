@@ -11,7 +11,10 @@ const Forms = () => {
       <Star />
       <Geminid />
       <WaveCircle />
-      <HeroSection title="Forms" description="Developing..." />
+      <HeroSection
+        title="Forms"
+        description="Discover our sleek form components, designed for style and functionality. Ideal for login, registration, and data collection, they offer a modern and flexible solution for any project."
+      />
       <CardsForm />
     </>
   );

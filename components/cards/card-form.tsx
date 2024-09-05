@@ -46,7 +46,7 @@ export const CardForm = ({
     <section className="mx-auto">
       <div
         className={cn(
-          `flex flex-col items-center justify-center w-[600px] h-[600px] rounded-xl relative card`,
+          `flex flex-col items-center justify-center w-[350px] py-16 md:py-0 mx-auto  md:w-[600px] md:h-[600px] overflow-x-scroll md:overflow-hidden rounded-xl relative card`,
           background ? `${background}` : "bg-[#808080]"
         )}
       >
