@@ -27,7 +27,7 @@ const CardsButton = () => {
     <Card
       key={generateKey()}
       iconColor="#fff"
-      information="Button Example"
+      information="css"
       background="bg-gradient-to-r from-black-100 via-purple-100 to-pink-100"
       content={
         <div
