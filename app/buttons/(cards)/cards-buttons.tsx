@@ -27,6 +27,72 @@ const CardsButton = () => {
     <Card
       key={generateKey()}
       iconColor="#fff"
+      information="css"
+      background="bg-gradient-to-r from-black-100 via-purple-100 to-pink-100"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+          <button type="button" class="uncommon-button-333">Clique Aqui</button>
+          <style>
+            .uncommon-button-333 {
+              padding: 10px 15px;
+              font-size: 1rem;
+              font-weight: bold;
+              color: #fff;
+              background: linear-gradient(135deg, #ff416c, #ff4b2b);
+              border: none;
+              border-radius: 50px;
+              cursor: pointer;
+              transition: transform 0.2s, background-color 0.4s;
+            }
+            
+            .uncommon-button-333:hover {
+              transform: rotate(5deg) scale(1.1);
+              background-color: #ff6200;
+            }
+            
+            .uncommon-button-333:active {
+              transform: scale(0.9) rotate(-5deg);
+            }
+          </style>
+          `
+          }}
+        />
+      }
+    />
+    ,
+    <Card key={generateKey()}
+      iconColor="#fff"
+      information="css"
+      background="bg-gradient-to-r from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+        <button type="button" class="unique-button-prmary-007BFF">PRYMARY</button>
+        <style>
+          .unique-button-prmary-007BFF{
+          background:#007BFF;
+          color:white;
+          padding: 5px 15px;
+          border:0;
+          outline:0;
+          border-radius: 5px;
+          }
+
+          .unique-button-prmary-007BFF:hover{
+          background:#2283eb;
+          }
+        </style>
+        `
+          }}
+        />
+      }
+    />,
+    <Card
+      key={generateKey()}
+      iconColor="#fff"
       information="Css"
       background="bg-gradient-to-r from-green-950"
       content={
