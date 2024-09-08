@@ -28,7 +28,7 @@ const CardsButton = () => {
       key={generateKey()}
       iconColor="#fff"
       information="css"
-      background="bg-gradient-to-r from-black-100 via-purple-100 to-pink-100"
+      background="bg-gradient-to-r from-black to-pink-950/30"
       content={
         <div
           dangerouslySetInnerHTML={{
@@ -57,35 +57,6 @@ const CardsButton = () => {
             }
           </style>
           `
-          }}
-        />
-      }
-    />
-    ,
-    <Card key={generateKey()}
-      iconColor="#fff"
-      information="css"
-      background="bg-gradient-to-r from-slate-950"
-      content={
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `
-        <button type="button" class="unique-button-prmary-007BFF">PRYMARY</button>
-        <style>
-          .unique-button-prmary-007BFF{
-          background:#007BFF;
-          color:white;
-          padding: 5px 15px;
-          border:0;
-          outline:0;
-          border-radius: 5px;
-          }
-
-          .unique-button-prmary-007BFF:hover{
-          background:#2283eb;
-          }
-        </style>
-        `
           }}
         />
       }
@@ -931,6 +902,34 @@ const CardsButton = () => {
             }
           </style>
         `,
+          }}
+        />
+      }
+    />,
+    <Card key={generateKey()}
+      iconColor="#fff"
+      information="css"
+      background="bg-gradient-to-r from-slate-950"
+      content={
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+        <button type="button" class="unique-button-prmary-007BFF">PRYMARY</button>
+        <style>
+          .unique-button-prmary-007BFF{
+          background:#007BFF;
+          color:white;
+          padding: 5px 15px;
+          border:0;
+          outline:0;
+          border-radius: 5px;
+          }
+
+          .unique-button-prmary-007BFF:hover{
+          background:#2283eb;
+          }
+        </style>
+        `
           }}
         />
       }
