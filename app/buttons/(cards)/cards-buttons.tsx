@@ -2657,6 +2657,32 @@ const CardsButton = () => {
         </button>
       }
     />,
+    <Card
+    key={generateKey()}
+    iconColor="#fff"
+    information="Tailwind"
+    background="bg-gradient-to-b from-40% from-neutral-950 to-black"
+    content={
+      <a className="relative select-none cursor-pointer flex items-center justify-center w-12 h-12 bg-black text-white font-bold rounded-xl transition-all duration-300 ease-in-out group overflow-hidden hover:w-36">
+      <svg
+        className="absolute transition-transform duration-300 ease-in-out group-hover:-translate-x-12"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        width="24" 
+        height="24" 
+      >
+        <path d="M12 .297C5.373.297 0 5.67 0 12.297c0 5.305 3.438 9.8 8.205 11.4.6.111.82-.261.82-.577 0-.287-.011-1.25-.017-2.28-3.338.724-4.042-1.608-4.042-1.608-.546-1.386-1.333-1.756-1.333-1.756-1.091-.745.083-.73.083-.73 1.207.085 1.839 1.237 1.839 1.237 1.071 1.836 2.809 1.303 3.492.996.108-.775.419-1.303.761-1.603-2.665-.303-5.466-1.334-5.466-5.93 0-1.313.469-2.387 1.236-3.228-.125-.303-.535-1.53.117-3.175 0 0 1.008-.323 3.302 1.23a11.563 11.563 0 0 1 3.002-.404c1.022.004 2.052.139 3.002.404 2.294-1.553 3.302-1.23 3.302-1.23.652 1.645.243 2.872.118 3.175.77.841 1.236 1.915 1.236 3.228 0 4.607-2.805 5.624-5.474 5.92.431.372.815 1.102.815 2.224 0 1.604-.014 2.896-.014 3.287 0 .316.22.694.825.577C20.563 22.097 24 17.602 24 12.297 24 5.67 18.627.297 12 .297z" />
+      </svg>
+
+      <span className="pl-10 pr-3 text-lg uppercase 
+                      opacity-0 transition-opacity ease-in 
+                      group-hover:opacity-100 group-hover:duration-700">
+        Follow
+      </span>
+    </a>
+    }
+  />,
   ];
 
   const filterCards = () => {
