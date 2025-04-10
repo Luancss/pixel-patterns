@@ -3,10 +3,10 @@ import { toast } from "sonner";
 
 export const Radius = () => {
   const [points, setPoints] = useState({
-    topLeft: 20,
-    topRight: 20,
-    bottomRight: 20,
-    bottomLeft: 20,
+    topLeft: 50,
+    topRight: 50,
+    bottomRight: 50,
+    bottomLeft: 50,
   });
   // Set fixed dimensions of 400px x 400px
   const dimensions = {
@@ -14,6 +14,7 @@ export const Radius = () => {
     height: 400,
   };
   const [isDragging, setIsDragging] = useState<string | null>(null);
+  const [hoverCorner, setHoverCorner] = useState<string | null>(null);
   const shapeRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -149,6 +150,48 @@ export const Radius = () => {
     toast.success("Copied to clipboard!");
   };
 
+  // Handle mouse move over the shape to show corner percentages
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+
+  const handleShapeMouseMove = (e: React.MouseEvent) => {
+    if (!shapeRef.current) return;
+
+    const shape = shapeRef.current.getBoundingClientRect();
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Update cursor position for tooltip
+    setCursorPosition({ x: mouseX - shape.left, y: mouseY - shape.top });
+
+    // Calculate relative position within the shape
+    const relX = mouseX - shape.left;
+    const relY = mouseY - shape.top;
+
+    // Determine which corner is closest
+    const isTop = relY < shape.height / 2;
+    const isLeft = relX < shape.width / 2;
+
+    let corner: keyof typeof points;
+
+    if (isTop && isLeft) {
+      corner = "topLeft";
+    } else if (isTop && !isLeft) {
+      corner = "topRight";
+    } else if (!isTop && !isLeft) {
+      corner = "bottomRight";
+    } else {
+      corner = "bottomLeft";
+    }
+
+    setHoverCorner(corner);
+  };
+
+  const handleShapeMouseLeave = () => {
+    if (!isDragging) {
+      setHoverCorner(null);
+    }
+  };
+
   return (
     <div className="absolute -bottom-12 right-4 overflow-hidden min-h-screen flex flex-col items-center justify-center z-50 -mt-20">
       <div
@@ -161,6 +204,8 @@ export const Radius = () => {
             className="shape cursor-pointer"
             style={shapeStyle}
             onMouseDown={handleShapeMouseDown}
+            onMouseMove={handleShapeMouseMove}
+            onMouseLeave={handleShapeMouseLeave}
           />
 
           {/* Dashed border around the shape */}
@@ -173,6 +218,21 @@ export const Radius = () => {
               left: 0,
             }}
           ></div>
+
+          {/* Cursor-following tooltip with animation */}
+          {hoverCorner && (
+            <div
+              className="absolute bg-black/80 text-white px-2 py-1 rounded text-sm font-mono pointer-events-none transform -translate-x-1/2 -translate-y-full animate-fadeIn"
+              style={{
+                left: `${cursorPosition.x}px`,
+                top: `${cursorPosition.y - 10}px`,
+                opacity: 0,
+                animation: "fadeIn 0.2s ease-in-out forwards",
+              }}
+            >
+              {Math.round(points[hoverCorner as keyof typeof points])}%
+            </div>
+          )}
         </div>
       </div>
 
@@ -234,7 +294,7 @@ export const Radius = () => {
             />
           </div>
           <div className="bg-gray-700/50 p-4 rounded-lg">
-            <label className="text-white block mb-2 font-medium flex justify-between">
+            <label className="text-white mb-2 font-medium flex justify-between">
               <span>Bottom Left</span>
               <span className="text-cyan-400">
                 {Math.round(points.bottomLeft)}%
