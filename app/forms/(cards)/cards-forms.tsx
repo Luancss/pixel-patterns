@@ -2265,7 +2265,7 @@ gap: 10px;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-1 gap-y-5">
         {paginatedCards()}
       </div>
-      <Pagination className="mt-8">
+      <Pagination className="my-10">
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
