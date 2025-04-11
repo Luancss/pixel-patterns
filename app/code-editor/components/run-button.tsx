@@ -1,11 +1,8 @@
 "use client";
 
-import {
-  getExecutionResult,
-  useCodeEditorStore,
-} from "@/store/useCodeEditorStore";
+import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { motion } from "framer-motion";
-import { Loader2, Play } from "lucide-react";
+import { Play } from "lucide-react";
 
 export const RunButton = () => {
   const { runCode, language, isRunning } = useCodeEditorStore();
@@ -31,15 +28,13 @@ export const RunButton = () => {
 
       <div className="relative flex items-center gap-2.5">
         {isRunning ? (
-          <>
-            <div className="relative">
-              <Loader2 className="w-4 h-4 animate-spin text-white/70" />
-              <div className="absolute inset-0 blur animate-pulse" />
-            </div>
-            <span className="text-sm font-medium text-white/90">
-              Executing...
-            </span>
-          </>
+          <button
+            className="inline-flex h-12 items-center rounded-lg bg-blue-500 px-6 text-neutral-50 disabled:pointer-events-none disabled:opacity-50 "
+            disabled={isRunning}
+          >
+            <div className="h-4 w-4 animate-spin rounded-full border-2 border-solid border-white border-t-transparent"></div>
+            <span className="ml-2">Loading... </span>
+          </button>
         ) : (
           <>
             <div className="relative flex items-center justify-center w-4 h-4">

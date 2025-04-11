@@ -2,7 +2,7 @@
 import { CodeEditorState } from "./../types/index";
 import { create } from "zustand";
 import { Monaco } from "@monaco-editor/react";
-import { LANGUAGE_CONFIG } from "@/app/code-compiler/_constants";
+import { LANGUAGE_CONFIG } from "@/app/code-editor/_constants";
 
 const getInitialState = () => {
   if (typeof window === "undefined") {
