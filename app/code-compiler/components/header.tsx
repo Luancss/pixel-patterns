@@ -1,7 +1,7 @@
 import { Blocks, Code2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ButtonEffect } from "./button-effect";
+import { ButtonEffect } from "../../../components/button-effect";
 export async function Header() {
   // const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
   // const user = await currentUser();
