@@ -1,3 +1,6 @@
+import {
+  ArrowRight
+} from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
@@ -218,6 +221,33 @@ export const Radius = () => {
               left: 0,
             }}
           ></div>
+
+          {/* Size information labels */}
+          <div
+            className="absolute text-white text-xs font-mono rounded-md animate-fadeIn font-medium flex gap-1"
+            style={{
+              top: "-20px",
+              left: "0",
+            }}
+          >
+            {dimensions.width}px
+            <ArrowRight className="size-4" />
+          </div>
+          <div
+            className="absolute text-white text-xs font-mono rounded-md animate-fadeIn font-medium flex items-center justify-center gap-1"
+            style={{
+              bottom: "0",
+              left: "-12px",
+              transform: "rotate(270deg)",
+              transformOrigin: "left center",
+              backfaceVisibility: "hidden",
+              WebkitFontSmoothing: "antialiased",
+              MozOsxFontSmoothing: "grayscale",
+            }}
+          >
+            {dimensions.height}px
+            <ArrowRight className="size-4" />
+          </div>
 
           {/* Cursor-following tooltip with animation */}
           {hoverCorner && (
