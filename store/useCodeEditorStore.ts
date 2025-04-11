@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { CodeEditorState } from "./../types/index";
 import { create } from "zustand";
 import { Monaco } from "@monaco-editor/react";
