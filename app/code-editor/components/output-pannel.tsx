@@ -26,7 +26,7 @@ export const OutputPanel = () => {
   };
 
   return (
-    <div className="relative bg-[#181825] rounded-xl p-4 ring-1 ring-gray-800/50">
+    <div className="relative bg-[#060611]/90 border border-blue-800/30 rounded-xl p-4 ring-1 ring-gray-800/50">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <div className="flex items-center justify-center w-6 h-6 rounded-lg bg-[#1e1e2e] ring-1 ring-gray-800/50">
@@ -58,7 +58,7 @@ export const OutputPanel = () => {
 
       <div className="relative">
         <div
-          className="relative bg-[#1e1e2e]/50 backdrop-blur-sm border border-[#313244] 
+          className="relative bg-[#1e1e2e]/50 backdrop-blur-sm 
         rounded-xl p-4 h-[600px] overflow-auto font-mono text-sm"
         >
           {isRunning ? (
