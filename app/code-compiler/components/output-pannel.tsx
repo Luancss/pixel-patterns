@@ -1,6 +1,6 @@
 "use client";
 
-// import { useCodeEditorStore } from "@/store/useCodeEditorStore";
+import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import {
   AlertTriangle,
   CheckCircle,
@@ -10,17 +10,16 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { RunningCodeSkeleton } from "./running-code-skeleton";
-// import { RunningCodeSkeleton } from "./RunningCodeSkeleton";
 
 export const OutputPanel = () => {
-  // const { output, error, isRunning } = useCodeEditorStore();
+  const { output, error, isRunning } = useCodeEditorStore();
   const [isCopied, setIsCopied] = useState(false);
 
-  // const hasContent = error || output;
+  const hasContent = error || output;
 
   const handleCopy = async () => {
-    // if (!hasContent) return;
-    // await navigator.clipboard.writeText(error || output);
+    if (!hasContent) return;
+    await navigator.clipboard.writeText(error || output);
     setIsCopied(true);
 
     setTimeout(() => setIsCopied(false), 2000);
@@ -36,7 +35,7 @@ export const OutputPanel = () => {
           <span className="text-sm font-medium text-gray-300">Output</span>
         </div>
 
-        {true && (
+        {hasContent && (
           <button
             onClick={handleCopy}
             className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs text-gray-400 hover:text-gray-300 bg-[#1e1e2e] 
@@ -62,29 +61,25 @@ export const OutputPanel = () => {
           className="relative bg-[#1e1e2e]/50 backdrop-blur-sm border border-[#313244] 
         rounded-xl p-4 h-[600px] overflow-auto font-mono text-sm"
         >
-          {false ? (
+          {isRunning ? (
             <RunningCodeSkeleton />
-          ) : false ? (
+          ) : error ? (
             <div className="flex items-start gap-3 text-red-400">
               <AlertTriangle className="w-5 h-5 flex-shrink-0 mt-1" />
               <div className="space-y-1">
                 <div className="font-medium">Execution Error</div>
                 <pre className="whitespace-pre-wrap text-red-400/80">
-                  {/* {error} */}
-                  Teste code
+                  {error}
                 </pre>
               </div>
             </div>
-          ) : true ? (
+          ) : output ? (
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-emerald-400 mb-3">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-medium">Execution Successful</span>
               </div>
-              <pre className="whitespace-pre-wrap text-gray-300">
-                {/* {output} */}
-                Teste code
-              </pre>
+              <pre className="whitespace-pre-wrap text-gray-300">{output}</pre>
             </div>
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-gray-500">

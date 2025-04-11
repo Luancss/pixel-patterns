@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ButtonEffect } from "../../../components/button-effect";
 import { ThemeSelector } from "./theme-selector";
 import { LanguageSelector } from "./language-selector";
+import { RunButton } from "./run-button";
 export async function Header() {
   // const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
   // const user = await currentUser();
@@ -58,7 +59,7 @@ export async function Header() {
                 Snippets
               </span>
             </Link>
-            {/* <ButtonEffect /> */}
+            <RunButton />
           </nav>
         </div>
 
