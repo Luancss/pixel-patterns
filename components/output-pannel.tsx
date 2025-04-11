@@ -9,6 +9,7 @@ import {
   Terminal,
 } from "lucide-react";
 import { useState } from "react";
+import { RunningCodeSkeleton } from "./running-code-skeleton";
 // import { RunningCodeSkeleton } from "./RunningCodeSkeleton";
 
 export const OutputPanel = () => {
