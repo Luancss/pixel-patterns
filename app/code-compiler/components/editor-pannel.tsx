@@ -1,14 +1,49 @@
 "use client";
 
-import { RotateCcwIcon, ShareIcon, TypeIcon } from "lucide-react";
-import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import { useMounted } from "@/hooks/useMounted";
+import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { Editor } from "@monaco-editor/react";
-import { useThemeStore } from "@/store/useThemeStore";
+import { motion } from "framer-motion";
+import { RotateCcwIcon, TypeIcon } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { defineMonacoThemes, LANGUAGE_CONFIG } from "../_constants";
 
 export const EditorPanel = () => {
-  const { theme } = useThemeStore();
+  const [isShareDialogOpen, setIsShareDialogOpen] = useState(false);
+  const { language, theme, fontSize, editor, setFontSize, setEditor } =
+    useCodeEditorStore();
+
+  const mounted = useMounted();
+
+  useEffect(() => {
+    const savedCode = localStorage.getItem(`editor-code-${language}`);
+    const newCode = savedCode || LANGUAGE_CONFIG[language].defaultCode;
+    if (editor) editor.setValue(newCode);
+  }, [language, editor]);
+
+  useEffect(() => {
+    const savedFontSize = localStorage.getItem("editor-font-size");
+    if (savedFontSize) setFontSize(parseInt(savedFontSize));
+  }, [setFontSize]);
+
+  const handleRefresh = () => {
+    const defaultCode = LANGUAGE_CONFIG[language].defaultCode;
+    if (editor) editor.setValue(defaultCode);
+    localStorage.removeItem(`editor-code-${language}`);
+  };
+
+  const handleEditorChange = (value: string | undefined) => {
+    if (value) localStorage.setItem(`editor-code-${language}`, value);
+  };
+
+  const handleFontSizeChange = (newSize: number) => {
+    const size = Math.min(Math.max(newSize, 12), 24);
+    setFontSize(size);
+    localStorage.setItem("editor-font-size", size.toString());
+  };
+
+  if (!mounted) return null;
 
   return (
     <div className="relative">
@@ -57,7 +92,7 @@ export const EditorPanel = () => {
               <RotateCcwIcon className="size-4 text-gray-400" />
             </motion.button>
 
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               // onClick={() => setIsShareDialogOpen(true)}
@@ -66,18 +101,18 @@ export const EditorPanel = () => {
             >
               <ShareIcon className="size-4 text-white" />
               <span className="text-sm font-medium text-white">Share</span>
-            </motion.button>
+            </motion.button> */}
           </div>
         </div>
 
         <div className="relative group rounded-xl overflow-hidden ring-1 ring-white/[0.05]">
           <Editor
             height="600px"
-            // language={LANGUAGE_CONFIG[language].monacoLanguage}
-            // onChange={handleEditorChange}
+            language={LANGUAGE_CONFIG[language].monacoLanguage}
+            onChange={handleEditorChange}
             theme={theme as any}
-            // beforeMount={defineMonacoThemes}
-            // onMount={(editor) => setEditor(editor)}
+            beforeMount={defineMonacoThemes}
+            onMount={(editor) => setEditor(editor)}
             options={{
               minimap: { enabled: false },
               // fontSize,
