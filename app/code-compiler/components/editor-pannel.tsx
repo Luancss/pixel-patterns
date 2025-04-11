@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { defineMonacoThemes, LANGUAGE_CONFIG } from "../_constants";
 
 export const EditorPanel = () => {
-  const [isShareDialogOpen, setIsShareDialogOpen] = useState(false);
   const { language, theme, fontSize, editor, setFontSize, setEditor } =
     useCodeEditorStore();
 
@@ -115,7 +114,7 @@ export const EditorPanel = () => {
             onMount={(editor) => setEditor(editor)}
             options={{
               minimap: { enabled: false },
-              // fontSize,
+              fontSize,
               automaticLayout: true,
               scrollBeyondLastLine: false,
               padding: { top: 16, bottom: 16 },
