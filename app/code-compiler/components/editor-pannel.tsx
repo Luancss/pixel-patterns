@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { useMounted } from "@/hooks/useMounted";
@@ -8,6 +9,7 @@ import { RotateCcwIcon, TypeIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { defineMonacoThemes, LANGUAGE_CONFIG } from "../_constants";
+import { EditorPanelSkeleton } from "./editor-pannel-skeleton";
 
 export const EditorPanel = () => {
   const { language, theme, fontSize, editor, setFontSize, setEditor } =
@@ -50,7 +52,7 @@ export const EditorPanel = () => {
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#1e1e2e] ring-1 ring-white/5">
-              <Image src={"/"} alt="Logo" width={24} height={24} />
+              <Image src="/code.svg" alt="Code" width={24} height={24} />
             </div>
             <div>
               <h2 className="text-sm font-medium text-white">Code Editor</h2>
@@ -68,15 +70,14 @@ export const EditorPanel = () => {
                   type="range"
                   min="12"
                   max="24"
-                  // value={fontSize}
-                  // onChange={(e) =>
-                  //   handleFontSizeChange(parseInt(e.target.value))
-                  // }
+                  value={fontSize}
+                  onChange={(e) =>
+                    handleFontSizeChange(parseInt(e.target.value))
+                  }
                   className="w-20 h-1 bg-gray-600 rounded-lg cursor-pointer"
                 />
                 <span className="text-sm font-medium text-gray-400 min-w-[2rem] text-center">
-                  {/* {fontSize} */}
-                  16
+                  {fontSize}
                 </span>
               </div>
             </div>
@@ -84,7 +85,7 @@ export const EditorPanel = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              // onClick={handleRefresh}
+              onClick={handleRefresh}
               className="p-2 bg-[#1e1e2e] hover:bg-[#2a2a3a] rounded-lg ring-1 ring-white/5 transition-colors"
               aria-label="Reset to default code"
             >
@@ -113,7 +114,7 @@ export const EditorPanel = () => {
             beforeMount={defineMonacoThemes}
             onMount={(editor) => setEditor(editor)}
             options={{
-              minimap: { enabled: false },
+              minimap: { enabled: true },
               fontSize,
               automaticLayout: true,
               scrollBeyondLastLine: false,
@@ -128,6 +129,7 @@ export const EditorPanel = () => {
               lineHeight: 1.6,
               letterSpacing: 0.5,
               roundedSelection: true,
+              "semanticHighlighting.enabled": true,
               scrollbar: {
                 verticalScrollbarSize: 8,
                 horizontalScrollbarSize: 8,
@@ -135,7 +137,7 @@ export const EditorPanel = () => {
             }}
           />
 
-          {/* {!clerk.loaded && <EditorPanelSkeleton />} */}
+          {/* {!mounted && <EditorPanelSkeleton />} */}
         </div>
       </div>
     </div>

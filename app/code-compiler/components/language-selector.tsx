@@ -1,11 +1,11 @@
 "use client";
+import { useMounted } from "@/hooks/useMounted";
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDownIcon, Lock, Sparkles } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { LANGUAGE_CONFIG } from "../_constants";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import { ChevronDownIcon, Lock, Sparkles } from "lucide-react";
-import { useMounted } from "@/hooks/useMounted";
 
 export const LanguageSelector = ({ hasAccess }: { hasAccess: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,12 +47,6 @@ export const LanguageSelector = ({ hasAccess }: { hasAccess: boolean }) => {
         className={`group relative flex items-center gap-3 px-4 py-2.5 bg-[#1e1e2e]/80 
       rounded-lg transition-all 
        duration-200 border border-gray-800/50 hover:border-gray-700
-       ${
-         hasAccess && language !== "javascript"
-           ? "opacity-50 cursor-not-allowed"
-           : ""
-       }
-       
        `}
       >
         <div
