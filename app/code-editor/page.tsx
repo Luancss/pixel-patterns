@@ -8,7 +8,7 @@ export default function CodeCompiler() {
     <>
       <Star />
       <Geminid />
-      <div className="w-full -mt-28">
+      <div className="w-full -mt-24">
         <div className="max-w-[1800px] mx-auto p-4">
           <Header />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

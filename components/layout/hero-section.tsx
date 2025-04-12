@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 import { Button } from "../ui";
-import { ButtonEffect } from "../button-effect";
 
 import { Navbar } from "./navbar";
+import { ButtonGithub } from "../button-github";
 
 interface HeroSectionProps {
   title: string;
@@ -24,7 +24,7 @@ export const HeroSection = ({ title, description }: HeroSectionProps) => {
         {description}
       </p>
       <div className="flex items-center justify-center gap-4 fade-in">
-        <ButtonEffect href="https://github.com/Luancss/pixel-patterns" />
+        <ButtonGithub href="https://github.com/Luancss/pixel-patterns" />
       </div>
       <Navbar />
     </div>
