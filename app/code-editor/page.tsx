@@ -1,16 +1,48 @@
 "use client";
 
-import { EditorPanel } from "@/app/code-editor/components/editor-pannel";
 import { Header } from "@/app/code-editor/components/header";
 import { Geminid, Star } from "@/components/shapes";
 import { Button } from "@/components/ui";
-import { useState } from "react";
-import { OutputPanel } from "./components/output-panel";
-import { OutputPanelComponent } from "./components/output-panel-component";
+import { Suspense, useState } from "react";
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
+import dynamic from "next/dynamic";
+import {
+  EditorPanelSkeleton,
+  OutputPanelSkeleton,
+} from "./components/skeletons";
+
+const Editor = dynamic(
+  () =>
+    import("@/app/code-editor/components/editor-panel").then(
+      (mod) => mod.EditorPanel
+    ),
+  {
+    loading: () => <EditorPanelSkeleton />,
+    ssr: false,
+  }
+);
+
+const OutputPanel = dynamic(
+  () => import("./components/output-panel-code").then((mod) => mod.OutputPanel),
+  {
+    loading: () => <OutputPanelSkeleton />,
+    ssr: false,
+  }
+);
+
+const OutputPanelComponent = dynamic(
+  () =>
+    import("./components/output-panel-html").then(
+      (mod) => mod.OutputPanelComponent
+    ),
+  {
+    loading: () => <OutputPanelSkeleton />,
+    ssr: false,
+  }
+);
 
 export default function CodeCompiler() {
-  const [isCodeRunning, setIsCodeRunning] = useState(false);
+  const [isHtml, setIsHtml] = useState(true);
   const { setLanguage } = useCodeEditorStore();
 
   return (
@@ -24,25 +56,29 @@ export default function CodeCompiler() {
             <Button
               className="bg-blue-600/20 text-blue-700"
               onClick={() => {
-                setIsCodeRunning(true);
+                setIsHtml(false);
                 setLanguage("typescript");
               }}
             >
-              Code Running
+              CODE
             </Button>
             <Button
               className="bg-blue-600/20 text-blue-700"
               onClick={() => {
                 setLanguage("html");
-                setIsCodeRunning(false);
+                setIsHtml(true);
               }}
             >
-              HTML Running
+              HTML
             </Button>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <EditorPanel />
-            {isCodeRunning ? <OutputPanel /> : <OutputPanelComponent />}
+            <Suspense fallback={<EditorPanelSkeleton />}>
+              <Editor />
+            </Suspense>
+            <Suspense fallback={<OutputPanelSkeleton />}>
+              {isHtml ? <OutputPanelComponent /> : <OutputPanel />}
+            </Suspense>
           </div>
         </div>
       </div>

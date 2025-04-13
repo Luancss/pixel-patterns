@@ -2,11 +2,9 @@
 
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { PlayIcon, Terminal } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export const OutputPanelComponent = () => {
-  const [code, setCode] = useState("");
   const [previewCode, setPreviewCode] = useState("");
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
   const { language, getCode } = useCodeEditorStore();
@@ -47,9 +45,14 @@ export const OutputPanelComponent = () => {
             <PlayIcon className="size-12 mx-auto mb-4 text-gray-600" />
             <p className="text-sm">Run your code to see the preview</p>
           </div>
+        ) : !previewCode ? (
+          <div className="text-center text-gray-500">
+            <PlayIcon className="size-12 mx-auto mb-4 text-gray-600" />
+            <p className="text-sm">No code found</p>
+          </div>
         ) : (
           <>
-            <div className="bg-[#1e1e2e] p-8 rounded-xl flex items-center justify-center min-h-[500px] w-full">
+            <div className="bg-[#1e1e2e] rounded-xl flex items-center justify-center min-h-[500px] w-full">
               <iframe
                 title="Preview"
                 srcDoc={previewCode}

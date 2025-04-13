@@ -7,7 +7,7 @@ export function EditorPanelSkeleton() {
       <div className="relative bg-[#12121a]/90 backdrop-blur rounded-xl border border-white/[0.05] p-6 h-[600px]">
         <div className="relative rounded-xl overflow-hidden ring-1 ring-white/[0.05]">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5" />
-          <div className="h-[600px] bg-[#1e1e2e]/50 backdrop-blur-sm p-4">
+          <div className="h-[100%] bg-[#1e1e2e]/50 backdrop-blur-sm p-4 animate-pulse">
             {[...Array(15)].map((_, i) => (
               <div key={i} className="flex items-center gap-4 mb-3">
                 <div className={`w-12 h-4 bg-white/5 rounded`} />
@@ -31,7 +31,7 @@ export function EditorPanelSkeleton() {
 export function OutputPanelSkeleton() {
   return (
     <div className="relative bg-[#181825] rounded-xl p-4 ring-1 ring-gray-800/50">
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center justify-between mb-3 animate-pulse">
         <div className="flex items-center gap-2">
           <div className="flex items-center justify-center w-6 h-6 rounded-lg bg-[#1e1e2e] ring-1 ring-gray-800/50">
             <Terminal className="w-4 h-4 text-blue-400/50" />
@@ -40,9 +40,9 @@ export function OutputPanelSkeleton() {
         </div>
       </div>
 
-      <div className="relative">
+      <div className="relative animate-pulse">
         <div className="absolute inset-0 bg-gradient-to-b from-[#1e1e2e] to-[#1a1a2e] rounded-xl -z-10" />
-        <div className="relative bg-[#1e1e2e]/50 backdrop-blur-sm border border-[#313244] rounded-xl p-4 h-[600px]">
+        <div className="relative bg-[#1e1e2e]/50 backdrop-blur-sm border border-[#313244] rounded-xl p-4 h-[500px]">
           <div className="flex items-center justify-center h-full">
             <div className="text-center">
               <div className={`w-12 h-12 mx-auto mb-4 bg-white/5 rounded-xl`} />
@@ -63,3 +63,19 @@ export function EditorViewSkeleton() {
     </div>
   );
 }
+
+export const RunningCodeSkeleton = () => (
+  <div className="space-y-4 animate-pulse">
+    <div className="space-y-2">
+      <div className="h-4 bg-gray-800/50 rounded w-3/4" />
+      <div className="h-4 bg-gray-800/50 rounded w-1/2" />
+      <div className="h-4 bg-gray-800/50 rounded w-5/6" />
+    </div>
+
+    <div className="space-y-2 pt-4">
+      <div className="h-4 bg-gray-800/50 rounded w-2/3" />
+      <div className="h-4 bg-gray-800/50 rounded w-4/5" />
+      <div className="h-4 bg-gray-800/50 rounded w-3/4" />
+    </div>
+  </div>
+);
