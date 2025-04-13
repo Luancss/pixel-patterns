@@ -3,8 +3,9 @@ import Link from "next/link";
 import { LanguageSelector } from "./language-selector";
 import { RunButton } from "./run-button";
 import { ThemeSelector } from "./theme-selector";
-
+import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 export function Header() {
+  const { language } = useCodeEditorStore();
   // const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
   // const user = await currentUser();
 
@@ -48,7 +49,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <RunButton />
             <ThemeSelector />
-            <LanguageSelector hasAccess={true} />
+            {language !== "html" && <LanguageSelector hasAccess={true} />}
           </div>
 
           {/* {!convexUser?.isPro && (

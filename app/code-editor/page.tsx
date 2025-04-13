@@ -10,8 +10,8 @@ import { OutputPanelComponent } from "./components/output-panel-component";
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 
 export default function CodeCompiler() {
-  const [isCodeRunning, setIsCodeRunning] = useState(true);
-  const { language, setLanguage } = useCodeEditorStore();
+  const [isCodeRunning, setIsCodeRunning] = useState(false);
+  const { setLanguage } = useCodeEditorStore();
 
   return (
     <>
