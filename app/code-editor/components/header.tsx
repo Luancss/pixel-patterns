@@ -3,7 +3,8 @@ import Link from "next/link";
 import { LanguageSelector } from "./language-selector";
 import { RunButton } from "./run-button";
 import { ThemeSelector } from "./theme-selector";
-export async function Header() {
+
+export function Header() {
   // const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
   // const user = await currentUser();
 

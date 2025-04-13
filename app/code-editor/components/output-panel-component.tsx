@@ -2,9 +2,9 @@
 
 import { PlayIcon, Terminal } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 
-export const OutputPannelComponent = () => {
+export const OutputPanelComponent = () => {
   const [code, setCode] = useState("");
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
 
@@ -42,13 +42,13 @@ export const OutputPannelComponent = () => {
             <div className="bg-[#1e1e2e] p-8 rounded-xl flex items-center justify-center min-h-[500px]">
               {code.includes("className") ? (
                 <div
-                  dangerouslySetInnerHTML={{ __html: code }}
+                  dangerouslySetInnerHTML={{ __html: code || "" }}
                   className="w-full flex items-center justify-center"
                 />
               ) : (
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: code,
+                    __html: code || "",
                   }}
                   className="w-full flex items-center justify-center"
                 />

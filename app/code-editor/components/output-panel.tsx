@@ -17,12 +17,18 @@ export const OutputPanel = () => {
 
   const hasContent = error || output;
 
-  const handleCopy = async () => {
+  const handleCopy = () => {
     if (!hasContent) return;
-    await navigator.clipboard.writeText(error || output);
-    setIsCopied(true);
 
-    setTimeout(() => setIsCopied(false), 2000);
+    navigator.clipboard
+      .writeText(error || output)
+      .then(() => {
+        setIsCopied(true);
+        setTimeout(() => setIsCopied(false), 2000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy text:", err);
+      });
   };
 
   return (
