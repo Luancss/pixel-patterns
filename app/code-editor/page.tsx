@@ -42,7 +42,7 @@ const OutputPanelComponent = dynamic(
 );
 
 export default function CodeCompiler() {
-  const [isHtml, setIsHtml] = useState(true);
+  const [isHtml, setIsHtml] = useState(false);
   const { setLanguage } = useCodeEditorStore();
 
   return (
