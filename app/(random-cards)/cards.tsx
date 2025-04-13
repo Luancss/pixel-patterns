@@ -1,6 +1,6 @@
 import { Card } from "@/components/cards/card";
 
-export const RamdonCards = () => {
+export const RandomCards = () => {
   let counter = 1;
 
   const generateKey = () => `card-${counter++}`;
