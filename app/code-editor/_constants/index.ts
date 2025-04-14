@@ -22,382 +22,110 @@ export const LANGUAGE_CONFIG: LanguageConfig = {
     monacoLanguage: "html",
     defaultCode: `<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Login-Signup Form</title>
-  <link rel="stylesheet" href="style.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login-Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .container {
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            gap: 5px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+        .header {
+            flex: 1;
+            width: 100%;
+            border: 2px dashed royalblue;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: #081b29;
-    }
+        .header svg {
+            height: 100px;
+        }
 
-    .wrapper {
-      position: relative;
-      width: 750px;
-      height: 450px;
-      background: transparent;
-      border: 2px solid #0ef;
-      overflow: hidden;
-      box-shadow: 0 0 25px #0ef;
-    }
+        .header p {
+            text-align: center;
+            color: black;
+        }
 
-    .wrapper .form-box {
-      position: absolute;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+        .footer {
+            background-color: rgba(0, 110, 255, 0.075);
+            width: 100%;
+            height: 40px;
+            padding: 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: black;
+            border: none;
+        }
 
-    .wrapper .form-box.login {
-      left: 0;
-      padding: 0px 60px 0 40px;
-    }
+        .footer svg {
+            height: 40px;
+            fill: royalblue;
+            background-color: rgba(70, 66, 66, 0.103);
+            border-radius: 50%;
+            padding: 2px;
+            cursor: pointer;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
+        }
 
-    .wrapper .form-box.login .animation {
-      transform: translateX(0);
-      opacity: 1;
-      filter: blur(0);
-      transition: .7s ease;
-      transition-delay: calc(.1s * var(--j));
-    }
+        .footer p {
+            flex: 1;
+            text-align: center;
+        }
 
-    .wrapper.active .form-box.login .animation {
-      transform: translateX(-120%);
-      opacity: 0;
-      filter: blur(10px);
-      transition-delay: calc(.1s * var(--i));
-    }
-
-    .wrapper .form-box.register {
-      right: 0;
-      padding: 0px 40px 0px 60px;
-      pointer-events: none;
-    }
-
-    .wrapper.active .form-box.register {
-      pointer-events: auto;
-    }
-
-    .wrapper .form-box.register .animation {
-      transform: translateX(120%);
-      opacity: 0;
-      filter: blur(10px);
-      transition: .7s ease;
-    }
-
-    .wrapper.active .form-box.register .animation {
-      transform: translateX(0);
-      opacity: 1;
-      filter: blur(0);
-      transition-delay: calc(.1s * var(--i));
-    }
-
-    .form-box h2 {
-      font-size: 32px;
-      color: #fff;
-      text-align: center;
-    }
-
-    .form-box .input-box {
-      position: relative;
-      width: 100%;
-      height: 50px;
-      margin: 25px 0;
-    }
-
-    .input-box input {
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      border: none;
-      outline: none;
-      border-bottom: 2px solid #fff;
-      padding-right: 23px;
-      font-size: 16px;
-      color: #fff;
-      font-weight: 500;
-      transition: .5s;
-    }
-
-    .input-box input:focus,
-    .input-box input:valid {
-      border-bottom-color: #0ef;
-    }
-
-    .input-box label {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      font-size: 16px;
-      color: #fff;
-      pointer-events: none;
-      transition: .5s;
-    }
-
-    .input-box input:focus~label,
-    .input-box input:valid~label {
-      top: -5px;
-      color: #0ef;
-    }
-
-    .input-box i {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      font-size: 18px;
-      color: #fff;
-      transition: .5s;
-    }
-
-    .input-box input:focus~i,
-    .input-box input:valid~i {
-      color: #0ef;
-    }
-
-    .btn {
-      position: relative;
-      width: 100%;
-      height: 45px;
-      background: transparent;
-      border: 2px solid #0ef;
-      outline: none;
-      border-radius: 40px;
-      cursor: pointer;
-      font-size: 16px;
-      color: #fff;
-      font-weight: 600;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: 300%;
-      background: linear-gradient(#081b29, #0ef, #081b29, #0ef);
-      z-index: -1;
-      transition: .5s;
-    }
-
-    .btn:hover::before {
-      top: 0;
-    }
-
-    .form-box .logreg-link {
-      font-size: 14.5px;
-      color: #fff;
-      text-align: center;
-      margin: 20px 0px 10px;
-    }
-
-    .logreg-link p a {
-      color: #0ef;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .logreg-link p a:hover {
-      text-decoration: underline;
-    }
-
-    .wrapper .info-text {
-      position: absolute;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .wrapper .info-text.login {
-      right: 0;
-      text-align: right;
-      padding: 0px 40px 60px 150px;
-    }
-
-    .wrapper .info-text.login .animation {
-      transform: translateX(0);
-      opacity: 1;
-      filter: blur(0);
-      transition: .7s ease;
-      transition-delay: calc(.1s * var(--j));
-    }
-
-    .wrapper.active .info-text.login .animation {
-      transform: translateX(120%);
-      opacity: 0;
-      filter: blur(10px);
-      transition-delay: calc(.1s * var(--i));
-    }
-
-    .wrapper .info-text.register {
-      left: 0;
-      text-align: left;
-      padding: 0px 150px 60px 40px;
-      pointer-events: none;
-    }
-
-    .wrapper.active .info-text.register {
-      pointer-events: auto;
-    }
-
-    .wrapper .info-text.register .animation {
-      transform: translateX(-120%);
-      opacity: 0;
-      filter: blur(10px);
-      transition: .7s ease;
-      transition-delay: calc(.1s * var(--j));
-    }
-
-    .wrapper.active .info-text.register .animation {
-      transform: translateX(0);
-      opacity: 1;
-      filter: blur(0);
-      transition-delay: calc(.1s * var(--i));
-    }
-
-    .info-text h2 {
-      font-size: 36px;
-      color: #fff;
-      line-height: 1.3;
-      text-transform: uppercase;
-    }
-
-    .info-text p {
-      font-size: 16px;
-      color: #fff;
-    }
-
-    .wrapper .bg-animate {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 850px;
-      height: 600px;
-      background: linear-gradient(45deg, #081b29, #0ef);
-      border-bottom: 3px solid #0ef;
-      transform: rotate(10deg) skewY(40deg);
-      transform-origin: bottom right;
-      transition: 1.5s ease;
-      transition-delay: 1.6s;
-    }
-
-    .wrapper.active .bg-animate {
-      transform: rotate(0) skewY(0);
-      transition-delay: .5s;
-    }
-
-    .wrapper .bg-animate2 {
-      position: absolute;
-      top: 100%;
-      left: 250px;
-      width: 850px;
-      height: 700px;
-      background: #081b29;
-      border-top: 3px solid #0ef;
-      transform: rotate(0) skewY(0);
-      transform-origin: bottom left;
-      transition: 1.5s ease;
-      transition-delay: .5s;
-    }
-
-    .wrapper.active .bg-animate2 {
-      transform: rotate(-11deg) skewY(-41deg);
-      transition-delay: 1.2s;
-    }
-  </style>
+        #file {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="wrapper">
-    <span class="bg-animate"></span>
-    <span class="bg-animate2"></span>
 
-    <div class="form-box login">
-      <h2 class="animation" style="--i:0; --j:21;">Login</h2>
-      <form action="#">
-        <div class="input-box animation" style="--i:1; --j:22;">
-          <input type="text" required>
-          <label>Username</label>
-          <i class='bx bxs-user'></i>
+    <div class="container">
+        <div class="header">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"
+                        stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </svg>
+            <p>Browse File to upload!</p>
         </div>
-        <div class="input-box animation" style="--i:2; --j:23;">
-          <input type="password" required>
-          <label>Password</label>
-          <i class='bx bxs-lock-alt'></i>
-        </div>
-        <button class="btn animation" type="submit" style="--i:3; --j:24;">Login</button>
-        <div class="logreg-link animation" style="--i:4; --j:25;">
-          <p>Don't have an account? <br> <a href="#" class="register-link">Sign up</a></p>
-        </div>
-      </form>
+        <label for="file" class="footer">
+    <svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M15.331 6H8.5v20h15V14.154h-8.169z"></path><path d="M18.153 6h-.009v5.342H23.5v-.002z"></path></g></svg> 
+    <p>Not selected file</p> 
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.16565 10.1534C5.07629 8.99181 5.99473 8 7.15975 8H16.8402C18.0053 8 18.9237 8.9918 18.8344 10.1534L18.142 19.1534C18.0619 20.1954 17.193 21 16.1479 21H7.85206C6.80699 21 5.93811 20.1954 5.85795 19.1534L5.16565 10.1534Z" stroke="#000000" stroke-width="2"></path> <path d="M19.5 5H4.5" stroke="#000000" stroke-width="2" stroke-linecap="round"></path> <path d="M10 3C10 2.44772 10.4477 2 11 2H13C13.5523 2 14 2.44772 14 3V5H10V3Z" stroke="#000000" stroke-width="2"></path> </g></svg>
+  </label>
+        <input id="file" type="file">
     </div>
-
-    <div class="info-text login">
-      <h2 class="animation" style="--i:0; --j:20;">Welcome back!</h2>
-      <p class="animation" style="--i:1; --j:21;">
-        We're happy to have you with us back again! If you need anything, we're here to help
-      </p>
-    </div>
-
-    <div class="form-box register">
-      <h2 class="animation" style="--i:17; --j:0;">Sign up</h2>
-      <form action="#">
-        <div class="input-box animation" style="--i:18; --j:1;">
-          <input type="text" required>
-          <label>Username</label>
-          <i class='bx bxs-user'></i>
-        </div>
-        <div class="input-box animation" style="--i:19; --j:2;">
-          <input type="text" required>
-          <label>Email</label>
-          <i class='bx bxs-envelope'></i>
-        </div>
-        <div class="input-box animation" style="--i:20; --j:3;">
-          <input type="password" required>
-          <label>Password</label>
-          <i class='bx bxs-lock-alt'></i>
-        </div>
-        <button class="btn animation" type="submit" style="--i:21; --j:4;">Register</button>
-        <div class="logreg-link animation" style="--i:22; --j:5;">
-          <p>Already have an account? <br> <a href="#" class="login-link">Login</a></p>
-        </div>
-      </form>
-    </div>
-
-    <div class="info-text register">
-      <h2 class="animation" style="--i:17; --j:0;">Join us today!</h2>
-      <p class="animation" style="--i:18; --j:1;">
-        Sign up and get access to exclusive features and benefits tailored for you!
-      </p>
-    </div>
-  </div>
 </body>
-</html>
-`,
+
+</html>`,
   },
   javascript: {
     id: "javascript",
