@@ -1,12 +1,11 @@
 import Link from "next/link";
 
+import { ButtonGithub } from "@/components/button-github";
 import { Footer, Navbar } from "@/components/layout";
 import { Cubic, Geminid, Star } from "@/components/shapes";
 import { Button, FlipWords } from "@/components/ui";
-import Spline from "@splinetool/react-spline";
 import { Sparkles } from "lucide-react";
 import { RandomCards } from "./(random-cards)/cards";
-import { ButtonGithub } from "@/components/button-github";
 
 export default function Home() {
   const words = ["enthusiast", "lovers", "fanatic", "admirer"];
