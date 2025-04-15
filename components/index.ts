@@ -1,2 +1,2 @@
 export * from "./copy";
-export * from "./button-effect";
+export * from "./button-github";
