@@ -1,34 +1,128 @@
 "use client";
 
-import React, { useState } from "react";
-import { HexColorPicker } from "react-colorful";
-import { Slider } from "@/components/ui/slider";
-import { Button } from "@/components/ui/button";
-import { Check, Copy } from "lucide-react";
+import React, { useState, useEffect } from "react";
 import styles from "./gradient.module.css";
-
-interface GradientStop {
-  id: string;
-  color: string;
-  position: number;
-}
+import { GradientPreview } from "./gradient-preview";
+import { GradientControls } from "./gradient-controls";
+import { BreakpointBar } from "./breakpoint-bar";
+import { ColorEditor } from "./color-editor";
+import {
+  GradientStop,
+  initialGradientType,
+  initialAngle,
+  initialStops,
+  hexToRgb,
+  rgbToHex,
+} from "./gradient-utils";
 
 export default function GradientPicker() {
   const [gradientType, setGradientType] = useState<"linear" | "radial">(
-    "linear"
+    initialGradientType
   );
-  const [angle, setAngle] = useState(90);
-  const [stops, setStops] = useState<GradientStop[]>([
-    { id: "1", color: "#8A2A9B", position: 0 },
-    { id: "2", color: "#57C785", position: 33 },
-    { id: "3", color: "#1A1111", position: 100 },
-  ]);
+  const [angle, setAngle] = useState(initialAngle);
+  const [stops, setStops] = useState<GradientStop[]>(initialStops);
   const [selectedStop, setSelectedStop] = useState<string>("1");
   const [copied, setCopied] = useState(false);
+  const [draggingStop, setDraggingStop] = useState<string | null>(null);
+  const [hexValue, setHexValue] = useState("#000345");
+  const [rgbValues, setRgbValues] = useState({ r: 138, g: 42, b: 155, a: 100 });
 
   const selectedStopData = stops.find((stop) => stop.id === selectedStop);
 
+  useEffect(() => {
+    if (selectedStopData) {
+      setHexValue(selectedStopData.color);
+      setRgbValues(hexToRgb(selectedStopData.color));
+    }
+  }, [selectedStop, selectedStopData]);
+
+  const handleReset = () => {
+    setGradientType(initialGradientType);
+    setAngle(initialAngle);
+    setStops([...initialStops]);
+    setSelectedStop("1");
+    setDraggingStop(null);
+    setHexValue(initialStops[0]?.color || "#000345");
+    setRgbValues(hexToRgb(initialStops[0]?.color || "#000345"));
+  };
+
+  const findPositionBoundaries = (id: string): [number, number] => {
+    const sortedStops = [...stops].sort((a, b) => a.position - b.position);
+    const currentIndex = sortedStops.findIndex((stop) => stop.id === id);
+
+    if (currentIndex === -1) return [0, 100];
+
+    let lowerBound = 0;
+    let upperBound = 100;
+
+    if (currentIndex > 0) {
+      const prevStop = sortedStops[currentIndex - 1];
+      if (prevStop) {
+        lowerBound = prevStop.position + 1;
+      }
+    }
+
+    if (currentIndex < sortedStops.length - 1) {
+      const nextStop = sortedStops[currentIndex + 1];
+      if (nextStop) {
+        upperBound = nextStop.position - 1;
+      }
+    }
+
+    return [lowerBound, upperBound];
+  };
+
+  const handleBreakpointDrag = (
+    event: React.MouseEvent,
+    id: string,
+    barRef: React.RefObject<HTMLDivElement>
+  ) => {
+    if (!barRef.current) return;
+
+    const barRect = barRef.current.getBoundingClientRect();
+    const barWidth = barRect.width;
+    const relativeX = event.clientX - barRect.left;
+
+    let newPosition = Math.max(0, Math.min(100, (relativeX / barWidth) * 100));
+    newPosition = Math.round(newPosition);
+
+    updateStopPosition(id, newPosition);
+  };
+
+  const startBreakpointDrag = (
+    event: React.MouseEvent,
+    id: string,
+    barRef: React.RefObject<HTMLDivElement>
+  ) => {
+    event.preventDefault();
+    setSelectedStop(id);
+    setDraggingStop(id);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      handleBreakpointDrag(
+        { clientX: e.clientX } as React.MouseEvent,
+        id,
+        barRef
+      );
+    };
+
+    const handleMouseUp = () => {
+      setDraggingStop(null);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
+
   const updateStopPosition = (id: string, newPosition: number) => {
+    setDraggingStop(id);
+
+    newPosition = Math.max(0, Math.min(100, newPosition));
+    const [lowerBound, upperBound] = findPositionBoundaries(id);
+    newPosition = Math.max(lowerBound, Math.min(upperBound, newPosition));
+
     setStops((prev) =>
       prev.map((stop) =>
         stop.id === id ? { ...stop, position: newPosition } : stop
@@ -40,26 +134,69 @@ export default function GradientPicker() {
     setStops((prev) =>
       prev.map((stop) => (stop.id === id ? { ...stop, color: newColor } : stop))
     );
+
+    setHexValue(newColor);
+    setRgbValues(hexToRgb(newColor));
+  };
+
+  const handleHexChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newHex = e.target.value;
+    setHexValue(newHex);
+
+    if (/^#?([0-9A-F]{3}){1,2}$/i.test(newHex)) {
+      const formattedHex = newHex.startsWith("#") ? newHex : `#${newHex}`;
+      if (selectedStopData) {
+        updateStopColor(selectedStopData.id, formattedHex);
+      }
+    }
+  };
+
+  const handleRgbChange = (channel: "r" | "g" | "b" | "a", value: string) => {
+    const numericValue = parseInt(value, 10);
+
+    if (!isNaN(numericValue)) {
+      const maxValue = channel === "a" ? 100 : 255;
+      const normalizedValue = Math.max(0, Math.min(maxValue, numericValue));
+
+      const newRgbValues = { ...rgbValues, [channel]: normalizedValue };
+      setRgbValues(newRgbValues);
+
+      if (selectedStopData && channel !== "a") {
+        const newHex = rgbToHex(newRgbValues.r, newRgbValues.g, newRgbValues.b);
+        updateStopColor(selectedStopData.id, newHex);
+      }
+    }
   };
 
   const addStop = () => {
+    if (stops.length >= 8) return;
+
     const newId = (stops.length + 1).toString();
-    const lastStop = stops[stops.length - 1];
-    const newPosition = lastStop ? (lastStop.position + 100) / 2 : 50;
+    const sortedStops = [...stops].sort((a, b) => a.position - b.position);
 
-    setStops([
-      ...stops,
-      { id: newId, color: "#000000", position: newPosition },
-    ]);
-    setSelectedStop(newId);
-  };
+    let maxGap = 0;
+    let gapPosition = 50;
 
-  const removeStop = (id: string) => {
-    if (stops.length <= 2) return;
-    setStops((prev) => prev.filter((stop) => stop.id !== id));
-    if (selectedStop === id) {
-      setSelectedStop(stops[0]?.id || "1");
+    if (sortedStops.length >= 2) {
+      for (let i = 0; i < sortedStops.length - 1; i++) {
+        const currentStop = sortedStops[i];
+        const nextStop = sortedStops[i + 1];
+
+        if (currentStop && nextStop) {
+          const gap = nextStop.position - currentStop.position;
+          if (gap > maxGap) {
+            maxGap = gap;
+            gapPosition = currentStop.position + gap / 2;
+          }
+        }
+      }
     }
+
+    const newStop = { id: newId, color: "#000000", position: gapPosition };
+    setStops([...stops, newStop]);
+    setSelectedStop(newId);
+    setHexValue(newStop.color);
+    setRgbValues(hexToRgb(newStop.color));
   };
 
   const getGradientString = () => {
@@ -80,131 +217,49 @@ export default function GradientPicker() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const gradientStyle = {
-    background: getGradientString(),
-  };
+  const gradientString = getGradientString();
 
   return (
     <div className={styles.container}>
-      <div className={styles.preview} style={gradientStyle}>
-        <div className={styles.copyButtonContainer}>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={copyToClipboard}
-            className={styles.copyButton}
-          >
-            {copied ? (
-              <>
-                <Check className="h-4 w-4 mr-2" />
-                Copied!
-              </>
-            ) : (
-              <>
-                <Copy className="h-4 w-4 mr-2" />
-                Copy CSS
-              </>
-            )}
-          </Button>
-        </div>
-      </div>
+      <GradientPreview
+        gradientString={gradientString}
+        copied={copied}
+        onCopy={copyToClipboard}
+      />
 
       <div className={styles.cssPreview}>
         <div className={styles.cssCode}>
-          <span className={styles.property}>background:</span>{" "}
-          {getGradientString()};
+          <span className={styles.property}>background:</span> {gradientString};
         </div>
       </div>
 
-      <div className={styles.controls}>
-        <div className={styles.typeControls}>
-          <button
-            className={`${styles.typeButton} ${
-              gradientType === "linear" ? styles.active : ""
-            }`}
-            onClick={() => setGradientType("linear")}
-          >
-            Linear
-          </button>
-          <button
-            className={`${styles.typeButton} ${
-              gradientType === "radial" ? styles.active : ""
-            }`}
-            onClick={() => setGradientType("radial")}
-          >
-            Radial
-          </button>
-        </div>
+      <GradientControls
+        gradientType={gradientType}
+        angle={angle}
+        onGradientTypeChange={setGradientType}
+        onAngleChange={setAngle}
+        onReset={handleReset}
+      />
 
-        {gradientType === "linear" && (
-          <div className={styles.angleControl}>
-            <label htmlFor="angle">Angle: {angle}°</label>
-            <Slider
-              id="angle"
-              min={0}
-              max={360}
-              step={1}
-              value={[angle]}
-              onValueChange={(value) => setAngle(value[0] || 90)}
-              className={styles.angleSlider}
-            />
-          </div>
-        )}
+      <BreakpointBar
+        stops={stops}
+        selectedStop={selectedStop}
+        draggingStop={draggingStop}
+        gradientString={gradientString}
+        onStartDrag={startBreakpointDrag}
+        onAddStop={addStop}
+      />
 
-        <div className={styles.stopsContainer}>
-          {stops.map((stop) => (
-            <div
-              key={stop.id}
-              className={`${styles.stop} ${
-                selectedStop === stop.id ? styles.selected : ""
-              }`}
-              onClick={() => setSelectedStop(stop.id)}
-            >
-              <div
-                className={styles.colorPreview}
-                style={{ backgroundColor: stop.color }}
-              />
-              <div className={styles.positionControl}>
-                <label htmlFor={`position-${stop.id}`}>
-                  Position: {stop.position}%
-                </label>
-                <Slider
-                  id={`position-${stop.id}`}
-                  min={0}
-                  max={100}
-                  step={1}
-                  value={[stop.position]}
-                  onValueChange={(value) =>
-                    updateStopPosition(stop.id, value[0] || 0)
-                  }
-                  className={styles.positionSlider}
-                />
-              </div>
-              <button
-                className={styles.removeStop}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  removeStop(stop.id);
-                }}
-              >
-                ×
-              </button>
-            </div>
-          ))}
-          <button className={styles.addStop} onClick={addStop}>
-            + Add color
-          </button>
-        </div>
-
-        {selectedStopData && (
-          <div className={styles.colorPicker}>
-            <HexColorPicker
-              color={selectedStopData.color}
-              onChange={(color) => updateStopColor(selectedStopData.id, color)}
-            />
-          </div>
-        )}
-      </div>
+      <ColorEditor
+        selectedStop={selectedStopData}
+        hexValue={hexValue}
+        rgbValues={rgbValues}
+        onColorChange={(color) =>
+          selectedStopData && updateStopColor(selectedStopData.id, color)
+        }
+        onHexChange={handleHexChange}
+        onRgbChange={handleRgbChange}
+      />
     </div>
   );
 }
