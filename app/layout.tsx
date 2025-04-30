@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import { Background } from "@/components/layout";
+import { jsonLd } from "@/static/json-ld";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -39,6 +40,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/logo.svg" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className={inter.className}>
         <Toaster />
