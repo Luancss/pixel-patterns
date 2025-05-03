@@ -14,6 +14,9 @@ import {
   hexToRgb,
   rgbToHex,
 } from "./gradient-utils";
+import { Button } from "@/components/ui/button";
+import { Check, Copy } from "lucide-react";
+import { toast } from "sonner";
 
 export default function GradientPicker() {
   const [gradientType, setGradientType] = useState<"linear" | "radial">(
@@ -214,6 +217,7 @@ export default function GradientPicker() {
     const gradientString = getGradientString();
     navigator.clipboard.writeText(`background: ${gradientString};`);
     setCopied(true);
+    toast.success("Gradient copied to clipboard");
     setTimeout(() => setCopied(false), 2000);
   };
 
@@ -221,13 +225,23 @@ export default function GradientPicker() {
 
   return (
     <div className={styles.container}>
-      <GradientPreview
-        gradientString={gradientString}
-        copied={copied}
-        onCopy={copyToClipboard}
-      />
+      <GradientPreview gradientString={gradientString} />
 
       <div className={styles.cssPreview}>
+        <div className={styles.copyButtonContainer}>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={copyToClipboard}
+            className={styles.copyButton}
+          >
+            {copied ? (
+              <Check className="h-4 w-4" />
+            ) : (
+              <Copy className="h-4 w-4" />
+            )}
+          </Button>
+        </div>
         <div className={styles.cssCode}>
           <span className={styles.property}>background:</span> {gradientString};
         </div>

@@ -2,10 +2,13 @@
   width: 100%;
   max-width: 600px;
   padding: 20px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 500;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  color: #fff;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .preview {
@@ -13,31 +16,37 @@
   height: 200px;
   border-radius: 8px;
   margin-bottom: 20px;
-  border: 1px solid #eee;
   position: relative;
+  border: 1px dashed #7a7a7a;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .cssPreview {
   width: 100%;
   padding: 16px;
-  background: #1e1e1e;
+  background: rgba(13, 17, 23, 0.8);
   border-radius: 8px;
   margin-bottom: 20px;
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
   font-size: 14px;
   line-height: 1.4;
-  color: #ffffff;
+  color: #fff;
   overflow-x: auto;
+  position: relative;
+  border: 1px solid #7a7a7a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cssCode {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  padding-right: 32px;
+  color: #fff;
 }
 
 .property {
-  color: #9cdcfe;
+  color: #58a6ff;
 }
 
 .controls {
@@ -52,6 +61,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  color: #fff;
 }
 
 .typeButtons {
@@ -61,20 +71,41 @@
 
 .typeButton {
   padding: 8px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid #7a7a7a;
   border-radius: 4px;
-  background: #fff;
+  background: rgba(13, 17, 23, 0.8);
+  color: #fff;
   cursor: pointer;
   transition: all 0.2s;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.typeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #58a6ff;
 }
 
 .typeButton.active {
-  background: #f0f0f0;
-  border-color: #999;
+  background: #58a6ff;
+  border-color: #58a6ff;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
 }
 
 .resetButton {
   margin-left: auto;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.resetButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .angleControl {
@@ -85,14 +116,16 @@
 
 .angleControl label {
   font-size: 14px;
-  color: #666;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .angleSlider {
   width: 100%;
+  accent-color: #58a6ff;
+  height: 4px;
 }
 
-/* Estilos para a barra de breakpoints */
 .breakpointBarContainer {
   display: flex;
   flex-direction: column;
@@ -106,33 +139,44 @@
   border-radius: 15px;
   position: relative;
   cursor: pointer;
-  border: 1px solid #ddd;
+  border: 1px solid #7a7a7a;
+  background: rgba(13, 17, 23, 0.8);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .breakpoint {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
+  background: #58a6ff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   cursor: grab;
   z-index: 10;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, left;
+}
+
+.breakpoint:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.4);
 }
 
 .breakpoint.selected {
   transform: translate(-50%, -50%) scale(1.2);
-  box-shadow: 0 0 0 2px white, 0 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 2px #fff, 0 0 15px rgba(88, 166, 255, 0.5);
   z-index: 20;
 }
 
 .breakpoint.dragging {
   cursor: grabbing;
   transform: translate(-50%, -50%) scale(1.3);
-  box-shadow: 0 0 0 2px white, 0 0 0 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 2px #fff, 0 0 20px rgba(88, 166, 255, 0.6);
+  transition: none;
+  z-index: 30;
 }
 
 .breakpointPositions {
@@ -145,7 +189,7 @@
   position: absolute;
   transform: translateX(-50%);
   font-size: 12px;
-  color: #666;
+  color: #ccc;
 }
 
 .stopsContainer {
@@ -217,19 +261,23 @@
 
 .addStop {
   padding: 8px 12px;
-  border: 1px dashed #ddd;
+  border: 1px dashed #7a7a7a;
   border-radius: 4px;
-  background: #fff;
+  background: rgba(13, 17, 23, 0.8);
   cursor: pointer;
-  color: #666;
+  color: #fff;
+  width: 100%;
+  margin: 15px 0;
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .addStop:hover {
-  border-color: #999;
-  color: #333;
+  border-color: #58a6ff;
+  background: rgba(88, 166, 255, 0.1);
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
 }
 
-/* Estilos para o editor de cores */
 .colorEditor {
   display: flex;
   flex-wrap: wrap;
@@ -240,6 +288,11 @@
 .colorPickerContainer {
   flex: 1;
   min-width: 200px;
+  background: rgba(13, 17, 23, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #7a7a7a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .colorInputs {
@@ -258,15 +311,26 @@
 
 .hexInput label {
   font-size: 14px;
-  color: #666;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .colorInput {
   width: 100%;
-  padding: 8px;
+  padding: 8px 12px;
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+}
+
+.colorInput:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.25);
 }
 
 .rgbInputs {
@@ -289,9 +353,10 @@
 
 .rgbChannel label {
   font-size: 14px;
-  color: #666;
+  color: #fff;
   font-weight: 500;
   text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .channelInput {
@@ -299,28 +364,38 @@
   padding: 8px;
   text-align: center;
   font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  color: #fff;
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+}
+
+.channelInput:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.25);
 }
 
 .copyButtonContainer {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 4px;
-  padding: 4px;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
 }
 
 .copyButton {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  padding: 4px 8px;
-  transition: all 0.2s;
+  background: rgba(13, 17, 23, 0.8) !important;
+  border: 1px solid #7a7a7a !important;
+  border-radius: 4px;
+  padding: 6px !important;
+  min-width: unset !important;
+  height: unset !important;
+  color: white !important;
+  transition: all 0.2s ease !important;
 }
 
 .copyButton:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(88, 166, 255, 0.1) !important;
+  border-color: #58a6ff !important;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
 } 

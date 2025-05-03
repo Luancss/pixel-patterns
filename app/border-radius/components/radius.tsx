@@ -1,6 +1,4 @@
-import {
-  ArrowRight
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
@@ -196,7 +194,7 @@ export const Radius = () => {
   };
 
   return (
-    <div className="absolute -bottom-12 right-4 overflow-hidden min-h-screen flex flex-col items-center justify-center z-50 -mt-20">
+    <div className="absolute bottom-0 right-5 overflow-hidden min-h-screen flex flex-col items-center justify-center z-50 -mt-20">
       <div
         ref={containerRef}
         className="shape-container relative w-[500px] h-[500px] flex items-center justify-center"
