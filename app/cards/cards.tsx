@@ -1,17 +1,17 @@
 "use client";
 
+import { CardSpecific } from "@/components/cards";
 import {
   Pagination,
+  PaginationContent,
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationContent,
   PaginationPrevious,
 } from "@/components/ui";
-import { CardSpecific } from "@/components/cards";
 
 import { cn } from "@/lib/utils";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const itemsPerPage = 9;
 

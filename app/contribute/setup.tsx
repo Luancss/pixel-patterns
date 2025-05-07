@@ -1,8 +1,6 @@
 import { CopyCard } from "@/components/copy";
-import { Button } from "@/components/ui/button";
-import React from "react";
-import Started from "./started";
 import Image from "next/image";
+import Started from "./started";
 
 const Setup = () => {
   return (

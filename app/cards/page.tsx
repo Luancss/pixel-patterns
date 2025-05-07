@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/layout";
 import { Box, Geminid, Star } from "@/components/shapes";
 
-import CardCards from "./(cards)/card-cards";
+import CardCards from "./cards";
 
 const Cards = () => {
   return (

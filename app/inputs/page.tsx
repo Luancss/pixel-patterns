@@ -1,8 +1,8 @@
-import { Wave } from "@/components/wave";
 import { HeroSection } from "@/components/layout";
 import { Geminid, Star } from "@/components/shapes";
+import { Wave } from "@/components/wave";
 
-import CardsInputs from "./(cards)/cards-inputs";
+import { CardsInputs } from "./cards";
 
 const Inputs = () => {
   return (

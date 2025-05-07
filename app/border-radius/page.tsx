@@ -2,7 +2,7 @@
 
 import { Geminid, Star } from "@/components/shapes";
 import Spline from "@splinetool/react-spline";
-import { Radius } from "./components/radius";
+import { Radius } from "./radius";
 
 export default function BorderRadius() {
   return (

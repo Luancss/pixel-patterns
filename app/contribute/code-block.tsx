@@ -1,8 +1,8 @@
 "use client";
-import { toast } from "sonner";
-import { useState } from "react";
+import { CodeBlock, coldarkDark, dracula } from "@react-email/code-block";
 import { Check, CopyIcon } from "lucide-react";
-import { dracula, CodeBlock, coldarkDark } from "@react-email/code-block";
+import { useState } from "react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui";
 

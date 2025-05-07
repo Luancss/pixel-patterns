@@ -1,2 +1,2 @@
 export * from "./copy";
-export * from "./button-github";
+export * from "./ui/button-github";

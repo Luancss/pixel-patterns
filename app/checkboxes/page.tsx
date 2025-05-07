@@ -2,7 +2,7 @@ import { WaveLittle } from "@/components/wave";
 import { HeroSection } from "@/components/layout";
 import { Geminid, Star } from "@/components/shapes";
 
-import CardsCheckboxes from "./(cards)/cards-checkboxes";
+import CardsCheckboxes from "./cards";
 
 const Inputs = () => {
   return (

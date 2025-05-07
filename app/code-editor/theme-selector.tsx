@@ -2,7 +2,7 @@
 
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import React, { useEffect, useRef, useState } from "react";
-import { THEMES } from "../_constants";
+import { THEMES } from "./_constants";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   CircleOff,

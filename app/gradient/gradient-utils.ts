@@ -1,4 +1,3 @@
-// Função para converter cor hex para RGB
 export const hexToRgb = (
   hex: string
 ): { r: number; g: number; b: number; a: number } => {

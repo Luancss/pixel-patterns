@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/layout";
 import { Geminid, Star } from "@/components/shapes";
 import { WaveBox } from "@/components/wave";
 import React from "react";
-import CardsForm from "./(cards)/cards-forms";
+import CardsForm from "./cards";
 import WaveCircle from "@/components/wave/wave-circle";
 
 const Forms = () => {

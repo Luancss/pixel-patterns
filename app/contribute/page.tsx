@@ -1,12 +1,11 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 
 import { Geminid, Star } from "@/components/shapes";
 import { AnimatedTooltipPreview } from "@/components/ui";
 
-import Setup from "./(components)/setup";
+import Setup from "./setup";
 
 const Contribute = () => {
   return (

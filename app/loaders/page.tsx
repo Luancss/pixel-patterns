@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/layout";
 import { Circle, Geminid, Star } from "@/components/shapes";
 
-import CardsLoaders from "./(cards)/cards-loaders";
+import CardsLoaders from "./cards";
 
 const Cards = () => {
   return (

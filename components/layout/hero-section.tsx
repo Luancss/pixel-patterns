@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "../ui";
 
 import { Navbar } from "./navbar";
-import { ButtonGithub } from "../button-github";
+import { ButtonGithub } from "../ui/button-github";
 
 interface HeroSectionProps {
   title: string;

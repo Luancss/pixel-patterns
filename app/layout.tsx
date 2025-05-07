@@ -50,7 +50,7 @@ export default function RootLayout({
         <div className="relative h-full w-full bg-black">
           <Background />
           <div className="flex min-h-screen flex-col box-border">
-            <div className="flex flex-col gap-y-10 items-center m-auto z-20">
+            <div className="flex flex-col gap-y-10 items-center z-20">
               {children}
             </div>
           </div>

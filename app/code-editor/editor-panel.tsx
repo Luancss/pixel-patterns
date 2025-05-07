@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { RotateCcwIcon, TypeIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { defineMonacoThemes, LANGUAGE_CONFIG } from "../_constants";
+import { defineMonacoThemes, LANGUAGE_CONFIG } from "./_constants";
 import { EditorPanelSkeleton } from "./editor-pannel-skeleton";
 
 export const EditorPanel = () => {
