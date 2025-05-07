@@ -1,0 +1,401 @@
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  color: #fff;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.preview {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  border: 1px dashed #7a7a7a;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.cssPreview {
+  width: 100%;
+  padding: 16px;
+  background: rgba(13, 17, 23, 0.8);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #fff;
+  overflow-x: auto;
+  position: relative;
+  border: 1px solid #7a7a7a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cssCode {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-right: 32px;
+  color: #fff;
+}
+
+.property {
+  color: #58a6ff;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.typeControls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.typeButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.typeButton {
+  padding: 8px 16px;
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+  background: rgba(13, 17, 23, 0.8);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.typeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #58a6ff;
+}
+
+.typeButton.active {
+  background: #58a6ff;
+  border-color: #58a6ff;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+}
+
+.resetButton {
+  margin-left: auto;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.resetButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.angleControl {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.angleControl label {
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.angleSlider {
+  width: 100%;
+  accent-color: #58a6ff;
+  height: 4px;
+}
+
+.breakpointBarContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.breakpointBar {
+  height: 30px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #7a7a7a;
+  background: rgba(13, 17, 23, 0.8);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breakpoint {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #58a6ff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  z-index: 10;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, left;
+}
+
+.breakpoint:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.4);
+}
+
+.breakpoint.selected {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 0 0 2px #fff, 0 0 15px rgba(88, 166, 255, 0.5);
+  z-index: 20;
+}
+
+.breakpoint.dragging {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.3);
+  box-shadow: 0 0 0 2px #fff, 0 0 20px rgba(88, 166, 255, 0.6);
+  transition: none;
+  z-index: 30;
+}
+
+.breakpointPositions {
+  display: flex;
+  position: relative;
+  height: 20px;
+}
+
+.positionLabel {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #ccc;
+}
+
+.stopsContainer {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.stop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  min-width: 200px;
+  transition: all 0.2s ease;
+}
+
+.stop.selected {
+  border-color: #666;
+  background: #f5f5f5;
+}
+
+.stop.dragging {
+  border-color: #0066cc;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);
+  z-index: 10;
+}
+
+.colorPreview {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.positionControl {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.positionControl label {
+  font-size: 12px;
+  color: #666;
+}
+
+.positionSlider {
+  width: 100%;
+}
+
+.removeStop {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 4px;
+}
+
+.removeStop:hover {
+  color: #666;
+}
+
+.addStop {
+  padding: 8px 12px;
+  border: 1px dashed #7a7a7a;
+  border-radius: 4px;
+  background: rgba(13, 17, 23, 0.8);
+  cursor: pointer;
+  color: #fff;
+  width: 100%;
+  margin: 15px 0;
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.addStop:hover {
+  border-color: #58a6ff;
+  background: rgba(88, 166, 255, 0.1);
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+}
+
+.colorEditor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.colorPickerContainer {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(13, 17, 23, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #7a7a7a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.colorInputs {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hexInput {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hexInput label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.colorInput {
+  width: 100%;
+  padding: 8px 12px;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+}
+
+.colorInput:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.25);
+}
+
+.rgbInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rgbChannels {
+  display: flex;
+  gap: 10px;
+}
+
+.rgbChannel {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.rgbChannel label {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.channelInput {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  color: #fff;
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+}
+
+.channelInput:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.25);
+}
+
+.copyButtonContainer {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+}
+
+.copyButton {
+  background: rgba(13, 17, 23, 0.8) !important;
+  border: 1px solid #7a7a7a !important;
+  border-radius: 4px;
+  padding: 6px !important;
+  min-width: unset !important;
+  height: unset !important;
+  color: white !important;
+  transition: all 0.2s ease !important;
+}
+
+.copyButton:hover {
+  background: rgba(88, 166, 255, 0.1) !important;
+  border-color: #58a6ff !important;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+} 

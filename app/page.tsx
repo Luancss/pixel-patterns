@@ -6,11 +6,12 @@ import { Cubic, Geminid, Star } from "@/components/shapes";
 import { Button, FlipWords } from "@/components/ui";
 import { Sparkles } from "lucide-react";
 import { RandomCards } from "./(random-cards)/cards";
+import { MonsterEletric } from "./monster/components/monster";
+import Spline from "@splinetool/react-spline";
 
 export default function Home() {
   const words = ["enthusiast", "lovers", "fanatic", "admirer"];
 
-  // <Spline scene="https://prod.spline.design/cAuIoDp8ZpbIsUKt/scene.splinecode" />;
   return (
     <>
       <Star />
@@ -20,7 +21,7 @@ export default function Home() {
         <ButtonGithub href="https://github.com/Luancss/pixel-patterns" />
       </div>
 
-      <div className="max-w-[600px] flex flex-col items-center justify-center text-center gap-y-7 md:mt-3">
+      <div className="max-w-[600px] flex flex-col items-center justify-center text-center gap-y-7 md:mt-3 z-50">
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <Button className="bg-yellow-950/30 hover:bg-yellow-950/10 text-yellow-500 px-4 py-2 sm:px-6 sm:py-3">
             <Link href="/contribute">Contribute to this project! 💡</Link>
