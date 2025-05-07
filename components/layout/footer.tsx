@@ -4,7 +4,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <div className="flex items-center justify-center flex-col gap-2">
+    <div className="flex items-center justify-center flex-col gap-2 mb-10">
       <div className="flex flex-col items-center gap-2">
         <Image
           alt="Luancss"

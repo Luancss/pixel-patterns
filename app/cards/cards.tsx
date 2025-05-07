@@ -974,7 +974,7 @@ const CardCards = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {paginatedCards()}
       </div>
-      <Pagination className="mt-8">
+      <Pagination className="my-10">
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
