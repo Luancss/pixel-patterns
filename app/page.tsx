@@ -12,19 +12,8 @@ import Spline from "@splinetool/react-spline";
 export default function Home() {
   const words = ["enthusiast", "lovers", "fanatic", "admirer"];
 
-  // <Spline scene="https://prod.spline.design/cAuIoDp8ZpbIsUKt/scene.splinecode" />;
   return (
     <>
-      {/* <Spline
-        scene="https://prod.spline.design/k4AN-W1ScDAJ6s12/scene.splinecode"
-        style={{
-          width: "50%",
-          height: "100vh",
-          position: "absolute",
-          top: 0,
-          right: 0,
-        }}
-      /> */}
       <Star />
       <Geminid />
       <Cubic />
