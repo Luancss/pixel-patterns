@@ -1,22 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
+import { Card } from "@/components/cards";
 import {
   Pagination,
+  PaginationContent,
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationContent,
   PaginationPrevious,
 } from "@/components/ui";
-import { Card } from "@/components/cards";
 
 import { cn } from "@/lib/utils";
 
 const itemsPerPage = 12;
 
-const CardsInputs = () => {
+export const CardsInputs = () => {
   const [filter, setFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -1059,5 +1059,3 @@ const CardsInputs = () => {
     </div>
   );
 };
-
-export default CardsInputs;

@@ -1,11 +1,10 @@
-import React from "react";
+import { AlertCircleIcon, CircleCheck, CircleX } from "lucide-react";
 import {
   CodeButtonCorrect,
   CodeButtonError,
   CodeCss,
   CodeTailwind,
 } from "./code-block";
-import { AlertCircleIcon, CircleCheck, CircleX } from "lucide-react";
 
 const Started = () => {
   return (

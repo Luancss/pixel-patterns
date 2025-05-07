@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { Card } from "@/components/cards";
 import {
   Pagination,
   PaginationContent,
@@ -9,7 +9,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui";
-import { Card } from "@/components/cards";
+import { useState } from "react";
 
 import { cn } from "@/lib/utils";
 

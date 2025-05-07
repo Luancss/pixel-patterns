@@ -1,21 +1,15 @@
 "use client";
 
-import { Header } from "@/app/code-editor/components/header";
+import { Header } from "@/app/code-editor/header";
 import { Geminid, Star } from "@/components/shapes";
 import { Button } from "@/components/ui";
 import { Suspense, useState } from "react";
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import dynamic from "next/dynamic";
-import {
-  EditorPanelSkeleton,
-  OutputPanelSkeleton,
-} from "./components/skeletons";
+import { EditorPanelSkeleton, OutputPanelSkeleton } from "./skeletons";
 
 const Editor = dynamic(
-  () =>
-    import("@/app/code-editor/components/editor-panel").then(
-      (mod) => mod.EditorPanel
-    ),
+  () => import("@/app/code-editor/editor-panel").then((mod) => mod.EditorPanel),
   {
     loading: () => <EditorPanelSkeleton />,
     ssr: false,
@@ -23,7 +17,7 @@ const Editor = dynamic(
 );
 
 const OutputPanel = dynamic(
-  () => import("./components/output-panel-code").then((mod) => mod.OutputPanel),
+  () => import("./output-panel-code").then((mod) => mod.OutputPanel),
   {
     loading: () => <OutputPanelSkeleton />,
     ssr: false,
@@ -31,10 +25,7 @@ const OutputPanel = dynamic(
 );
 
 const OutputPanelComponent = dynamic(
-  () =>
-    import("./components/output-panel-html").then(
-      (mod) => mod.OutputPanelComponent
-    ),
+  () => import("./output-panel-html").then((mod) => mod.OutputPanelComponent),
   {
     loading: () => <OutputPanelSkeleton />,
     ssr: false,

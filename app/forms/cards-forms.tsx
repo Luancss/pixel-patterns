@@ -2,17 +2,16 @@
 
 import {
   Pagination,
+  PaginationContent,
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationContent,
   PaginationPrevious,
 } from "@/components/ui";
-import { Card } from "@/components/cards";
 
-import { cn } from "@/lib/utils";
-import React, { useState } from "react";
 import { CardForm } from "@/components/cards/card-form";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 const itemsPerPage = 6;
 
