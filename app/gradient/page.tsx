@@ -1,5 +1,5 @@
-import GradientPicker from "./components/gradient";
-import { MonsterEletric } from "./components/monster";
+import GradientPicker from "./gradient";
+import { MonsterEletric } from "./monster";
 
 function Monster() {
   return (

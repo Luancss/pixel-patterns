@@ -4,7 +4,6 @@ import { useEffect } from "react";
 
 export const MonsterEletric = () => {
   useEffect(() => {
-    // Define uma função cross-browser para solicitar animações
     window.requestAnimFrame = function () {
       return (
         window.requestAnimationFrame ||
@@ -18,7 +17,6 @@ export const MonsterEletric = () => {
       );
     };
 
-    // Função de inicialização do canvas
     function init(elemid) {
       let canvas = document.getElementById(elemid),
         c = canvas.getContext("2d"),
@@ -29,7 +27,6 @@ export const MonsterEletric = () => {
       return { c: c, canvas: canvas };
     }
 
-    // Inicializa o contexto e o canvas
     let c = init("canvas").c,
       canvas = init("canvas").canvas,
       w = (canvas.width = window.innerWidth),
@@ -37,12 +34,10 @@ export const MonsterEletric = () => {
       mouse = { x: false, y: false },
       last_mouse = {};
 
-    // Função para calcular a distância entre dois pontos
     function dist(p1x, p1y, p2x, p2y) {
       return Math.sqrt(Math.pow(p2x - p1x, 2) + Math.pow(p2y - p1y, 2));
     }
 
-    // Classe que representa um segmento
     class segment {
       constructor(parent, l, a, first) {
         this.first = first;
@@ -85,7 +80,6 @@ export const MonsterEletric = () => {
       }
     }
 
-    // Classe que representa um tentáculo
     class tentacle {
       constructor(x, y, l, n, a) {
         this.x = x;
@@ -169,7 +163,6 @@ export const MonsterEletric = () => {
       }
     }
 
-    // Configuração dos tentáculos
     let maxl = 300,
       minl = 50,
       n = 30,
@@ -194,7 +187,6 @@ export const MonsterEletric = () => {
       );
     }
 
-    // Função para desenhar a animação
     function draw() {
       if (mouse.x) {
         target.errx = mouse.x - target.x;
@@ -239,7 +231,6 @@ export const MonsterEletric = () => {
       last_target.y = target.y;
     }
 
-    // Event listeners
     canvas.addEventListener(
       "mousemove",
       function (e) {
@@ -258,7 +249,6 @@ export const MonsterEletric = () => {
       false
     );
 
-    // Variable to store the timeout
     let mouseTimer;
 
     canvas.addEventListener("mouseleave", function (e) {
@@ -283,24 +273,20 @@ export const MonsterEletric = () => {
       false
     );
 
-    // Loop de animação
     function loop() {
       window.requestAnimationFrame(loop);
       c.clearRect(0, 0, w, h);
       draw();
     }
 
-    // Redimensionamento
     window.addEventListener("resize", function () {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
       loop();
     });
 
-    // Inicia a animação
     loop();
 
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", () => {});
       canvas?.removeEventListener("mousemove", () => {});
