@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/layout";
 import { Geminid, Star } from "@/components/shapes";
 import { WaveBox } from "@/components/wave";
 
-import CardsButton from "./cards-buttons";
+import CardsButton from "./cards";
 
 const Buttons = () => {
   return (
