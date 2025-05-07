@@ -3,7 +3,7 @@
 import { Header } from "@/app/code-editor/header";
 import { Geminid, Star } from "@/components/shapes";
 import { Button } from "@/components/ui";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import dynamic from "next/dynamic";
 import { EditorPanelSkeleton, OutputPanelSkeleton } from "./skeletons";
@@ -34,7 +34,13 @@ const OutputPanelComponent = dynamic(
 
 export default function CodeCompiler() {
   const [isHtml, setIsHtml] = useState(false);
-  const { setLanguage } = useCodeEditorStore();
+  const { language, setLanguage } = useCodeEditorStore();
+
+  useEffect(() => {
+    if (language === "html") {
+      setIsHtml(true);
+    }
+  }, []);
 
   return (
     <>
