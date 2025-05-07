@@ -9,7 +9,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui";
 
-import { CardForm } from "@/components/cards/card-form";
+import { CardForm } from "@/components/cards/form";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
