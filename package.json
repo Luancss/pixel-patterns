@@ -1,12 +1,15 @@
 {
-  "name": "belick",
+  "name": "pixel-patterns",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
@@ -22,6 +25,7 @@
     "framer-motion": "^11.18.2",
     "lucide-react": "^0.426.0",
     "next": "14.2.35",
+    "prismjs": "^1.30.0",
     "react": "18",
     "react-colorful": "^5.6.1",
     "react-dom": "18",
@@ -32,15 +36,20 @@
   },
   "devDependencies": {
     "@types/node": "20",
+    "@types/prismjs": "^1.26.6",
     "@types/react": "18.3.5",
     "@types/react-dom": "18",
     "eslint": "8",
     "eslint-config-next": "14.2.5",
     "postcss": "8",
+    "prettier": "^3.9.10",
     "tailwindcss": "3.4.1",
     "typescript": "5.5.4"
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "overrides": {
+    "prismjs": "$prismjs"
   }
 }

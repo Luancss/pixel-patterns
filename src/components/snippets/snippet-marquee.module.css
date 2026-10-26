@@ -1,0 +1,35 @@
+.row {
+  max-width: calc(100vw - 20rem);
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+  .row {
+    max-width: calc(100vw - 5rem);
+  }
+}
+
+.track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 200%;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.row[data-direction="left"] .track {
+  animation-direction: normal;
+}
+
+.row[data-direction="right"] .track {
+  animation-direction: reverse;
+}

@@ -4,7 +4,6 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,
     "noEmit": true,
@@ -22,7 +21,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

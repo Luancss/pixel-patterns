@@ -1,5 +1,3 @@
-/** @type {import('next').NextConfig} */
-
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -23,13 +21,17 @@ const securityHeaders = [
   },
 ];
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   poweredByHeader: false,
   images: {
-    domains: ['images.unsplash.com', 'avatars.githubusercontent.com'],
-  }, async headers() {
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "avatars.githubusercontent.com" },
+    ],
+  },
+  async headers() {
     return [
       {
         source: "/(.*)",
