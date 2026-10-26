@@ -43,6 +43,72 @@ This open-source project not only offers an initial library of components but al
 
 Click the following link to view the <a target="_blank" href="https://pixel-patterns-mauve.vercel.app/">deploy</a>
 
+## 🛠 Getting Started
+
+Requires Node.js 20 or newer.
+
+```bash
+npm install
+npm run dev
+```
+
+| Script | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
+| `npm run typecheck` | Run the TypeScript compiler without emitting files |
+| `npm run format` | Format the codebase with Prettier |
+| `npm run format:check` | Check formatting without writing changes |
+
+## 🗂 Project Structure
+
+```
+src/
+├── app/                    # App Router routes (Server Components by default)
+│   ├── <route>/page.tsx    # One folder per page
+│   ├── <route>/_components # Components used only by that route
+│   └── <route>/_lib        # Route-specific state, config and helpers
+├── components/
+│   ├── decorations/        # Animated backgrounds, each with its own CSS Module
+│   ├── layout/             # Site chrome: hero, navbar, footer, buttons
+│   ├── snippets/           # Snippet card, gallery, marquee and code preview
+│   └── ui/                 # Reusable primitives (shadcn/ui based)
+├── data/snippets/          # Component library content, one file per category
+├── hooks/                  # Shared React hooks
+├── lib/                    # Site configuration and utilities
+└── types/                  # Shared TypeScript types
+```
+
+Conventions:
+
+- Files use `kebab-case`, components use `PascalCase` named exports, hooks start with `use`.
+- Import with the `@/` alias (maps to `src/`); CSS Modules are imported relatively from the component next to them.
+- Add `"use client"` only to files that use hooks, browser APIs or event handlers.
+- Global CSS is limited to Tailwind layers and design tokens in `src/app/globals.css`; component styles live in Tailwind classes or a colocated `*.module.css`.
+
+## ➕ Adding a Component
+
+1. Open the category file in `src/data/snippets/` (for example `buttons.tsx`).
+2. Append a new entry at the end of the array:
+
+```tsx
+{
+  category: "css",
+  background: "bg-[#212121]",
+  iconColor: "#fff",
+  html: `
+    <button class="button-83501">Click me</button>
+    <style>
+      .button-83501 { /* ... */ }
+    </style>
+  `,
+},
+```
+
+Use `category: "tailwind"` with a `content: (<button className="...">...</button>)` JSX field for Tailwind components. Snippets must be static markup: what is rendered is exactly what gets copied, so event handlers are not supported. Add five random digits to every class and keyframe name in CSS snippets to avoid collisions with other components on the same page.
+
 
 ## 🚀 Technologies
 
