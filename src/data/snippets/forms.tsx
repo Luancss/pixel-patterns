@@ -2045,4 +2045,381 @@ gap: 10px;
       </div>
     ),
   },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-indigo-950 via-zinc-950 to-black",
+    iconColor: "#fff",
+    content: (
+      <form className="w-[440px] rounded-3xl border border-white/10 bg-white/[0.03] p-8 text-center">
+        <span className="mx-auto flex size-12 items-center justify-center rounded-2xl bg-indigo-500/15 text-indigo-300">
+          <svg
+            className="size-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M4 6h16v12H4zM4 7l8 6 8-6" />
+          </svg>
+        </span>
+        <h2 className="mt-5 text-2xl font-semibold text-white">
+          Stay in the loop
+        </h2>
+        <p className="mt-2 text-sm text-zinc-400">
+          One email a month with new components and design tips. No spam.
+        </p>
+        <div className="mt-6 flex gap-2">
+          <input
+            type="email"
+            required
+            placeholder="you@example.com"
+            className="min-w-0 flex-1 rounded-xl border border-white/10 bg-zinc-900 px-4 py-2.5 text-sm text-white placeholder:text-zinc-500 focus:border-indigo-400 focus:outline-none"
+          />
+          <button className="rounded-xl bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-400">
+            Subscribe
+          </button>
+        </div>
+        <div className="mt-6 flex items-center justify-center gap-3 text-xs text-zinc-400">
+          <span className="flex -space-x-2">
+            <span className="size-7 rounded-full border-2 border-zinc-950 bg-gradient-to-br from-pink-400 to-rose-500"></span>
+            <span className="size-7 rounded-full border-2 border-zinc-950 bg-gradient-to-br from-amber-300 to-orange-500"></span>
+            <span className="size-7 rounded-full border-2 border-zinc-950 bg-gradient-to-br from-sky-400 to-indigo-500"></span>
+          </span>
+          Joined by 4,200+ developers
+        </div>
+      </form>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-[#f4f4f5]",
+    iconColor: "#000",
+    content: (
+      <form className="w-[460px] space-y-4 rounded-3xl bg-white p-7 shadow-xl shadow-zinc-900/10">
+        <div>
+          <h2 className="text-xl font-semibold text-zinc-900">Get in touch</h2>
+          <p className="mt-1 text-sm text-zinc-500">
+            We usually reply within one business day.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <label className="block">
+            <span className="mb-1.5 block text-xs font-medium text-zinc-600">
+              First name
+            </span>
+            <input
+              type="text"
+              className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-zinc-900 focus:ring-4 focus:ring-zinc-900/5"
+            />
+          </label>
+          <label className="block">
+            <span className="mb-1.5 block text-xs font-medium text-zinc-600">
+              Last name
+            </span>
+            <input
+              type="text"
+              className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-zinc-900 focus:ring-4 focus:ring-zinc-900/5"
+            />
+          </label>
+        </div>
+        <label className="block">
+          <span className="mb-1.5 block text-xs font-medium text-zinc-600">
+            Email
+          </span>
+          <input
+            type="email"
+            className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-zinc-900 focus:ring-4 focus:ring-zinc-900/5"
+          />
+        </label>
+        <label className="block">
+          <span className="mb-1.5 block text-xs font-medium text-zinc-600">
+            Topic
+          </span>
+          <select className="w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-zinc-900">
+            <option>Sales</option>
+            <option>Support</option>
+            <option>Partnerships</option>
+          </select>
+        </label>
+        <label className="block">
+          <span className="mb-1.5 block text-xs font-medium text-zinc-600">
+            Message
+          </span>
+          <textarea
+            rows={3}
+            className="w-full resize-none rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 outline-none transition focus:border-zinc-900 focus:ring-4 focus:ring-zinc-900/5"
+          ></textarea>
+        </label>
+        <button className="w-full rounded-lg bg-zinc-900 py-2.5 text-sm font-semibold text-white transition hover:bg-zinc-700">
+          Send message
+        </button>
+      </form>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-emerald-950/50 to-zinc-950",
+    iconColor: "#fff",
+    content: (
+      <form className="w-[440px] rounded-3xl border border-white/10 bg-zinc-900 p-7">
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-semibold text-white">Payment</h2>
+          <span className="flex items-center gap-1.5 text-xs text-emerald-300">
+            <svg
+              className="size-3.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="5" y="11" width="14" height="10" rx="2" />
+              <path d="M8 11V7a4 4 0 018 0v4" />
+            </svg>
+            Secure checkout
+          </span>
+        </div>
+        <label className="mt-6 block">
+          <span className="mb-1.5 block text-xs font-medium text-zinc-400">
+            Card number
+          </span>
+          <span className="flex items-center rounded-xl border border-white/10 bg-zinc-950 px-3 transition focus-within:border-emerald-400">
+            <input
+              type="text"
+              inputMode="numeric"
+              placeholder="1234 1234 1234 1234"
+              className="min-w-0 flex-1 bg-transparent py-2.5 text-sm text-white placeholder:text-zinc-600 focus:outline-none"
+            />
+            <span className="rounded bg-white px-1.5 py-0.5 text-[10px] font-black italic text-blue-700">
+              VISA
+            </span>
+          </span>
+        </label>
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          <label className="block">
+            <span className="mb-1.5 block text-xs font-medium text-zinc-400">
+              Expiry
+            </span>
+            <input
+              type="text"
+              placeholder="MM / YY"
+              className="w-full rounded-xl border border-white/10 bg-zinc-950 px-3 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:border-emerald-400 focus:outline-none"
+            />
+          </label>
+          <label className="block">
+            <span className="mb-1.5 block text-xs font-medium text-zinc-400">
+              CVC
+            </span>
+            <input
+              type="text"
+              placeholder="123"
+              className="w-full rounded-xl border border-white/10 bg-zinc-950 px-3 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:border-emerald-400 focus:outline-none"
+            />
+          </label>
+        </div>
+        <div className="mt-6 space-y-2 border-t border-white/10 pt-5 text-sm">
+          <div className="flex justify-between text-zinc-400">
+            <span>Subtotal</span>
+            <span>$49.00</span>
+          </div>
+          <div className="flex justify-between text-zinc-400">
+            <span>Tax</span>
+            <span>$4.41</span>
+          </div>
+          <div className="flex justify-between font-semibold text-white">
+            <span>Total</span>
+            <span>$53.41</span>
+          </div>
+        </div>
+        <button className="mt-6 w-full rounded-xl bg-emerald-500 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-emerald-400">
+          Pay $53.41
+        </button>
+      </form>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-gradient-to-br from-[#2e1065] to-[#0c0a1d]",
+    iconColor: "#fff",
+    html: `
+      <form class="signup-92157">
+        <h2>Create your account</h2>
+        <p>Start building in less than a minute.</p>
+        <label>Full name<input type="text" placeholder="Ada Lovelace"></label>
+        <label>Email<input type="email" placeholder="ada@example.com"></label>
+        <label>Password<input type="password" placeholder="At least 8 characters" minlength="8" required></label>
+        <div class="signup-92157-meter" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <small class="signup-92157-hint">Use 8+ characters with a mix of letters and numbers.</small>
+        <button type="submit">Create account</button>
+        <span class="signup-92157-footer">Already have an account? <a href="#">Sign in</a></span>
+      </form>
+      <style>
+        .signup-92157 {
+          display: grid;
+          gap: 14px;
+          width: 380px;
+          padding: 32px;
+          border: 1px solid rgba(167, 139, 250, 0.2);
+          border-radius: 24px;
+          background: rgba(15, 10, 31, 0.9);
+          color: #ede9fe;
+          box-shadow: 0 30px 60px -30px rgba(124, 58, 237, 0.6);
+        }
+        .signup-92157 h2 {
+          margin: 0;
+          font-size: 22px;
+        }
+        .signup-92157 > p {
+          margin: -8px 0 6px;
+          color: #a78bfa;
+          font-size: 14px;
+        }
+        .signup-92157 label {
+          display: grid;
+          gap: 6px;
+          color: #c4b5fd;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .signup-92157 input {
+          padding: 11px 14px;
+          border: 1px solid #3b2a6b;
+          border-radius: 12px;
+          background: #170f31;
+          color: #fff;
+          font-size: 14px;
+          outline: none;
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .signup-92157 input::placeholder {
+          color: #6d5ba6;
+        }
+        .signup-92157 input:focus {
+          border-color: #a78bfa;
+          box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.15);
+        }
+        .signup-92157-meter {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 6px;
+          margin-top: -4px;
+        }
+        .signup-92157-meter i {
+          height: 4px;
+          border-radius: 999px;
+          background: #2a1f4d;
+          transition: background 0.3s ease;
+        }
+        .signup-92157:has([type="password"]:not(:placeholder-shown)) .signup-92157-meter i:nth-child(-n + 1) {
+          background: #f87171;
+        }
+        .signup-92157:has([type="password"]:valid) .signup-92157-meter i {
+          background: #34d399;
+        }
+        .signup-92157-hint {
+          margin-top: -6px;
+          color: #8b7cc4;
+          font-size: 12px;
+        }
+        .signup-92157 button {
+          margin-top: 6px;
+          padding: 12px;
+          border: 0;
+          border-radius: 12px;
+          background: linear-gradient(135deg, #8b5cf6, #d946ef);
+          color: #fff;
+          font-size: 15px;
+          font-weight: 700;
+          cursor: pointer;
+          transition: filter 0.2s ease;
+        }
+        .signup-92157 button:hover {
+          filter: brightness(1.1);
+        }
+        .signup-92157-footer {
+          color: #a78bfa;
+          font-size: 13px;
+          text-align: center;
+        }
+        .signup-92157-footer a {
+          color: #f0abfc;
+          font-weight: 600;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-[#09090b]",
+    iconColor: "#fff",
+    content: (
+      <form className="w-[460px] divide-y divide-white/10 rounded-3xl border border-white/10 bg-zinc-900">
+        <div className="p-6">
+          <h2 className="text-lg font-semibold text-white">Preferences</h2>
+          <p className="mt-1 text-sm text-zinc-400">
+            Control how the workspace behaves for you.
+          </p>
+        </div>
+        <label className="flex cursor-pointer items-center justify-between gap-6 px-6 py-4">
+          <span>
+            <span className="block text-sm font-medium text-white">
+              Weekly digest
+            </span>
+            <span className="block text-xs text-zinc-500">
+              A summary of activity every Monday.
+            </span>
+          </span>
+          <span className="relative shrink-0">
+            <input type="checkbox" defaultChecked className="peer sr-only" />
+            <span className="block h-6 w-11 rounded-full bg-zinc-700 transition peer-checked:bg-indigo-500"></span>
+            <span className="absolute left-0.5 top-0.5 size-5 rounded-full bg-white shadow transition peer-checked:translate-x-5"></span>
+          </span>
+        </label>
+        <label className="flex cursor-pointer items-center justify-between gap-6 px-6 py-4">
+          <span>
+            <span className="block text-sm font-medium text-white">
+              Compact mode
+            </span>
+            <span className="block text-xs text-zinc-500">
+              Show more items with less spacing.
+            </span>
+          </span>
+          <span className="relative shrink-0">
+            <input type="checkbox" className="peer sr-only" />
+            <span className="block h-6 w-11 rounded-full bg-zinc-700 transition peer-checked:bg-indigo-500"></span>
+            <span className="absolute left-0.5 top-0.5 size-5 rounded-full bg-white shadow transition peer-checked:translate-x-5"></span>
+          </span>
+        </label>
+        <label className="flex items-center justify-between gap-6 px-6 py-4">
+          <span>
+            <span className="block text-sm font-medium text-white">
+              Language
+            </span>
+            <span className="block text-xs text-zinc-500">
+              Used across emails and the interface.
+            </span>
+          </span>
+          <select className="rounded-lg border border-white/10 bg-zinc-950 px-3 py-1.5 text-sm text-white focus:border-indigo-400 focus:outline-none">
+            <option>English</option>
+            <option>Português</option>
+            <option>Español</option>
+          </select>
+        </label>
+        <div className="flex justify-end gap-2 p-6">
+          <button
+            type="button"
+            className="rounded-lg px-4 py-2 text-sm text-zinc-300 transition hover:bg-white/5"
+          >
+            Cancel
+          </button>
+          <button className="rounded-lg bg-indigo-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-400">
+            Save changes
+          </button>
+        </div>
+      </form>
+    ),
+  },
 ];

@@ -18,7 +18,12 @@ export function CopyButton({
   const Icon = isCopied ? Check : CopyIcon;
 
   return (
-    <Button onClick={onCopy} variant="link" className={className}>
+    <Button
+      onClick={onCopy}
+      variant="link"
+      aria-label={isCopied ? "Code copied" : "Copy code"}
+      className={className}
+    >
       <Icon size={20} color={color} />
     </Button>
   );

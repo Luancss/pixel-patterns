@@ -858,4 +858,353 @@ export const inputSnippets: Snippet[] = [
       </div>
     ),
   },
+  {
+    category: "tailwind",
+    background: "bg-[#0b0d12]",
+    iconColor: "#fff",
+    content: (
+      <label className="relative block w-64">
+        <input
+          type="email"
+          placeholder=" "
+          className="peer w-full rounded-xl border border-white/15 bg-transparent px-4 pb-2 pt-5 text-sm text-white outline-none transition focus:border-sky-400"
+        />
+        <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-sm text-zinc-500 transition-all peer-focus:top-3.5 peer-focus:text-xs peer-focus:text-sky-400 peer-[:not(:placeholder-shown)]:top-3.5 peer-[:not(:placeholder-shown)]:text-xs">
+          Email address
+        </span>
+      </label>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-zinc-900 to-black",
+    iconColor: "#fff",
+    content: (
+      <label className="flex w-64 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-zinc-400 transition focus-within:border-white/25 focus-within:bg-white/10">
+        <svg
+          className="size-4 shrink-0"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="11" cy="11" r="7" />
+          <path d="M21 21l-4.3-4.3" />
+        </svg>
+        <input
+          type="search"
+          placeholder="Search docs"
+          className="w-full bg-transparent text-white placeholder:text-zinc-500 focus:outline-none"
+        />
+        <kbd className="rounded-md border border-white/10 bg-white/5 px-1.5 font-sans text-[11px] text-zinc-400">
+          ⌘K
+        </kbd>
+      </label>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-violet-950/50 to-zinc-950",
+    iconColor: "#fff",
+    content: (
+      <label className="block w-60">
+        <span className="mb-1.5 block text-xs font-medium text-zinc-400">
+          Country
+        </span>
+        <span className="relative block">
+          <select
+            defaultValue="br"
+            className="w-full appearance-none rounded-xl border border-white/10 bg-zinc-900 px-3.5 py-2.5 pr-10 text-sm text-white outline-none transition focus:border-violet-400 focus:ring-4 focus:ring-violet-500/20"
+          >
+            <option value="br">Brazil</option>
+            <option value="ca">Canada</option>
+            <option value="de">Germany</option>
+            <option value="jp">Japan</option>
+          </select>
+          <svg
+            className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-zinc-400"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M19 9l-7 7-7-7" />
+          </svg>
+        </span>
+      </label>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#f5f3ff]",
+    iconColor: "#000",
+    html: `
+      <fieldset class="otp-50916">
+        <legend>Enter the 6-digit code</legend>
+        <div class="otp-50916-fields">
+          <input inputmode="numeric" maxlength="1" value="4" aria-label="Digit 1">
+          <input inputmode="numeric" maxlength="1" value="8" aria-label="Digit 2">
+          <input inputmode="numeric" maxlength="1" value="1" aria-label="Digit 3">
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 4">
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 5">
+          <input inputmode="numeric" maxlength="1" aria-label="Digit 6">
+        </div>
+      </fieldset>
+      <style>
+        .otp-50916 {
+          margin: 0;
+          padding: 0;
+          border: 0;
+        }
+        .otp-50916 legend {
+          margin-bottom: 12px;
+          color: #4c1d95;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .otp-50916-fields {
+          display: flex;
+          gap: 8px;
+        }
+        .otp-50916 input {
+          width: 36px;
+          height: 46px;
+          border: 1px solid #ddd6fe;
+          border-radius: 10px;
+          background: #fff;
+          color: #2e1065;
+          font-size: 20px;
+          font-weight: 700;
+          text-align: center;
+          outline: none;
+          box-shadow: 0 2px 6px -4px rgba(76, 29, 149, 0.5);
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .otp-50916 input:focus {
+          border-color: #8b5cf6;
+          box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+        }
+        .otp-50916 input:not(:placeholder-shown),
+        .otp-50916 input[value] {
+          border-color: #a78bfa;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "css",
+    background: "bg-gradient-to-br from-[#0c4a6e] to-[#020617]",
+    iconColor: "#fff",
+    html: `
+      <label class="range-73284">
+        <span>Volume <output>65%</output></span>
+        <input type="range" min="0" max="100" value="65">
+      </label>
+      <style>
+        .range-73284 {
+          display: grid;
+          gap: 12px;
+          width: 240px;
+        }
+        .range-73284 span {
+          display: flex;
+          justify-content: space-between;
+          color: #e0f2fe;
+          font-size: 14px;
+          font-weight: 600;
+        }
+        .range-73284 output {
+          color: #7dd3fc;
+        }
+        .range-73284 input {
+          width: 100%;
+          height: 8px;
+          border-radius: 999px;
+          background: linear-gradient(90deg, #38bdf8, #6366f1) 0 / 65% 100% no-repeat, #1e293b;
+          cursor: pointer;
+          appearance: none;
+          -webkit-appearance: none;
+        }
+        .range-73284 input::-webkit-slider-thumb {
+          width: 20px;
+          height: 20px;
+          border: 4px solid #fff;
+          border-radius: 50%;
+          background: #6366f1;
+          box-shadow: 0 4px 12px rgba(99, 102, 241, 0.6);
+          -webkit-appearance: none;
+        }
+        .range-73284 input::-moz-range-thumb {
+          width: 12px;
+          height: 12px;
+          border: 4px solid #fff;
+          border-radius: 50%;
+          background: #6366f1;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-[#06100c]",
+    iconColor: "#fff",
+    content: (
+      <label className="block w-64">
+        <span className="mb-1.5 block text-xs font-medium text-zinc-400">
+          Website
+        </span>
+        <span className="flex overflow-hidden rounded-xl border border-white/10 bg-zinc-900 text-sm transition focus-within:border-emerald-400">
+          <span className="flex items-center border-r border-white/10 bg-white/5 px-3 text-zinc-400">
+            https://
+          </span>
+          <input
+            type="text"
+            placeholder="yourbrand.com"
+            className="min-w-0 flex-1 bg-transparent px-3 py-2.5 text-white placeholder:text-zinc-600 focus:outline-none"
+          />
+        </span>
+        <span className="mt-1.5 block text-xs text-zinc-500">
+          We will verify ownership by email.
+        </span>
+      </label>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-[#0a0a10]",
+    iconColor: "#fff",
+    content: (
+      <label className="flex w-64 cursor-pointer flex-col items-center gap-2 rounded-2xl border-2 border-dashed border-white/15 bg-white/[0.02] px-6 py-7 text-center transition hover:border-indigo-400/60 hover:bg-indigo-500/5">
+        <span className="flex size-11 items-center justify-center rounded-full bg-indigo-500/15 text-indigo-300">
+          <svg
+            className="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M7 18a4 4 0 01-.9-7.9A5 5 0 0116 8a4 4 0 011 7.9M12 12v8M9 15l3-3 3 3" />
+          </svg>
+        </span>
+        <span className="text-sm font-medium text-white">Click to upload</span>
+        <span className="text-xs text-zinc-500">PNG, JPG or SVG up to 5MB</span>
+        <input type="file" className="sr-only" />
+      </label>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#fafaf9]",
+    iconColor: "#000",
+    html: `
+      <div class="stepper-28451">
+        <button aria-label="Decrease">−</button>
+        <input type="number" value="2" min="0" aria-label="Quantity">
+        <button aria-label="Increase">+</button>
+      </div>
+      <style>
+        .stepper-28451 {
+          display: inline-flex;
+          align-items: center;
+          padding: 4px;
+          border: 1px solid #e7e5e4;
+          border-radius: 14px;
+          background: #fff;
+          box-shadow: 0 10px 24px -16px rgba(28, 25, 23, 0.5);
+        }
+        .stepper-28451 button {
+          width: 40px;
+          height: 40px;
+          border: 0;
+          border-radius: 10px;
+          background: #f5f5f4;
+          color: #292524;
+          font-size: 20px;
+          cursor: pointer;
+          transition: background 0.2s ease;
+        }
+        .stepper-28451 button:hover {
+          background: #e7e5e4;
+        }
+        .stepper-28451 button:active {
+          transform: scale(0.94);
+        }
+        .stepper-28451 input {
+          width: 56px;
+          border: 0;
+          background: transparent;
+          color: #1c1917;
+          font-size: 18px;
+          font-weight: 700;
+          text-align: center;
+          outline: none;
+          appearance: textfield;
+          -moz-appearance: textfield;
+        }
+        .stepper-28451 input::-webkit-outer-spin-button,
+        .stepper-28451 input::-webkit-inner-spin-button {
+          margin: 0;
+          -webkit-appearance: none;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-amber-950/40 to-zinc-950",
+    iconColor: "#fff",
+    content: (
+      <div className="w-64 rounded-xl border border-white/10 bg-zinc-900 transition focus-within:border-amber-400/70">
+        <textarea
+          rows={3}
+          placeholder="Leave a comment..."
+          className="block w-full resize-none bg-transparent px-3 py-2.5 text-sm text-white placeholder:text-zinc-500 focus:outline-none"
+        ></textarea>
+        <div className="flex items-center justify-between border-t border-white/10 px-2 py-1.5">
+          <div className="flex gap-1 text-zinc-500">
+            <button
+              aria-label="Attach file"
+              className="rounded-md p-1.5 transition hover:bg-white/5 hover:text-zinc-200"
+            >
+              <svg
+                className="size-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 11.5l-8.5 8.5a5 5 0 01-7-7L14 4.5a3.5 3.5 0 015 5l-8.5 8.5a2 2 0 01-3-3L15 7.5" />
+              </svg>
+            </button>
+            <button
+              aria-label="Mention someone"
+              className="rounded-md p-1.5 transition hover:bg-white/5 hover:text-zinc-200"
+            >
+              <svg
+                className="size-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path d="M16 8v5a3 3 0 006 0v-1a10 10 0 10-4 8" />
+              </svg>
+            </button>
+          </div>
+          <span className="text-[11px] text-zinc-500">0 / 280</span>
+        </div>
+      </div>
+    ),
+  },
 ];

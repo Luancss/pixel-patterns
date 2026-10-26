@@ -852,4 +852,502 @@ export const cardSnippets: Snippet[] = [
       </div>
     ),
   },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-indigo-950/60 via-zinc-950 to-black",
+    iconColor: "#fff",
+    content: (
+      <div className="relative w-72 rounded-3xl border border-indigo-400/30 bg-zinc-950 p-6 shadow-2xl shadow-indigo-500/10">
+        <span className="absolute -top-3 left-6 rounded-full bg-indigo-500 px-3 py-1 text-xs font-semibold text-white">
+          Most popular
+        </span>
+        <p className="text-sm font-medium text-indigo-300">Pro</p>
+        <p className="mt-3 flex items-end gap-1">
+          <span className="text-4xl font-bold text-white">$24</span>
+          <span className="pb-1 text-sm text-zinc-400">/ month</span>
+        </p>
+        <p className="mt-2 text-sm text-zinc-400">
+          Everything you need to ship faster.
+        </p>
+        <ul className="mt-5 space-y-2.5 text-sm text-zinc-300">
+          <li className="flex items-center gap-2">
+            <svg
+              className="size-4 text-indigo-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={3}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+            Unlimited components
+          </li>
+          <li className="flex items-center gap-2">
+            <svg
+              className="size-4 text-indigo-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={3}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+            Figma source files
+          </li>
+          <li className="flex items-center gap-2">
+            <svg
+              className="size-4 text-indigo-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={3}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+            Priority support
+          </li>
+        </ul>
+        <a
+          href="#"
+          className="mt-6 block rounded-xl bg-indigo-500 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-indigo-400"
+        >
+          Start free trial
+        </a>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#0f0c29]",
+    iconColor: "#fff",
+    html: `
+      <div class="glasscard-73015">
+        <span class="glasscard-73015-orb"></span>
+        <span class="glasscard-73015-orb"></span>
+        <article class="glasscard-73015-card">
+          <span class="glasscard-73015-chip">Weather</span>
+          <h3>24°</h3>
+          <p>Partly cloudy · São Paulo</p>
+          <div class="glasscard-73015-row"><span>H 27°</span><span>L 18°</span><span>Wind 9 km/h</span></div>
+        </article>
+      </div>
+      <style>
+        .glasscard-73015 {
+          position: relative;
+          display: grid;
+          place-items: center;
+          width: 340px;
+          height: 300px;
+        }
+        .glasscard-73015-orb {
+          position: absolute;
+          border-radius: 50%;
+        }
+        .glasscard-73015-orb:first-child {
+          top: 20px;
+          left: 30px;
+          width: 150px;
+          height: 150px;
+          background: linear-gradient(135deg, #ff6ec4, #7873f5);
+        }
+        .glasscard-73015-orb:nth-child(2) {
+          right: 24px;
+          bottom: 16px;
+          width: 120px;
+          height: 120px;
+          background: linear-gradient(135deg, #42e695, #3bb2b8);
+        }
+        .glasscard-73015-card {
+          position: relative;
+          width: 250px;
+          padding: 22px;
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          border-radius: 24px;
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          backdrop-filter: blur(18px) saturate(140%);
+          -webkit-backdrop-filter: blur(18px) saturate(140%);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 20px 40px -18px rgba(0, 0, 0, 0.6);
+        }
+        .glasscard-73015-chip {
+          padding: 4px 10px;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.18);
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+        .glasscard-73015-card h3 {
+          margin: 14px 0 2px;
+          font-size: 52px;
+          font-weight: 300;
+          line-height: 1;
+        }
+        .glasscard-73015-card p {
+          margin: 0;
+          color: rgba(255, 255, 255, 0.75);
+          font-size: 14px;
+        }
+        .glasscard-73015-row {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 18px;
+          padding-top: 14px;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+          color: rgba(255, 255, 255, 0.85);
+          font-size: 12px;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-[#09090b]",
+    iconColor: "#fff",
+    content: (
+      <div className="w-72 overflow-hidden rounded-3xl border border-white/10 bg-zinc-900">
+        <div className="h-20 bg-gradient-to-r from-cyan-500 via-sky-500 to-indigo-500"></div>
+        <div className="px-5 pb-5">
+          <span className="-mt-9 flex size-16 items-center justify-center rounded-2xl border-4 border-zinc-900 bg-gradient-to-br from-amber-300 to-orange-500 text-lg font-bold text-zinc-900">
+            NV
+          </span>
+          <h3 className="mt-3 text-base font-semibold text-white">
+            Nina Valente
+          </h3>
+          <p className="text-sm text-zinc-400">Design engineer at Orbit</p>
+          <div className="mt-4 grid grid-cols-3 rounded-xl bg-white/5 py-2.5 text-center">
+            <div>
+              <p className="text-sm font-semibold text-white">128</p>
+              <p className="text-[11px] text-zinc-500">Posts</p>
+            </div>
+            <div className="border-x border-white/10">
+              <p className="text-sm font-semibold text-white">8.4k</p>
+              <p className="text-[11px] text-zinc-500">Followers</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-white">312</p>
+              <p className="text-[11px] text-zinc-500">Following</p>
+            </div>
+          </div>
+          <div className="mt-4 flex gap-2">
+            <button className="flex-1 rounded-lg bg-white py-2 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-200">
+              Follow
+            </button>
+            <button className="flex-1 rounded-lg border border-white/10 py-2 text-sm font-medium text-zinc-200 transition hover:bg-white/5">
+              Message
+            </button>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-amber-50 to-orange-100",
+    iconColor: "#000",
+    content: (
+      <figure className="w-80 rounded-3xl bg-white p-6 shadow-xl shadow-orange-900/10">
+        <div className="flex gap-0.5 text-amber-400">
+          <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" />
+          </svg>
+          <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" />
+          </svg>
+          <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" />
+          </svg>
+          <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" />
+          </svg>
+          <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z" />
+          </svg>
+        </div>
+        <blockquote className="mt-4 text-[15px] leading-relaxed text-stone-700">
+          "We replaced half of our design system with these snippets. Our team
+          ships new screens in hours instead of days."
+        </blockquote>
+        <figcaption className="mt-5 flex items-center gap-3">
+          <span className="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-rose-500 text-sm font-bold text-white">
+            CM
+          </span>
+          <span>
+            <span className="block text-sm font-semibold text-stone-900">
+              Carla Mendes
+            </span>
+            <span className="block text-xs text-stone-500">
+              Head of Product, Lumen
+            </span>
+          </span>
+        </figcaption>
+      </figure>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#050505]",
+    iconColor: "#fff",
+    html: `
+      <article class="aurora-41862">
+        <div class="aurora-41862-inner">
+          <span class="aurora-41862-icon">⚡</span>
+          <h3>Edge functions</h3>
+          <p>Run code close to your users with zero cold starts and automatic scaling.</p>
+          <a href="#">Learn more →</a>
+        </div>
+      </article>
+      <style>
+        @property --aurora-41862-angle {
+          syntax: "<angle>";
+          initial-value: 0deg;
+          inherits: false;
+        }
+        .aurora-41862 {
+          width: 300px;
+          padding: 1px;
+          border-radius: 22px;
+          background: conic-gradient(from var(--aurora-41862-angle), #27272a 0deg, #22d3ee 60deg, #a855f7 120deg, #27272a 180deg, #27272a 360deg);
+          animation: aurora-41862-rotate 5s linear infinite;
+        }
+        .aurora-41862-inner {
+          padding: 26px;
+          border-radius: 21px;
+          background: radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.12), transparent 50%), #0a0a0a;
+        }
+        .aurora-41862-icon {
+          display: grid;
+          place-items: center;
+          width: 42px;
+          height: 42px;
+          border: 1px solid #27272a;
+          border-radius: 12px;
+          background: #18181b;
+          font-size: 20px;
+        }
+        .aurora-41862 h3 {
+          margin: 18px 0 8px;
+          color: #fafafa;
+          font-size: 18px;
+        }
+        .aurora-41862 p {
+          margin: 0;
+          color: #a1a1aa;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+        .aurora-41862 a {
+          display: inline-block;
+          margin-top: 18px;
+          color: #67e8f9;
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+        .aurora-41862 a:hover {
+          color: #a5f3fc;
+        }
+        @keyframes aurora-41862-rotate {
+          to {
+            --aurora-41862-angle: 360deg;
+          }
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-zinc-900 to-black",
+    iconColor: "#fff",
+    content: (
+      <article className="group w-80 overflow-hidden rounded-3xl border border-white/10 bg-zinc-950">
+        <div className="relative h-36 overflow-hidden bg-[radial-gradient(circle_at_20%_20%,#f472b6,transparent_45%),radial-gradient(circle_at_80%_30%,#60a5fa,transparent_45%),radial-gradient(circle_at_50%_90%,#a3e635,transparent_45%)] bg-zinc-900 transition duration-500 group-hover:scale-105">
+          <span className="absolute left-4 top-4 rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur">
+            Design
+          </span>
+        </div>
+        <div className="p-5">
+          <p className="text-xs text-zinc-500">Mar 18, 2026 · 6 min read</p>
+          <h3 className="mt-2 text-base font-semibold leading-snug text-white">
+            Building expressive gradients without images
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+            Layer radial gradients to create rich, lightweight backgrounds.
+          </p>
+          <a
+            href="#"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-pink-300 transition hover:text-pink-200"
+          >
+            Read article
+            <svg
+              className="size-4 transition group-hover:translate-x-0.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </article>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-emerald-950/40 to-zinc-950",
+    iconColor: "#fff",
+    content: (
+      <div className="w-80 rounded-3xl border border-white/10 bg-zinc-900/90 p-5">
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-semibold text-white">Integrations</h3>
+          <a href="#" className="text-xs text-emerald-300 hover:underline">
+            Browse all
+          </a>
+        </div>
+        <ul className="mt-4 space-y-3">
+          <li className="flex items-center gap-3">
+            <span className="flex size-9 items-center justify-center rounded-xl bg-[#4A154B] text-sm font-bold text-white">
+              S
+            </span>
+            <span className="flex-1">
+              <span className="block text-sm text-white">Slack</span>
+              <span className="block text-xs text-zinc-500">
+                Post deploy updates
+              </span>
+            </span>
+            <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-300">
+              Connected
+            </span>
+          </li>
+          <li className="flex items-center gap-3">
+            <span className="flex size-9 items-center justify-center rounded-xl bg-white text-sm font-bold text-zinc-900">
+              N
+            </span>
+            <span className="flex-1">
+              <span className="block text-sm text-white">Notion</span>
+              <span className="block text-xs text-zinc-500">Sync docs</span>
+            </span>
+            <button className="rounded-lg border border-white/10 px-2.5 py-1 text-xs text-zinc-200 transition hover:bg-white/5">
+              Connect
+            </button>
+          </li>
+          <li className="flex items-center gap-3">
+            <span className="flex size-9 items-center justify-center rounded-xl bg-[#5E6AD2] text-sm font-bold text-white">
+              L
+            </span>
+            <span className="flex-1">
+              <span className="block text-sm text-white">Linear</span>
+              <span className="block text-xs text-zinc-500">Track issues</span>
+            </span>
+            <button className="rounded-lg border border-white/10 px-2.5 py-1 text-xs text-zinc-200 transition hover:bg-white/5">
+              Connect
+            </button>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-gradient-to-br from-[#e0f2fe] to-[#ede9fe]",
+    iconColor: "#000",
+    html: `
+      <div class="paycard-58036">
+        <div class="paycard-58036-top">
+          <span class="paycard-58036-chip"></span>
+          <span class="paycard-58036-brand">PIXEL</span>
+        </div>
+        <p class="paycard-58036-number">4242 8812 0094 1180</p>
+        <div class="paycard-58036-bottom">
+          <span><small>Card holder</small>Ana Ribeiro</span>
+          <span><small>Expires</small>09/29</span>
+        </div>
+      </div>
+      <style>
+        .paycard-58036 {
+          position: relative;
+          width: 320px;
+          height: 196px;
+          padding: 22px 24px;
+          overflow: hidden;
+          border-radius: 20px;
+          background: linear-gradient(135deg, #1e1b4b, #4338ca 55%, #7c3aed);
+          color: #fff;
+          box-shadow: 0 28px 50px -22px rgba(67, 56, 202, 0.8);
+          transition: transform 0.4s ease;
+        }
+        .paycard-58036::before {
+          content: "";
+          position: absolute;
+          inset: -40% -10% auto auto;
+          width: 260px;
+          height: 260px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.08);
+        }
+        .paycard-58036::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.22) 50%, transparent 65%);
+          transform: translateX(-100%);
+          transition: transform 0.8s ease;
+        }
+        .paycard-58036:hover {
+          transform: translateY(-4px);
+        }
+        .paycard-58036:hover::after {
+          transform: translateX(100%);
+        }
+        .paycard-58036-top,
+        .paycard-58036-bottom {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .paycard-58036-chip {
+          width: 42px;
+          height: 32px;
+          border-radius: 7px;
+          background: linear-gradient(135deg, #fde68a, #d97706);
+        }
+        .paycard-58036-brand {
+          font-size: 16px;
+          font-weight: 900;
+          font-style: italic;
+          letter-spacing: 0.08em;
+        }
+        .paycard-58036-number {
+          position: relative;
+          margin: 34px 0 22px;
+          font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+          font-size: 19px;
+          letter-spacing: 0.12em;
+        }
+        .paycard-58036-bottom span {
+          display: grid;
+          font-size: 14px;
+          font-weight: 600;
+        }
+        .paycard-58036-bottom small {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+      </style>
+    `,
+  },
 ];

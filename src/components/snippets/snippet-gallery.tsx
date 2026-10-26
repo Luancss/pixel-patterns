@@ -35,11 +35,11 @@ const GALLERY_LAYOUTS: Record<
   },
   wide: {
     pageSize: 9,
-    grid: "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6",
+    grid: "grid grid-cols-1 min-[1080px]:grid-cols-2 min-[1640px]:grid-cols-3 gap-6",
   },
   large: {
     pageSize: 6,
-    grid: "grid grid-cols-1 lg:grid-cols-2 gap-x-1 gap-y-5",
+    grid: "grid grid-cols-1 min-[1260px]:grid-cols-2 gap-x-1 gap-y-5",
   },
 };
 

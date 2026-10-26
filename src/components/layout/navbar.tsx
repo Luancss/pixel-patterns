@@ -14,13 +14,17 @@ const NAV_ITEMS = [
   { href: "/cards", label: "Cards" },
   { href: "/checkboxes", label: "Checkboxes" },
   { href: "/forms", label: "Forms" },
+  { href: "/navigation", label: "Navigation" },
+  { href: "/feedback", label: "Feedback" },
+  { href: "/overlays", label: "Overlays" },
+  { href: "/data-display", label: "Data Display" },
 ];
 
 export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-wrap lg:flex-nowrap gap-4 mt-7 mb-10 animate-slide-in-down items-center justify-center">
+    <div className="flex w-[min(60rem,calc(100vw-2rem))] flex-wrap gap-3 sm:gap-4 mt-7 mb-10 animate-slide-in-down items-center justify-center">
       {NAV_ITEMS.map(({ href, label }) => (
         <Button
           key={href}

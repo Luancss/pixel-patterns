@@ -2529,4 +2529,418 @@ animation: rollingRock 2.5s cubic-bezier(.79, 0, .47, .97) infinite;
       </div>
     ),
   },
+  {
+    category: "tailwind",
+    background: "bg-[#0a0a0c]",
+    iconColor: "#fff",
+    content: (
+      <div
+        role="status"
+        aria-label="Loading"
+        className="w-60 animate-pulse rounded-2xl border border-white/10 bg-zinc-900 p-3.5"
+      >
+        <div className="h-20 rounded-xl bg-white/10"></div>
+        <div className="mt-3 flex items-center gap-3">
+          <div className="size-9 rounded-full bg-white/10"></div>
+          <div className="flex-1 space-y-2">
+            <div className="h-2.5 w-3/4 rounded-full bg-white/10"></div>
+            <div className="h-2.5 w-1/2 rounded-full bg-white/10"></div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#f8fafc]",
+    iconColor: "#000",
+    html: `
+      <ul class="shimmer-59318" aria-busy="true">
+        <li><span class="shimmer-59318-avatar"></span><span class="shimmer-59318-lines"><i></i><i></i></span></li>
+        <li><span class="shimmer-59318-avatar"></span><span class="shimmer-59318-lines"><i></i><i></i></span></li>
+        <li><span class="shimmer-59318-avatar"></span><span class="shimmer-59318-lines"><i></i><i></i></span></li>
+      </ul>
+      <style>
+        .shimmer-59318 {
+          display: grid;
+          gap: 12px;
+          width: 240px;
+          margin: 0;
+          padding: 14px;
+          list-style: none;
+          border-radius: 16px;
+          background: #fff;
+          box-shadow: 0 12px 28px -20px rgba(15, 23, 42, 0.6);
+        }
+        .shimmer-59318 li {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        .shimmer-59318-avatar,
+        .shimmer-59318-lines i {
+          background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+          background-size: 200% 100%;
+          animation: shimmer-59318-sweep 1.4s ease-in-out infinite;
+        }
+        .shimmer-59318-avatar {
+          flex-shrink: 0;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+        }
+        .shimmer-59318-lines {
+          display: grid;
+          flex: 1;
+          gap: 8px;
+        }
+        .shimmer-59318-lines i {
+          height: 10px;
+          border-radius: 999px;
+        }
+        .shimmer-59318-lines i:last-child {
+          width: 60%;
+        }
+        @keyframes shimmer-59318-sweep {
+          from {
+            background-position: 200% 0;
+          }
+          to {
+            background-position: -200% 0;
+          }
+        }
+      </style>
+    `,
+  },
+  {
+    category: "css",
+    background: "bg-gradient-to-br from-[#1e1b4b] to-[#0b0a1a]",
+    iconColor: "#fff",
+    html: `
+      <div class="stripes-90472">
+        <div class="stripes-90472-label"><span>Uploading assets</span><span>68%</span></div>
+        <div class="stripes-90472-track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+          <div class="stripes-90472-bar"></div>
+        </div>
+      </div>
+      <style>
+        .stripes-90472 {
+          width: 250px;
+        }
+        .stripes-90472-label {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          color: #e0e7ff;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .stripes-90472-track {
+          height: 14px;
+          overflow: hidden;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.08);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .stripes-90472-bar {
+          width: 68%;
+          height: 100%;
+          border-radius: inherit;
+          background-color: #818cf8;
+          background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%);
+          background-size: 20px 20px;
+          box-shadow: 0 0 16px rgba(129, 140, 248, 0.6);
+          animation: stripes-90472-move 0.8s linear infinite;
+        }
+        @keyframes stripes-90472-move {
+          to {
+            background-position: 20px 0;
+          }
+        }
+      </style>
+    `,
+  },
+  {
+    category: "css",
+    background: "bg-[#050b14]",
+    iconColor: "#fff",
+    html: `
+      <div class="ring-36081" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+        <span>72<small>%</small></span>
+      </div>
+      <style>
+        @property --ring-36081-progress {
+          syntax: "<percentage>";
+          initial-value: 0%;
+          inherits: false;
+        }
+        .ring-36081 {
+          position: relative;
+          display: grid;
+          place-items: center;
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          background: conic-gradient(#22d3ee var(--ring-36081-progress), #172033 0);
+          animation: ring-36081-fill 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .ring-36081::before {
+          content: "";
+          position: absolute;
+          inset: 12px;
+          border-radius: 50%;
+          background: #050b14;
+        }
+        .ring-36081 span {
+          position: relative;
+          color: #ecfeff;
+          font-size: 34px;
+          font-weight: 800;
+        }
+        .ring-36081 small {
+          color: #67e8f9;
+          font-size: 16px;
+        }
+        @keyframes ring-36081-fill {
+          to {
+            --ring-36081-progress: 72%;
+          }
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-sky-950/40 to-black",
+    iconColor: "#fff",
+    content: (
+      <div className="w-64">
+        <div className="mb-2 flex justify-between text-xs">
+          <span className="font-medium text-zinc-200">Step 3 of 5</span>
+          <span className="text-zinc-500">Payment details</span>
+        </div>
+        <div className="flex gap-1.5">
+          <span className="h-1.5 flex-1 rounded-full bg-sky-400"></span>
+          <span className="h-1.5 flex-1 rounded-full bg-sky-400"></span>
+          <span className="h-1.5 flex-1 rounded-full bg-sky-400"></span>
+          <span className="h-1.5 flex-1 rounded-full bg-white/10"></span>
+          <span className="h-1.5 flex-1 rounded-full bg-white/10"></span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-[#09090b]",
+    iconColor: "#fff",
+    content: (
+      <div className="flex w-60 flex-col items-center text-center">
+        <span className="flex size-14 items-center justify-center rounded-2xl border border-dashed border-white/20 text-zinc-400">
+          <svg
+            className="size-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+          </svg>
+        </span>
+        <h3 className="mt-4 text-sm font-semibold text-white">
+          No projects yet
+        </h3>
+        <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+          Create your first project to start collecting components.
+        </p>
+        <button className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-zinc-900 transition hover:bg-zinc-200">
+          <svg
+            className="size-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={3}
+            strokeLinecap="round"
+          >
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+          New project
+        </button>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-gradient-to-br from-[#ecfdf5] to-[#d1fae5]",
+    iconColor: "#000",
+    html: `
+      <div class="typing-12748">
+        <span class="typing-12748-avatar">AI</span>
+        <div class="typing-12748-bubble" aria-label="Assistant is typing"><i></i><i></i><i></i></div>
+      </div>
+      <style>
+        .typing-12748 {
+          display: flex;
+          align-items: flex-end;
+          gap: 10px;
+        }
+        .typing-12748-avatar {
+          display: grid;
+          place-items: center;
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #10b981, #0ea5e9);
+          color: #fff;
+          font-size: 12px;
+          font-weight: 800;
+        }
+        .typing-12748-bubble {
+          display: flex;
+          gap: 5px;
+          padding: 14px 16px;
+          border-radius: 18px 18px 18px 4px;
+          background: #fff;
+          box-shadow: 0 10px 24px -14px rgba(6, 78, 59, 0.6);
+        }
+        .typing-12748-bubble i {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #10b981;
+          animation: typing-12748-bounce 1.2s ease-in-out infinite;
+        }
+        .typing-12748-bubble i:nth-child(2) {
+          animation-delay: 0.15s;
+        }
+        .typing-12748-bubble i:nth-child(3) {
+          animation-delay: 0.3s;
+        }
+        @keyframes typing-12748-bounce {
+          0%,
+          60%,
+          100% {
+            opacity: 0.4;
+            transform: translateY(0);
+          }
+          30% {
+            opacity: 1;
+            transform: translateY(-6px);
+          }
+        }
+      </style>
+    `,
+  },
+  {
+    category: "css",
+    background: "bg-[#05030f]",
+    iconColor: "#fff",
+    html: `
+      <div class="orbit-27591" role="status" aria-label="Loading">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <style>
+        .orbit-27591 {
+          position: relative;
+          width: 90px;
+          height: 90px;
+        }
+        .orbit-27591 span {
+          position: absolute;
+          inset: 0;
+          border: 3px solid transparent;
+          border-radius: 50%;
+          animation: orbit-27591-spin 1.6s linear infinite;
+        }
+        .orbit-27591 span:nth-child(1) {
+          border-top-color: #f472b6;
+        }
+        .orbit-27591 span:nth-child(2) {
+          inset: 12px;
+          border-right-color: #a78bfa;
+          animation-duration: 1.2s;
+          animation-direction: reverse;
+        }
+        .orbit-27591 span:nth-child(3) {
+          inset: 24px;
+          border-bottom-color: #38bdf8;
+          animation-duration: 0.8s;
+        }
+        @keyframes orbit-27591-spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-rose-950/40 to-black",
+    iconColor: "#fff",
+    content: (
+      <div
+        role="status"
+        aria-label="Connecting"
+        className="relative flex size-20 items-center justify-center"
+      >
+        <span className="absolute inset-0 animate-ping rounded-full bg-rose-500/30"></span>
+        <span className="absolute inset-3 animate-pulse rounded-full bg-rose-500/20"></span>
+        <span className="relative flex size-10 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg shadow-rose-500/40">
+          <svg
+            className="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z" />
+            <circle cx="12" cy="10" r="2.5" />
+          </svg>
+        </span>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#0a0a0a]",
+    iconColor: "#fff",
+    html: `
+      <div class="indeterminate-84301" role="progressbar" aria-label="Loading">
+        <span></span>
+      </div>
+      <style>
+        .indeterminate-84301 {
+          position: relative;
+          width: 240px;
+          height: 4px;
+          overflow: hidden;
+          border-radius: 999px;
+          background: #262626;
+        }
+        .indeterminate-84301 span {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 40%;
+          border-radius: inherit;
+          background: linear-gradient(90deg, transparent, #f5f5f5, transparent);
+          animation: indeterminate-84301-slide 1.3s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+        @keyframes indeterminate-84301-slide {
+          from {
+            left: -40%;
+          }
+          to {
+            left: 100%;
+          }
+        }
+      </style>
+    `,
+  },
 ];

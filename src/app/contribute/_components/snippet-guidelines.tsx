@@ -1,7 +1,10 @@
-import { CodeBlock, coldarkDark } from "@react-email/code-block";
 import { AlertCircleIcon, CircleCheck, CircleX } from "lucide-react";
 
 import { TemplateCodeBlock } from "@/app/contribute/_components/template-code-block";
+import { CodeView } from "@/components/snippets/code-view";
+import { getHighlightTheme } from "@/components/snippets/highlight-themes";
+
+const EXAMPLE_THEME = getHighlightTheme("coldarkDark");
 
 const TAILWIND_TEMPLATE = `{
   category: "tailwind",
@@ -30,11 +33,11 @@ const UNIQUE_CLASS_EXAMPLE = `<button class="button83501">Click me</button>`;
 
 function ExampleCodeBlock({ code }: { code: string }) {
   return (
-    <CodeBlock
+    <CodeView
       code={code}
-      lineNumbers
-      theme={coldarkDark}
-      language="javascript"
+      language="markup"
+      theme={EXAMPLE_THEME}
+      className="my-2 flex-1 rounded-md"
     />
   );
 }

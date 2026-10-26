@@ -2506,4 +2506,510 @@ export const buttonSnippets: Snippet[] = [
       </a>
     ),
   },
+  {
+    category: "tailwind",
+    background: "bg-[#0b0b0f]",
+    iconColor: "#fff",
+    content: (
+      <div className="inline-flex overflow-hidden rounded-xl border border-white/10 bg-white/5 text-sm font-medium text-zinc-300 shadow-lg shadow-black/40">
+        <button className="flex items-center gap-2 px-3.5 py-2 transition hover:bg-white/10 hover:text-white">
+          <svg
+            className="size-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M4 20h4L19 9l-4-4L4 16v4z" />
+          </svg>
+          Edit
+        </button>
+        <button className="flex items-center gap-2 border-x border-white/10 px-3.5 py-2 transition hover:bg-white/10 hover:text-white">
+          <svg
+            className="size-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M16 6l-4-4-4 4M12 2v14" />
+          </svg>
+          Share
+        </button>
+        <button
+          aria-label="More actions"
+          className="px-3 py-2 transition hover:bg-white/10 hover:text-white"
+        >
+          <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="5" cy="12" r="1.8" />
+            <circle cx="12" cy="12" r="1.8" />
+            <circle cx="19" cy="12" r="1.8" />
+          </svg>
+        </button>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#07070c]",
+    iconColor: "#fff",
+    html: `
+      <button class="glow-82614"><span>Get started</span></button>
+      <style>
+        @property --glow-82614-angle {
+          syntax: "<angle>";
+          initial-value: 0deg;
+          inherits: false;
+        }
+        .glow-82614 {
+          padding: 2px;
+          border: 0;
+          border-radius: 14px;
+          background: conic-gradient(from var(--glow-82614-angle), #22d3ee, #a855f7, #f43f5e, #22d3ee);
+          box-shadow: 0 0 32px -6px rgba(168, 85, 247, 0.7);
+          cursor: pointer;
+          animation: glow-82614-spin 4s linear infinite;
+        }
+        .glow-82614 span {
+          display: block;
+          padding: 12px 28px;
+          border-radius: 12px;
+          background: #0b0b12;
+          color: #fff;
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: 0.01em;
+          transition: background 0.3s ease;
+        }
+        .glow-82614:hover span {
+          background: #17172a;
+        }
+        @keyframes glow-82614-spin {
+          to {
+            --glow-82614-angle: 360deg;
+          }
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-zinc-900 to-black",
+    iconColor: "#fff",
+    content: (
+      <div className="flex items-center gap-3">
+        <button
+          aria-label="Like"
+          className="flex size-11 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg shadow-rose-500/30 transition hover:scale-105 hover:bg-rose-400"
+        >
+          <svg className="size-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21s-7.5-4.6-9.5-9.3C1.1 8.3 3.3 4.5 7 4.5c2 0 3.6 1.1 5 2.8 1.4-1.7 3-2.8 5-2.8 3.7 0 5.9 3.8 4.5 7.2C19.5 16.4 12 21 12 21z" />
+          </svg>
+        </button>
+        <button
+          aria-label="Share"
+          className="flex size-11 items-center justify-center rounded-full border border-white/15 text-zinc-300 transition hover:border-white/40 hover:text-white"
+        >
+          <svg
+            className="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4" />
+          </svg>
+        </button>
+        <button
+          aria-label="Bookmark"
+          className="flex size-11 items-center justify-center rounded-full bg-white/5 text-zinc-300 transition hover:bg-white/10 hover:text-white"
+        >
+          <svg
+            className="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M6 3h12v18l-6-4-6 4z" />
+          </svg>
+        </button>
+        <button
+          aria-label="Add"
+          className="flex size-11 items-center justify-center rounded-xl bg-white text-zinc-900 transition hover:bg-zinc-200"
+        >
+          <svg
+            className="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2.5}
+            strokeLinecap="round"
+          >
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </button>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#e6e9ef]",
+    iconColor: "#000",
+    html: `
+      <button class="neu-37509">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v10M18.4 6.6a9 9 0 11-12.8 0"/></svg>
+        Power
+      </button>
+      <style>
+        .neu-37509 {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 16px 30px;
+          border: 0;
+          border-radius: 18px;
+          background: #e6e9ef;
+          color: #5b6478;
+          font-size: 15px;
+          font-weight: 700;
+          cursor: pointer;
+          box-shadow: 8px 8px 16px #c5c8ce, -8px -8px 16px #ffffff;
+          transition: box-shadow 0.2s ease, color 0.2s ease;
+        }
+        .neu-37509 svg {
+          width: 18px;
+          height: 18px;
+        }
+        .neu-37509:hover {
+          color: #3b82f6;
+        }
+        .neu-37509:active {
+          box-shadow: inset 6px 6px 12px #c5c8ce, inset -6px -6px 12px #ffffff;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "css",
+    background: "bg-[#0c0a1d]",
+    iconColor: "#fff",
+    html: `
+      <div class="glass-19473">
+        <span class="glass-19473-blob"></span>
+        <span class="glass-19473-blob"></span>
+        <button class="glass-19473-button">Join the waitlist</button>
+      </div>
+      <style>
+        .glass-19473 {
+          position: relative;
+          display: grid;
+          place-items: center;
+          width: 260px;
+          height: 160px;
+        }
+        .glass-19473-blob {
+          position: absolute;
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          filter: blur(2px);
+          animation: glass-19473-float 6s ease-in-out infinite alternate;
+        }
+        .glass-19473-blob:first-child {
+          top: 6px;
+          left: 26px;
+          background: linear-gradient(135deg, #f472b6, #f97316);
+        }
+        .glass-19473-blob:nth-child(2) {
+          right: 20px;
+          bottom: 4px;
+          background: linear-gradient(135deg, #22d3ee, #6366f1);
+          animation-delay: -3s;
+        }
+        .glass-19473-button {
+          position: relative;
+          padding: 14px 26px;
+          border: 1px solid rgba(255, 255, 255, 0.35);
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.12);
+          color: #fff;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+          transition: background 0.3s ease;
+        }
+        .glass-19473-button:hover {
+          background: rgba(255, 255, 255, 0.22);
+        }
+        @keyframes glass-19473-float {
+          to {
+            transform: translate(12px, -10px) scale(1.06);
+          }
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-[#0a0a0a]",
+    iconColor: "#fff",
+    content: (
+      <div className="grid w-60 gap-2.5 text-sm font-medium">
+        <button className="flex items-center justify-center gap-3 rounded-lg bg-white px-4 py-2.5 text-zinc-800 transition hover:bg-zinc-100">
+          <svg className="size-4" viewBox="0 0 24 24">
+            <path
+              fill="#EA4335"
+              d="M12 10.2v3.9h5.4c-.2 1.3-1.6 3.8-5.4 3.8-3.3 0-5.9-2.7-5.9-6s2.6-6 5.9-6c1.9 0 3.1.8 3.8 1.5l2.6-2.5C16.8 3.4 14.6 2.4 12 2.4 6.7 2.4 2.4 6.7 2.4 12s4.3 9.6 9.6 9.6c5.5 0 9.2-3.9 9.2-9.4 0-.6-.1-1.1-.2-1.6H12z"
+            />
+          </svg>
+          Continue with Google
+        </button>
+        <button className="flex items-center justify-center gap-3 rounded-lg bg-zinc-800 px-4 py-2.5 text-white ring-1 ring-inset ring-white/10 transition hover:bg-zinc-700">
+          <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 011-2.7c-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 015 0c1.9-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7a3.9 3.9 0 011 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z" />
+          </svg>
+          Continue with GitHub
+        </button>
+        <button className="flex items-center justify-center gap-3 rounded-lg border border-white/15 px-4 py-2.5 text-white transition hover:bg-white/5">
+          <svg className="size-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8s2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8 0 0-2.4-.9-2.4-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z" />
+          </svg>
+          Continue with Apple
+        </button>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#fffbeb]",
+    iconColor: "#000",
+    html: `
+      <div class="links-25168">
+        <a href="#" class="links-25168-slide">Slide underline</a>
+        <a href="#" class="links-25168-grow">Center grow</a>
+        <a href="#" class="links-25168-marker">Highlighter</a>
+      </div>
+      <style>
+        .links-25168 {
+          display: grid;
+          justify-items: center;
+          gap: 18px;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .links-25168 a {
+          position: relative;
+          color: #1c1917;
+          text-decoration: none;
+        }
+        .links-25168-slide::after,
+        .links-25168-grow::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -4px;
+          left: 0;
+          height: 3px;
+          border-radius: 3px;
+          background: #f97316;
+          transition: transform 0.3s ease;
+        }
+        .links-25168-slide::after {
+          transform: scaleX(0);
+          transform-origin: right;
+        }
+        .links-25168-slide:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+        .links-25168-grow::after {
+          background: #6366f1;
+          transform: scaleX(0);
+        }
+        .links-25168-grow:hover::after {
+          transform: scaleX(1);
+        }
+        .links-25168-marker {
+          padding: 0 4px;
+          background: linear-gradient(#fde047, #fde047) no-repeat left bottom / 100% 35%;
+          transition: background-size 0.3s ease;
+        }
+        .links-25168-marker:hover {
+          background-size: 100% 100%;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-b from-indigo-950/60 to-zinc-950",
+    iconColor: "#fff",
+    content: (
+      <div className="h-40">
+        <div className="relative inline-flex rounded-lg shadow-lg shadow-indigo-500/20">
+          <button className="rounded-l-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-indigo-500">
+            Publish
+          </button>
+          <details className="group">
+            <summary className="flex h-full cursor-pointer list-none items-center rounded-r-lg border-l border-indigo-400/40 bg-indigo-600 px-2.5 text-white transition hover:bg-indigo-500 [&::-webkit-details-marker]:hidden">
+              <svg
+                className="size-4 transition group-open:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div className="absolute right-0 top-full z-10 mt-2 w-48 rounded-lg border border-white/10 bg-zinc-900 p-1 text-sm text-zinc-300 shadow-xl">
+              <a
+                href="#"
+                className="block rounded-md px-3 py-2 transition hover:bg-white/5 hover:text-white"
+              >
+                Schedule for later
+              </a>
+              <a
+                href="#"
+                className="block rounded-md px-3 py-2 transition hover:bg-white/5 hover:text-white"
+              >
+                Save as draft
+              </a>
+              <a
+                href="#"
+                className="block rounded-md px-3 py-2 transition hover:bg-white/5 hover:text-white"
+              >
+                Share preview link
+              </a>
+            </div>
+          </details>
+        </div>
+      </div>
+    ),
+  },
+  {
+    category: "tailwind",
+    background: "bg-[#050807]",
+    iconColor: "#fff",
+    content: (
+      <div className="flex flex-col items-center gap-3">
+        <button
+          disabled
+          className="inline-flex cursor-wait items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white opacity-80"
+        >
+          <svg className="size-4 animate-spin" viewBox="0 0 24 24" fill="none">
+            <circle
+              cx="12"
+              cy="12"
+              r="9"
+              stroke="currentColor"
+              strokeOpacity="0.25"
+              strokeWidth="3"
+            />
+            <path
+              d="M21 12a9 9 0 00-9-9"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+          </svg>
+          Processing...
+        </button>
+        <button className="group inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-200">
+          Continue
+          <svg
+            className="size-4 transition group-hover:translate-x-0.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#1a1033]",
+    iconColor: "#fff",
+    html: `
+      <button class="push-64029">
+        <span class="push-64029-shadow"></span>
+        <span class="push-64029-edge"></span>
+        <span class="push-64029-front">Push me</span>
+      </button>
+      <style>
+        .push-64029 {
+          position: relative;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+          outline-offset: 4px;
+        }
+        .push-64029-shadow,
+        .push-64029-edge {
+          position: absolute;
+          inset: 0;
+          border-radius: 14px;
+        }
+        .push-64029-shadow {
+          background: rgba(0, 0, 0, 0.35);
+          filter: blur(4px);
+          transform: translateY(4px);
+          transition: transform 0.4s cubic-bezier(0.3, 0.7, 0.4, 1);
+        }
+        .push-64029-edge {
+          background: linear-gradient(to left, #5b21b6, #7c3aed 10%, #7c3aed 90%, #5b21b6);
+        }
+        .push-64029-front {
+          position: relative;
+          display: block;
+          padding: 14px 36px;
+          border-radius: 14px;
+          background: #a78bfa;
+          color: #1e1035;
+          font-size: 16px;
+          font-weight: 800;
+          transform: translateY(-6px);
+          transition: transform 0.4s cubic-bezier(0.3, 0.7, 0.4, 1);
+        }
+        .push-64029:hover .push-64029-front {
+          transform: translateY(-8px);
+        }
+        .push-64029:hover .push-64029-shadow {
+          transform: translateY(6px);
+        }
+        .push-64029:active .push-64029-front {
+          transform: translateY(-2px);
+          transition-duration: 0.05s;
+        }
+        .push-64029:active .push-64029-shadow {
+          transform: translateY(1px);
+          transition-duration: 0.05s;
+        }
+      </style>
+    `,
+  },
 ];

@@ -1265,4 +1265,442 @@ export const checkboxSnippets: Snippet[] = [
       </style>
     `,
   },
+  {
+    category: "tailwind",
+    background: "bg-[#08090c]",
+    iconColor: "#fff",
+    content: (
+      <label className="flex w-64 cursor-pointer items-start justify-between gap-4">
+        <span>
+          <span className="block text-sm font-medium text-white">
+            Email notifications
+          </span>
+          <span className="mt-0.5 block text-xs text-zinc-400">
+            Get a summary of new activity.
+          </span>
+        </span>
+        <span className="relative mt-0.5 shrink-0">
+          <input type="checkbox" defaultChecked className="peer sr-only" />
+          <span className="block h-6 w-11 rounded-full bg-zinc-700 transition peer-checked:bg-emerald-500 peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-400/60"></span>
+          <span className="absolute left-0.5 top-0.5 size-5 rounded-full bg-white shadow transition peer-checked:translate-x-5"></span>
+        </span>
+      </label>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#f2f2f7]",
+    iconColor: "#000",
+    html: `
+      <div class="ios-83620">
+        <label><span>Wi-Fi</span><input type="checkbox" checked><i></i></label>
+        <label><span>Bluetooth</span><input type="checkbox"><i></i></label>
+        <label><span>Airplane mode</span><input type="checkbox"><i></i></label>
+      </div>
+      <style>
+        .ios-83620 {
+          width: 260px;
+          overflow: hidden;
+          border-radius: 14px;
+          background: #fff;
+        }
+        .ios-83620 label {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 16px;
+          color: #111827;
+          font-size: 15px;
+          cursor: pointer;
+        }
+        .ios-83620 label + label {
+          border-top: 1px solid #e5e7eb;
+        }
+        .ios-83620 input {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
+        .ios-83620 i {
+          position: relative;
+          width: 51px;
+          height: 31px;
+          border-radius: 999px;
+          background: #e5e5ea;
+          transition: background 0.25s ease;
+        }
+        .ios-83620 i::after {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 27px;
+          height: 27px;
+          border-radius: 50%;
+          background: #fff;
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.16);
+          transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .ios-83620 input:checked + i {
+          background: #34c759;
+        }
+        .ios-83620 input:checked + i::after {
+          transform: translateX(20px);
+        }
+        .ios-83620 input:focus-visible + i {
+          outline: 2px solid #0a84ff;
+          outline-offset: 2px;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-violet-950/50 to-zinc-950",
+    iconColor: "#fff",
+    content: (
+      <div className="grid w-64 gap-1.5">
+        <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:bg-white/5 has-[:checked]:border-violet-400 has-[:checked]:bg-violet-500/10">
+          <input
+            type="radio"
+            name="plan-52714"
+            defaultChecked
+            className="size-4 accent-violet-500"
+          />
+          <span className="flex-1">
+            <span className="block text-sm font-medium text-white">
+              Starter
+            </span>
+            <span className="block text-xs text-zinc-400">
+              Up to 3 projects
+            </span>
+          </span>
+          <span className="text-sm font-semibold text-white">$0</span>
+        </label>
+        <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:bg-white/5 has-[:checked]:border-violet-400 has-[:checked]:bg-violet-500/10">
+          <input
+            type="radio"
+            name="plan-52714"
+            className="size-4 accent-violet-500"
+          />
+          <span className="flex-1">
+            <span className="block text-sm font-medium text-white">Pro</span>
+            <span className="block text-xs text-zinc-400">
+              Unlimited projects
+            </span>
+          </span>
+          <span className="text-sm font-semibold text-white">$12</span>
+        </label>
+        <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:bg-white/5 has-[:checked]:border-violet-400 has-[:checked]:bg-violet-500/10">
+          <input
+            type="radio"
+            name="plan-52714"
+            className="size-4 accent-violet-500"
+          />
+          <span className="flex-1">
+            <span className="block text-sm font-medium text-white">Team</span>
+            <span className="block text-xs text-zinc-400">
+              Shared workspaces
+            </span>
+          </span>
+          <span className="text-sm font-semibold text-white">$29</span>
+        </label>
+      </div>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-[#111111]",
+    iconColor: "#fff",
+    html: `
+      <div class="segment-40592" role="radiogroup" aria-label="Billing period">
+        <label><input type="radio" name="segment-40592" checked><span>Monthly</span></label>
+        <label><input type="radio" name="segment-40592"><span>Yearly</span></label>
+        <label><input type="radio" name="segment-40592"><span>Lifetime</span></label>
+      </div>
+      <style>
+        .segment-40592 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          width: 270px;
+          padding: 4px;
+          border-radius: 12px;
+          background: #262626;
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+        }
+        .segment-40592 label {
+          position: relative;
+          cursor: pointer;
+        }
+        .segment-40592 input {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
+        .segment-40592 span {
+          display: block;
+          padding: 8px 0;
+          border-radius: 9px;
+          color: #a3a3a3;
+          font-size: 13px;
+          font-weight: 600;
+          text-align: center;
+          transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+        }
+        .segment-40592 label:hover span {
+          color: #e5e5e5;
+        }
+        .segment-40592 input:checked + span {
+          background: #fafafa;
+          color: #171717;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+        .segment-40592 input:focus-visible + span {
+          outline: 2px solid #60a5fa;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "css",
+    background: "bg-gradient-to-br from-[#1c1917] to-[#0c0a09]",
+    iconColor: "#fff",
+    html: `
+      <div class="rating-81037" role="radiogroup" aria-label="Rating">
+        <label aria-label="5 stars"><input type="radio" name="rating-81037" value="5"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></label>
+        <label aria-label="4 stars"><input type="radio" name="rating-81037" value="4" checked><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></label>
+        <label aria-label="3 stars"><input type="radio" name="rating-81037" value="3"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></label>
+        <label aria-label="2 stars"><input type="radio" name="rating-81037" value="2"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></label>
+        <label aria-label="1 star"><input type="radio" name="rating-81037" value="1"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></label>
+      </div>
+      <style>
+        .rating-81037 {
+          display: inline-flex;
+          flex-direction: row-reverse;
+          gap: 6px;
+        }
+        .rating-81037 label {
+          position: relative;
+          cursor: pointer;
+        }
+        .rating-81037 input {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
+        .rating-81037 svg {
+          display: block;
+          width: 34px;
+          height: 34px;
+          fill: #3f3f46;
+          transition: fill 0.2s ease, transform 0.2s ease;
+        }
+        .rating-81037 label:has(input:checked) svg,
+        .rating-81037 label:has(input:checked) ~ label svg {
+          fill: #facc15;
+        }
+        .rating-81037:hover label svg {
+          fill: #3f3f46;
+        }
+        .rating-81037 label:hover svg,
+        .rating-81037 label:hover ~ label svg {
+          fill: #fde047;
+        }
+        .rating-81037 label:hover svg {
+          transform: scale(1.15);
+        }
+      </style>
+    `,
+  },
+  {
+    category: "tailwind",
+    background: "bg-gradient-to-br from-sky-950/50 to-zinc-950",
+    iconColor: "#fff",
+    content: (
+      <fieldset className="w-64 space-y-2">
+        <legend className="mb-1 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+          Notify me about
+        </legend>
+        <label className="flex cursor-pointer gap-3">
+          <input
+            type="checkbox"
+            defaultChecked
+            className="mt-0.5 size-4 shrink-0 accent-sky-500"
+          />
+          <span>
+            <span className="block text-sm text-white">Comments</span>
+            <span className="block text-xs text-zinc-500">
+              When someone replies to you.
+            </span>
+          </span>
+        </label>
+        <label className="flex cursor-pointer gap-3">
+          <input
+            type="checkbox"
+            defaultChecked
+            className="mt-0.5 size-4 shrink-0 accent-sky-500"
+          />
+          <span>
+            <span className="block text-sm text-white">Mentions</span>
+            <span className="block text-xs text-zinc-500">
+              When you are tagged in a thread.
+            </span>
+          </span>
+        </label>
+        <label className="flex cursor-pointer gap-3">
+          <input
+            type="checkbox"
+            className="mt-0.5 size-4 shrink-0 accent-sky-500"
+          />
+          <span>
+            <span className="block text-sm text-white">Product updates</span>
+            <span className="block text-xs text-zinc-500">
+              New features and release notes.
+            </span>
+          </span>
+        </label>
+      </fieldset>
+    ),
+  },
+  {
+    category: "css",
+    background: "bg-gradient-to-br from-[#1e3a8a] to-[#0f172a]",
+    iconColor: "#fff",
+    html: `
+      <label class="theme-77134">
+        <input type="checkbox" aria-label="Dark mode">
+        <span class="theme-77134-track">
+          <span class="theme-77134-thumb"></span>
+          <span class="theme-77134-star"></span>
+          <span class="theme-77134-star"></span>
+        </span>
+      </label>
+      <style>
+        .theme-77134 {
+          display: inline-block;
+          cursor: pointer;
+        }
+        .theme-77134 input {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
+        .theme-77134-track {
+          position: relative;
+          display: block;
+          width: 96px;
+          height: 46px;
+          overflow: hidden;
+          border-radius: 999px;
+          background: linear-gradient(180deg, #7dd3fc, #38bdf8);
+          box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.25);
+          transition: background 0.4s ease;
+        }
+        .theme-77134-thumb {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background: #fde047;
+          box-shadow: 0 0 0 6px rgba(253, 224, 71, 0.25), 0 4px 10px rgba(0, 0, 0, 0.25);
+          transition: transform 0.4s cubic-bezier(0.6, -0.3, 0.3, 1.3), background 0.4s ease, box-shadow 0.4s ease;
+        }
+        .theme-77134-star {
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #fff;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+        .theme-77134-star:nth-child(2) {
+          top: 12px;
+          left: 22px;
+        }
+        .theme-77134-star:nth-child(3) {
+          top: 28px;
+          left: 36px;
+        }
+        .theme-77134 input:checked + .theme-77134-track {
+          background: linear-gradient(180deg, #1e1b4b, #312e81);
+        }
+        .theme-77134 input:checked + .theme-77134-track .theme-77134-thumb {
+          background: #e2e8f0;
+          box-shadow: inset -8px -6px 0 #cbd5e1, 0 0 0 6px rgba(226, 232, 240, 0.12);
+          transform: translateX(50px);
+        }
+        .theme-77134 input:checked + .theme-77134-track .theme-77134-star {
+          opacity: 1;
+        }
+        .theme-77134 input:focus-visible + .theme-77134-track {
+          outline: 2px solid #fff;
+          outline-offset: 3px;
+        }
+      </style>
+    `,
+  },
+  {
+    category: "css",
+    background: "bg-[#fff7ed]",
+    iconColor: "#000",
+    html: `
+      <label class="draw-46195">
+        <input type="checkbox" checked>
+        <span class="draw-46195-box"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+        I agree to the terms
+      </label>
+      <style>
+        .draw-46195 {
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          color: #431407;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .draw-46195 input {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+        }
+        .draw-46195-box {
+          display: grid;
+          place-items: center;
+          width: 26px;
+          height: 26px;
+          border: 2px solid #fdba74;
+          border-radius: 8px;
+          background: #fff;
+          transition: background 0.25s ease, border-color 0.25s ease;
+        }
+        .draw-46195-box svg {
+          width: 16px;
+          height: 16px;
+          fill: none;
+          stroke: #fff;
+          stroke-width: 3;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-dasharray: 24;
+          stroke-dashoffset: 24;
+          transition: stroke-dashoffset 0.35s ease 0.05s;
+        }
+        .draw-46195 input:checked + .draw-46195-box {
+          border-color: #f97316;
+          background: #f97316;
+        }
+        .draw-46195 input:checked + .draw-46195-box svg {
+          stroke-dashoffset: 0;
+        }
+        .draw-46195 input:focus-visible + .draw-46195-box {
+          box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.25);
+        }
+      </style>
+    `,
+  },
 ];
