@@ -62,35 +62,59 @@ npm run dev
 | `npm run format` | Format the codebase with Prettier |
 | `npm run format:check` | Check formatting without writing changes |
 
+### Code Editor runtimes
+
+JavaScript and TypeScript run directly in the browser, inside a sandboxed Web Worker (TypeScript is type-checked and compiled by the editor's bundled TypeScript service). No setup is needed.
+
+The other languages (Python, Java, Go, Rust, C++, C#, Ruby and Swift) are executed by a [Piston](https://github.com/engineer-man/piston) instance. The public Piston API is whitelist-only, so point the editor to your own instance:
+
+```bash
+# .env.local
+NEXT_PUBLIC_PISTON_URL=http://localhost:2000/api/v2
+```
+
 ## 🗂 Project Structure
 
 ```
 src/
-├── app/                    # App Router routes (Server Components by default)
-│   ├── <route>/page.tsx    # One folder per page
-│   ├── <route>/_components # Components used only by that route
-│   └── <route>/_lib        # Route-specific state, config and helpers
-├── components/
-│   ├── decorations/        # Animated backgrounds, each with its own CSS Module
-│   ├── layout/             # Site chrome: hero, navbar, footer, buttons
-│   ├── snippets/           # Snippet card, gallery, marquee and code preview
-│   └── ui/                 # Reusable primitives (shadcn/ui based)
-├── data/snippets/          # Component library content, one file per category
-├── hooks/                  # Shared React hooks
-├── lib/                    # Site configuration and utilities
-└── types/                  # Shared TypeScript types
+├── app/                        # Routes only: thin pages that compose features
+│   ├── [collection]/page.tsx   # Every snippet collection (generated from config)
+│   ├── palettes/               # Color palette library
+│   ├── resources/[slug]/       # Developer guides
+│   └── code-editor/ gradient/ border-radius/ contribute/
+├── components/                 # Shared, domain-agnostic building blocks
+│   ├── ui/                     # Design-system primitives (button, switch, tooltip…)
+│   ├── layout/                 # Site chrome: navbar, footer, hero, navigation links
+│   └── decorations/<name>/     # One folder per decoration: component, CSS Module, config
+├── features/<domain>/          # Self-contained domains
+│   ├── components/             # React components of the domain
+│   ├── config/                 # Static configuration and registries
+│   ├── data/                   # Content (snippets, palettes, guides)
+│   ├── hooks/  lib/  store/    # Domain hooks, pure logic, Zustand stores
+│   └── types.ts
+├── config/                     # Site metadata (no dependencies)
+├── hooks/                      # Generic React hooks
+├── lib/                        # Generic utilities (cn, color math, downloads)
+└── styles/globals.css          # Tailwind layers and design tokens
 ```
+
+Features: `snippets`, `code-highlight`, `code-editor`, `palettes`, `resources`, `gradient`, `border-radius` and `contribute`.
 
 Conventions:
 
+- Dependencies point inwards, in four layers:
+  1. **Foundation** — `lib`, `hooks`, `config`, `components/ui`, `components/decorations`. Never imports features.
+  2. **Features** — domains built on the foundation. The only cross-feature dependency allowed is the shared `code-highlight` feature.
+  3. **Shell** — `components/layout`, which composes feature configuration (e.g. the collection registry) into navigation.
+  4. **Routes** — `app`, which wires everything together.
 - Files use `kebab-case`, components use `PascalCase` named exports, hooks start with `use`.
 - Import with the `@/` alias (maps to `src/`); CSS Modules are imported relatively from the component next to them.
-- Add `"use client"` only to files that use hooks, browser APIs or event handlers.
-- Global CSS is limited to Tailwind layers and design tokens in `src/app/globals.css`; component styles live in Tailwind classes or a colocated `*.module.css`.
+- Add `"use client"` only to files that use hooks, browser APIs or event handlers. Large content modules (like `features/snippets/data`) are imported only by Server Components.
+- Global CSS is limited to Tailwind layers and design tokens in `src/styles/globals.css`; component styles live in Tailwind classes or a colocated `*.module.css`.
 
 ## ➕ Adding a Component
 
-1. Open the category file in `src/data/snippets/` (for example `buttons.tsx`).
+1. Open the collection file in `src/features/snippets/data/` (for example `buttons.tsx`).
 2. Append a new entry at the end of the array:
 
 ```tsx
@@ -108,6 +132,10 @@ Conventions:
 ```
 
 Use `category: "tailwind"` with a `content: (<button className="...">...</button>)` JSX field for Tailwind components. Snippets must be static markup: what is rendered is exactly what gets copied, so event handlers are not supported. Add five random digits to every class and keyframe name in CSS snippets to avoid collisions with other components on the same page.
+
+To add a new collection, register it in `src/features/snippets/config/collections.ts` and map its data in `src/features/snippets/data/index.ts` — the route, navigation entry and page metadata are generated from that registry.
+
+New palettes go in `src/features/palettes/data/palettes.ts` and new guides in `src/features/resources/data/guides/` (then list them in `data/index.ts`).
 
 
 ## 🚀 Technologies

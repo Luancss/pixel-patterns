@@ -1,4 +1,4 @@
-import { CodeEditor } from "@/app/code-editor/_components/code-editor";
+import { CodeEditor } from "@/features/code-editor/components/code-editor";
 import { MeteorShower } from "@/components/decorations/meteor-shower";
 import { Starfield } from "@/components/decorations/starfield";
 

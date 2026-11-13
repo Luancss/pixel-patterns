@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { siteConfig } from "@/lib/site";
+import { siteConfig } from "@/config/site";
 
 const STARS_REVALIDATE_SECONDS = 3600;
 

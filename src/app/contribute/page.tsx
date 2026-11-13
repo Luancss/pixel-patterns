@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { Contributors } from "@/app/contribute/_components/contributors";
-import { SetupGuide } from "@/app/contribute/_components/setup-guide";
+import { Contributors } from "@/features/contribute/components/contributors";
+import { SetupGuide } from "@/features/contribute/components/setup-guide";
 import { MeteorShower } from "@/components/decorations/meteor-shower";
 import { Starfield } from "@/components/decorations/starfield";
 
@@ -17,10 +17,9 @@ export default function ContributePage() {
             Contribute
           </h1>
           <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto animate-slide-in-right">
-            Spotlight effect is a great way to draw attention to a specific part
-            of the page. Here, we are drawing the attention towards the text
-            section of the page. I don&apos;t know why but I&apos;m running out
-            of copy.
+            Pixel Patterns is built by the community. Fork the repository, add
+            your component and open a pull request — every snippet helps other
+            developers ship beautiful interfaces faster.
           </p>
           <Image
             className="mt-10"

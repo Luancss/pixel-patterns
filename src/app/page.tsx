@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Code2, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 import { MeteorShower } from "@/components/decorations/meteor-shower";
@@ -8,10 +8,14 @@ import { ContributeButton } from "@/components/layout/contribute-button";
 import { Footer } from "@/components/layout/footer";
 import { GithubStarButton } from "@/components/layout/github-star-button";
 import { Navbar } from "@/components/layout/navbar";
-import { SnippetMarquee } from "@/components/snippets/snippet-marquee";
+import { TOOL_LINKS } from "@/components/layout/navigation-links";
 import { Button } from "@/components/ui/button";
 import { FlipWords } from "@/components/ui/flip-words";
-import { featuredSnippetRows } from "@/data/snippets/featured";
+import { ShowcaseCard } from "@/components/ui/showcase-card";
+import { PaletteTeaser } from "@/features/palettes/components/palette-teaser";
+import { ResourceTeaser } from "@/features/resources/components/resource-teaser";
+import { SnippetMarquee } from "@/features/snippets/components/snippet-marquee";
+import { featuredSnippetRows } from "@/features/snippets/data/featured";
 
 const FLIP_WORDS = ["enthusiast", "lovers", "fanatic", "admirer"];
 
@@ -43,12 +47,52 @@ export default function HomePage() {
           Collection of for development <FlipWords words={FLIP_WORDS} /> <br />
         </h1>
         <p className="text-base text-gray-300 animate-slide-in-right sm:text-lg md:text-xl">
-          Ready-to-use, simply copy and paste into your next project. All
-          snippets crafted with Tailwind CSS for easy integration.
+          Ready-to-use, simply copy and paste into your next project. Snippets
+          crafted with HTML, CSS and Tailwind CSS for easy integration.
         </p>
         <Navbar />
       </div>
       <SnippetMarquee rows={featuredSnippetRows} />
+
+      <section
+        aria-labelledby="library-heading"
+        className="mt-10 w-[min(72rem,calc(100vw-2rem))] text-center"
+      >
+        <h2
+          id="library-heading"
+          className="text-3xl font-bold text-gray-100 lg:text-4xl"
+        >
+          More than components
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-gray-400">
+          Palettes, references and tools to take an interface from idea to
+          production.
+        </p>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <PaletteTeaser />
+          <ResourceTeaser />
+          <ShowcaseCard
+            href="/code-editor"
+            icon={Code2}
+            title="Developer Tools"
+            description="Run code in the browser, design gradients and shape border radii visually."
+            cta="Open the code editor"
+          >
+            <ul className="space-y-2.5">
+              {TOOL_LINKS.map(({ href, label, icon: Icon }) => (
+                <li
+                  key={href}
+                  className="flex items-center gap-2 text-sm text-zinc-300"
+                >
+                  <Icon className="size-4 text-purple-400" />
+                  {label}
+                </li>
+              ))}
+            </ul>
+          </ShowcaseCard>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

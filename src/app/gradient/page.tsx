@@ -1,5 +1,5 @@
-import { ElectricMonster } from "@/app/gradient/_components/electric-monster";
-import { GradientPicker } from "@/app/gradient/_components/gradient-picker";
+import { ElectricMonster } from "@/components/decorations/electric-monster";
+import { GradientPicker } from "@/features/gradient/components/gradient-picker";
 
 export default function GradientPage() {
   return (

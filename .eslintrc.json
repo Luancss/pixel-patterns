@@ -5,7 +5,7 @@
   },
   "overrides": [
     {
-      "files": ["src/data/snippets/**"],
+      "files": ["src/features/snippets/data/**"],
       "rules": {
         "@next/next/no-img-element": "off"
       }
