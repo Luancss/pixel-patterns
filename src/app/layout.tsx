@@ -1,12 +1,12 @@
-import "./globals.css";
+import "@/styles/globals.css";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { Toaster } from "sonner";
 
-import { SiteBackground } from "@/components/layout/site-background";
-import { siteConfig, siteJsonLd } from "@/lib/site";
+import { GridBackground } from "@/components/decorations/grid-background";
+import { siteConfig, siteJsonLd } from "@/config/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Toaster />
         <div className="relative h-full w-full bg-black">
-          <SiteBackground />
+          <GridBackground />
           <div className="flex min-h-screen flex-col box-border">
             <div className="flex flex-col gap-y-10 items-center z-20">
               {children}

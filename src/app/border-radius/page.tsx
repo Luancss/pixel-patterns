@@ -1,5 +1,5 @@
-import { BorderRadiusEditor } from "@/app/border-radius/_components/border-radius-editor";
-import { SplineScene } from "@/app/border-radius/_components/spline-scene";
+import { BorderRadiusEditor } from "@/features/border-radius/components/border-radius-editor";
+import { SplineScene } from "@/components/decorations/spline-scene";
 import { MeteorShower } from "@/components/decorations/meteor-shower";
 import { Starfield } from "@/components/decorations/starfield";
 

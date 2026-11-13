@@ -1,5 +1,5 @@
 package-lock.json
 public
 *.md
-src/components/decorations/starfield.module.css
-src/components/decorations/meteor-shower.module.css
+src/components/decorations/starfield/starfield.module.css
+src/components/decorations/meteor-shower/meteor-shower.module.css
